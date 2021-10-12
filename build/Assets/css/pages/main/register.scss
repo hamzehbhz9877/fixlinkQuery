@@ -1,0 +1,12 @@
+@import "../../abstracts","../../base/helpers";
+
+.register {
+  max-width: 75rem;
+  & .custom-btn{
+    width: 320px;
+  }
+  @include element("have-account"){
+    margin-top: 1rem;
+    color: $x4;
+  }
+}

@@ -1,0 +1,51 @@
+@mixin on-event($self: false) {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+  @if $self {
+    & {
+      @content
+    }
+  }
+}
+
+
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+
+@mixin media($property) {
+  @if map-has-key($breakpoints, $property) {
+    @media #{inspect(map-get($breakpoints, $property))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`";
+  }
+}
+
+@mixin keyframes($fontame) {
+  @keyframes #{$fontame} {
+    @content;
+  }
+}
+
+@mixin element($fontame) {
+  @at-root #{&}__#{$fontame} {
+    @content;
+  }
+}
+
+@mixin modifier($fontame) {
+  @at-root #{&}--#{$fontame} {
+    @content;
+  }
+}
+
+

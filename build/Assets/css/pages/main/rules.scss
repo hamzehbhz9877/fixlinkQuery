@@ -1,0 +1,11 @@
+@import "../../abstracts","../../base/helpers";
+
+
+.rules {
+  @include element("title"){
+    color: $x6;
+  }
+  & p{
+    @extend %justify-text
+  }
+}

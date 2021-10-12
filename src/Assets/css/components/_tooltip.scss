@@ -1,0 +1,92 @@
+@import "../abstracts/index";
+
+.react-tooltip-wrapper {
+  display: inline-flex;
+}
+
+.react-tooltip {
+  font-size: $tooltip-font-size;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color:$tooltip-color;
+  background-color: $tooltip-bg;
+  border-radius: $tooltip-border-radius;
+  pointer-events: none;
+  visibility: visible;
+  opacity: 0;
+  padding: $tooltip-arrow 21px;
+  display: inline-block;
+  z-index: $tooltip-z-index;
+  transition: opacity .3s ease-out;
+}
+
+.react-tooltip.right {
+  margin-left: 10px;
+}
+
+.react-tooltip.left {
+  margin-left: -10px;
+}
+
+.react-tooltip.bottom {
+  margin-top: 10px;
+}
+
+.react-tooltip.top {
+  margin-top: -10px;
+}
+
+
+.react-tooltip.open {
+  visibility: visible;
+  opacity: $tooltip-opacity;
+}
+
+.react-tooltip.right::after, .react-tooltip.left::after {
+  content: "";
+  position: absolute;
+  border-top: $tooltip-arrow solid transparent;
+  border-bottom: $tooltip-arrow solid transparent;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.react-tooltip.top::after, .react-tooltip.bottom::after {
+  content: "";
+  position: absolute;
+  border-right: $tooltip-arrow solid transparent;
+  border-left: $tooltip-arrow solid transparent;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.react-tooltip.right::after {
+  border-right-color: $tooltip-arrow-color;
+  border-right-style: solid;
+  border-right-width: $tooltip-arrow;
+  right: 100%;
+}
+
+.react-tooltip.left::after {
+  border-left-color: $tooltip-arrow-color;
+  border-left-style: solid;
+  border-left-width: $tooltip-arrow;
+  left: 100%;
+}
+
+.react-tooltip.top::after {
+  border-top-color: $tooltip-arrow-color;
+  border-top-style: solid;
+  border-top-width: $tooltip-arrow;
+  top: 100%;
+}
+
+.react-tooltip.bottom::after {
+  border-bottom-color: $tooltip-arrow-color;
+  border-bottom-style: solid;
+  border-bottom-width: $tooltip-arrow;
+  bottom: 100%;
+}
+
+

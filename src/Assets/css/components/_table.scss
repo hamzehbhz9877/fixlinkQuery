@@ -1,0 +1,68 @@
+@import "../abstracts/index";
+table {
+  /*border-color does not have any effect here since we used collapse for border-collapse*/
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  min-width: max-content;
+}
+
+.table {
+  min-width: max-content;
+  border: none;
+
+  &-overflow {
+    overflow-x: auto;
+  }
+
+  @include element("fixed") {
+    table-layout: fixed;
+    & tbody tr td.text-overflow {
+      direction: ltr;
+      max-width: 100%;
+    }
+  }
+
+  & thead {
+    background-color: $table-th-background-color;
+    color: $table-th-color;
+    border: none;
+
+    & th {
+      border: none;
+    }
+  }
+
+  & tbody {
+    & tr {
+      background-color: $x7 !important;
+
+      & td {
+        padding: $table-cell-padding-y $table-cell-padding-x !important;
+        color: $table-cell-color;
+        position: relative;
+        border: none;
+        vertical-align: $table-cell-vertical-align !important;
+        font-size: $font-size-base;
+
+        & button{
+          background-color: transparent;
+        }
+        & label {
+          margin-bottom: 0 !important;
+        }
+
+        &:not(:last-child):before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 15%;
+          width: 1px;
+          height: 70%;
+          background-color: $x10;
+        }
+      }
+    }
+  }
+}
+
+

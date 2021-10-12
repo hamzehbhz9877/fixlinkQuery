@@ -1,0 +1,8 @@
+@import "../../abstracts","../../base/helpers";
+
+.contact-us {
+  max-width:69rem;
+  & .custom-btn{
+    width: 300px;
+  }
+}

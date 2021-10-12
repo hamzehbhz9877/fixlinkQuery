@@ -1,0 +1,27 @@
+.dashboard__chart {
+  background-color: #393939 !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 15px;
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 212px);
+}
+.dashboard__chart p {
+  margin: auto;
+}
+
+.dashboard__card {
+  background-color: #4E4E4E;
+  text-align: center;
+  margin: 3px;
+  width: calc(100% / 3.1);
+}
+@media (max-width: 767.98px) {
+  .dashboard__card {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=dashboard.css.map */

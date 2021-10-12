@@ -1,0 +1,77 @@
+@import "../abstracts/index";
+
+.action .profile {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.profile .welcome{
+
+  //small devices
+
+  @include media("sm-max")
+  {
+    display: none;
+  }
+}
+
+.action .angle {
+  color: white;
+  transition: .2s;
+  margin-right: 10px;
+  &.rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.action .menu {
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  padding: 10px 15px;
+  background-color: $dropdown-menu-background;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+  transition: .2s;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+
+  &.active-menu {
+    top: 80px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 28px;
+    width: 20px;
+    height: 20px;
+    background-color: $dropdown-menu-caret-background;
+    transform: rotate(45deg);
+  }
+  & ul a:hover{
+    color: $dropdown-menu-list--hover;
+  }
+
+  & ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+
+    & a {
+      display: inline-block;
+      color: $dropdown-menu-list-color;
+      transition: .2s;
+      padding: 15px 10px;
+    }
+
+    & i {
+      margin-left: 5px;
+    }
+  }
+}

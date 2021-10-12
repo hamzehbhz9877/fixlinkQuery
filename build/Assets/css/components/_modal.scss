@@ -1,0 +1,48 @@
+@import "../abstracts/index";
+
+.Modal {
+  background-color: $modal-background;
+  box-shadow: 0 0 10px -5px;
+  border-radius: .5rem;
+  padding: 1em 1.5em;
+  margin: 0 auto;
+  height: max-content;
+  z-index: $modal-z-index;
+
+  //medium devices
+  @include media("md-min") {
+    margin: auto;
+  }
+
+  //small devices
+  @include media("sm-max") {
+    width: 95% !important;
+    overflow-x: auto;
+  }
+
+  & .btn {
+    padding: 0.4rem 1rem
+  }
+}
+
+
+.Overlay {
+  position: fixed;
+  inset: 0;
+  background-color: $modal-overlay-background;
+  transition: all .1s ease;
+  display: flex;
+  overflow-y: auto;
+  padding: 3rem 0;
+  z-index: $backdrop-z-index;
+}
+
+.ReactModal__Body {
+  @include modifier("open") {
+    overflow-y: hidden;
+  }
+}
+
+
+
+

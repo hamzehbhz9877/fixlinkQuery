@@ -1,0 +1,182 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+
+body, html, #root {
+  min-height: 100vh;
+}
+
+
+ul {
+  margin: 0 !important;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  color: inherit !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ol:not(.ck ol), ul:not(.ck ul) {
+  list-style-type: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $x6;
+  -webkit-box-shadow: 0 0 0 1000px $x7 inset;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: $x6;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none;
+}
+
+input.success, textarea.success {
+  border-color: var(--success);
+}
+
+tr td, tr th {
+  text-align: center !important;
+}
+
+input.error, textarea.error {
+  border-color: var(--danger);
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="searchStatistics"] {
+  text-align: right;
+}
+
+[name="bigLink"], [name="shortLink"], [name="viewerLink"], [name="searchStatistics"], [class*="s-left"], [name="email"] {
+  direction: ltr;
+}
+
+input:placeholder-shown {
+  text-overflow: ellipsis;
+}
+
+hr {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-top: 1px solid #aaa;
+  clear: both;
+}
+
+blockquote {
+  padding: 0.2em 1em 0.2em 2em;
+  border-left: 3px solid #eee
+}
+
+
+.empty-info {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 30px;
+  color: white;
+}
+
+.notfound, .access-deny {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+@include media("md-min") {
+  .container {
+    width: 750px;
+  }
+}
+
+@include media("lg-min") {
+  .container {
+    width: 970px;
+  }
+}
+
+@include media("xl-min") {
+  .container {
+    width: 1170px;
+  }
+}
+
+.ck-content > ol, .ck-content > ul {
+  margin: revert !important;
+  padding: revert !important;
+  color: white;
+
+  & li {
+    padding: 10px 0;
+  }
+}
+
+.text-overflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.loadingMessage, .errorMessage,.no-info {
+  color: white;
+}

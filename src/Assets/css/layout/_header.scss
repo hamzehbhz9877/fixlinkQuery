@@ -1,0 +1,120 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.navBar, .panel-navBar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header {
+  height: $header-height;
+  background-color: transparent;
+  width: 100%;
+  z-index: 100;
+  transition: .2s;
+}
+
+.navBar {
+  padding: 0 $general-space;
+
+
+  & .navBar-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    & > li {
+      margin: 0 15px;
+      position: relative;
+
+      & a {
+        padding: 18px 10px;
+        color: $header-list-color;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          right: 0;
+          height: 2px;
+          width: 0;
+          background-color: $header-list--after-background;
+          transition: .3s ease;
+        }
+
+        &:hover:after {
+          width: 100%;
+        }
+
+        &.active {
+          color: $header-list--active;
+
+          &:after {
+            height: 2px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.login-btn {
+  background-color: $header-login-background;
+  border-radius: 35px;
+  width: 98px;
+  @include on-event(true) {
+    color: white !important;
+  }
+}
+
+
+@include media("sm-max")
+{
+  .user-dropdown {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    max-width: 125px;
+    direction: ltr;
+  }
+}
+
+
+.panel-header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background-color: $panel-header-background;
+  padding-right: 0;
+  height: $panel-header-height;
+  z-index: $panel-header-z-index;
+}
+
+.panel-navBar {
+  padding-right: 0;
+  padding-left: $general-space;
+  @include media("md-max")
+  {
+    padding: 0 $general-space;
+  }
+  & .panel-logo {
+    width: $sidebar-width;
+    background-color: $x7;
+    height: $panel-header-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //medium devices
+    @include media("md-max")
+    {
+      width: auto;
+      background-color: transparent;
+    }
+  }
+}
