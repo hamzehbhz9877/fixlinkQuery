@@ -1,5 +1,5 @@
-import { DetailedHTMLProps, FC, SelectHTMLAttributes } from "react";
-import { ErrorMessage, useField } from "formik";
+import { DetailedHTMLProps, FC, SelectHTMLAttributes } from 'react';
+import { ErrorMessage, useField } from 'formik';
 
 type propsType = DetailedHTMLProps<
   SelectHTMLAttributes<HTMLSelectElement>,
@@ -25,14 +25,14 @@ const CustomSelectInput: FC<customSelectInput> = ({
 
   return (
     <>
-      <div className={`form-group ${classes ? classes : ""}`}>
+      <div className={`form-group ${classes ? classes : ''}`}>
         <label htmlFor="">{label}</label>
         <select
           {...field}
           {...props}
           placeholder="وارد کنید"
-          className={`form-select form-select-lg ${error && "error"} ${
-            success && "success"
+          className={`form-select form-select-lg ${error && 'error'} ${
+            success && 'success'
           }`}
           aria-label=".form-select-lg example"
         >

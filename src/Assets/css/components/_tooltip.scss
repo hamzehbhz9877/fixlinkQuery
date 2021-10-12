@@ -1,4 +1,4 @@
-@import "../abstracts/index";
+@import '../abstracts/index';
 
 .react-tooltip-wrapper {
   display: inline-flex;
@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  color:$tooltip-color;
+  color: $tooltip-color;
   background-color: $tooltip-bg;
   border-radius: $tooltip-border-radius;
   pointer-events: none;
@@ -18,7 +18,7 @@
   padding: $tooltip-arrow 21px;
   display: inline-block;
   z-index: $tooltip-z-index;
-  transition: opacity .3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 
 .react-tooltip.right {
@@ -37,14 +37,14 @@
   margin-top: -10px;
 }
 
-
 .react-tooltip.open {
   visibility: visible;
   opacity: $tooltip-opacity;
 }
 
-.react-tooltip.right::after, .react-tooltip.left::after {
-  content: "";
+.react-tooltip.right::after,
+.react-tooltip.left::after {
+  content: '';
   position: absolute;
   border-top: $tooltip-arrow solid transparent;
   border-bottom: $tooltip-arrow solid transparent;
@@ -52,8 +52,9 @@
   transform: translateY(-50%);
 }
 
-.react-tooltip.top::after, .react-tooltip.bottom::after {
-  content: "";
+.react-tooltip.top::after,
+.react-tooltip.bottom::after {
+  content: '';
   position: absolute;
   border-right: $tooltip-arrow solid transparent;
   border-left: $tooltip-arrow solid transparent;
@@ -88,5 +89,3 @@
   border-bottom-width: $tooltip-arrow;
   bottom: 100%;
 }
-
-

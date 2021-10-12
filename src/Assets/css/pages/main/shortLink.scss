@@ -1,47 +1,44 @@
-@import "../../abstracts","../../base/helpers";
-
+@import '../../abstracts', '../../base/helpers';
 
 .short-link {
   max-width: 55rem;
-  @include element("copy-btn") {
+  @include element('copy-btn') {
     background-color: $x1;
-    @include on-event(true)
-    {
+    @include on-event(true) {
       color: white !important;
     }
   }
 
-  @include element("input") {
+  @include element('input') {
     width: 30rem;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 1rem;
-    & input{
+    & input {
       text-align: center;
     }
-    @include media("sm-max") {
+    @include media('sm-max') {
       @media (max-width: 450px) {
         width: 100%;
       }
     }
   }
-  @include element("qr-code")
-  {
+  @include element('qr-code') {
     display: flex;
     align-items: center;
     flex-direction: column;
-    & button{
-        background-color: $x7;
-        border: 2px dashed $x10;
-        width: 120px;
+    & button {
+      background-color: $x7;
+      border: 2px dashed $x10;
+      width: 120px;
     }
-    & img{
+    & img {
       width: 12rem;
       height: 12rem;
     }
   }
 
-  @include element("alert") {
+  @include element('alert') {
     background-color: $x12;
     border: none;
     margin: 1rem 0;
@@ -50,7 +47,7 @@
     }
   }
 
-  @include element("go-back-btn") {
+  @include element('go-back-btn') {
     position: absolute;
     left: 20px;
     top: 20px;
@@ -62,5 +59,4 @@
       font-size: 2.5rem;
     }
   }
-
 }

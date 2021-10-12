@@ -1,8 +1,8 @@
-import {useContext} from "react";
-import {AlertProvider} from "Context/alert/index";
+import { useContext } from 'react';
+import { AlertProvider } from 'Context/alert/index';
 
 const useAlert = () => {
-    return useContext(AlertProvider);
+  return useContext(AlertProvider);
 };
 
-export default useAlert
+export default useAlert;

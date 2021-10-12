@@ -1,4 +1,4 @@
-@import "../abstracts/index";
+@import '../abstracts/index';
 table {
   /*border-color does not have any effect here since we used collapse for border-collapse*/
   border-collapse: separate;
@@ -14,7 +14,7 @@ table {
     overflow-x: auto;
   }
 
-  @include element("fixed") {
+  @include element('fixed') {
     table-layout: fixed;
     & tbody tr td.text-overflow {
       direction: ltr;
@@ -44,7 +44,7 @@ table {
         vertical-align: $table-cell-vertical-align !important;
         font-size: $font-size-base;
 
-        & button{
+        & button {
           background-color: transparent;
         }
         & label {
@@ -52,7 +52,7 @@ table {
         }
 
         &:not(:last-child):before {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           top: 15%;
@@ -64,5 +64,3 @@ table {
     }
   }
 }
-
-

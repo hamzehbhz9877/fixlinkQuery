@@ -26,17 +26,16 @@
   width: 1px;
 }
 
-%center-horizontally{
+%center-horizontally {
   right: 50%;
   transform: translateX(50%);
 }
 
-%center-vertically{
+%center-vertically {
   top: 50%;
   transform: translateY(-50%);
 }
 
-%justify-text{
-  text-align: justify
+%justify-text {
+  text-align: justify;
 }
-

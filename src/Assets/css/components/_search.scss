@@ -9,7 +9,7 @@
 
   & > div {
     width: 49%;
-    @include media("sm-max") {
+    @include media('sm-max') {
       width: 100%;
     }
   }
@@ -18,25 +18,24 @@
     width: 100%;
   }
 
-  @include element("filter") {
+  @include element('filter') {
     padding: 30px;
     background-color: $x7;
 
-
-    @include media("sm-max") {
+    @include media('sm-max') {
       width: 100%;
       flex-basis: auto;
     }
 
     &-wrapper {
-      @include media("xs-max") {
+      @include media('xs-max') {
         flex-wrap: wrap;
         justify-content: center;
       }
     }
   }
 
-  @include element("close-filter-btn") {
+  @include element('close-filter-btn') {
     position: absolute;
     left: 10px;
     display: flex;
@@ -52,7 +51,7 @@
     }
   }
 
-  @include element("btn") {
+  @include element('btn') {
     & button {
       font-size: $font-size-base !important;
     }
@@ -62,5 +61,3 @@
     }
   }
 }
-
-

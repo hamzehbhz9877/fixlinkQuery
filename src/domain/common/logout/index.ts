@@ -1,12 +1,10 @@
-import useAuth from "Context/authentication/useAuth";
+import useAuth from 'Context/authentication/useAuth';
 
 const Logout = () => {
+  const { reset } = useAuth();
+  reset();
 
-    const {reset} = useAuth()
-    reset()
-
-    return null
+  return null;
 };
 
-
-export default Logout
+export default Logout;

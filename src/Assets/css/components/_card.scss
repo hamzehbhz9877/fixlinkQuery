@@ -4,9 +4,8 @@
   margin: 0 auto;
   flex-wrap: wrap;
   max-width: 75rem;
-  @include media("sm-max")
-  {
-    margin: -.3rem;
+  @include media('sm-max') {
+    margin: -0.3rem;
   }
 }
 
@@ -16,7 +15,6 @@
 }
 
 .card__header-title {
-
   text-align: center;
   padding-bottom: 40px;
 
@@ -26,7 +24,7 @@
     margin-top: 1rem;
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       top: 130%;
@@ -38,18 +36,16 @@
   }
 }
 
-
-.banner, .statistics {
+.banner,
+.statistics {
   width: calc(100% / 3);
   border: none;
   background-color: transparent;
-  padding: .3rem;
-
+  padding: 0.3rem;
 
   @media (max-width: 768.98px) {
     width: 50%;
   }
-
 
   & .card-body {
     position: relative;

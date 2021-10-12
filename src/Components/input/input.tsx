@@ -1,5 +1,5 @@
-import { ErrorMessage, useField } from "formik";
-import { DetailedHTMLProps, FC, InputHTMLAttributes } from "react";
+import { ErrorMessage, useField } from 'formik';
+import { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react';
 
 export type propsType = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
@@ -20,15 +20,19 @@ const Input: FC<Props> = ({ label, classes, ...props }) => {
 
   return (
     <>
-      <div className={`form-group ${classes ? classes : ""}`}>
+      <div className={`form-group ${classes ? classes : ''}`}>
         <div className="form__div">
           <input
-              {...field}
-              {...props}
-              className={`form__input ${error && "error"} ${success && "success"}`}
-              placeholder="وارد کنید"
+            {...field}
+            {...props}
+            className={`form__input ${error && 'error'} ${
+              success && 'success'
+            }`}
+            placeholder="وارد کنید"
           />
-          <label htmlFor="" className="form__label">{label}</label>
+          <label htmlFor="" className="form__label">
+            {label}
+          </label>
         </div>
         <ErrorMessage
           name={`${props.name}`}

@@ -1,8 +1,7 @@
-@import "../../../abstracts";
-
+@import '../../../abstracts';
 
 .dashboard {
-  @include element("chart") {
+  @include element('chart') {
     background-color: $x7 !important;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -17,12 +16,12 @@
     }
   }
 
-  @include element("card") {
+  @include element('card') {
     background-color: $x5;
     text-align: center;
     margin: 3px;
     width: calc(100% / 3.1);
-    @include media("sm-max") {
+    @include media('sm-max') {
       width: 90%;
     }
   }

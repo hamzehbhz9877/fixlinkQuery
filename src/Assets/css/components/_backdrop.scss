@@ -1,4 +1,4 @@
-@import "../abstracts/index";
+@import '../abstracts/index';
 .backdrop {
   position: fixed;
   height: 100vh;
@@ -9,8 +9,7 @@
   inset: 0;
   z-index: $backdrop-z-index;
   transition: 0s ease;
-  @include modifier("open")
-  {
+  @include modifier('open') {
     opacity: $backdrop-opacity--open;
     visibility: visible;
   }

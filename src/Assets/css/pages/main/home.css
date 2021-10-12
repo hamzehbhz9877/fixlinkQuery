@@ -39,12 +39,14 @@
   color: white;
 }
 .home__custom-link-button-wrapper button {
-  background: #00B063;
+  background: #00b063;
   padding: 0.8rem 0;
   border-radius: 2.7rem;
   width: 15rem;
 }
-.home__custom-link-button-wrapper button:hover, .home__custom-link-button-wrapper button:active, .home__custom-link-button-wrapper button:focus {
+.home__custom-link-button-wrapper button:hover,
+.home__custom-link-button-wrapper button:active,
+.home__custom-link-button-wrapper button:focus {
   color: white !important;
 }
 .home__custom-link-button-wrapper button {

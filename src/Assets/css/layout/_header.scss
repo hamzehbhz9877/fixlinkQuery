@@ -2,7 +2,8 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-.navBar, .panel-navBar {
+.navBar,
+.panel-navBar {
   display: flex;
   align-items: center;
   height: 100%;
@@ -13,12 +14,11 @@
   background-color: transparent;
   width: 100%;
   z-index: 100;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .navBar {
   padding: 0 $general-space;
-
 
   & .navBar-item {
     display: flex;
@@ -35,14 +35,14 @@
         position: relative;
 
         &:after {
-          content: "";
+          content: '';
           position: absolute;
           top: 100%;
           right: 0;
           height: 2px;
           width: 0;
           background-color: $header-list--after-background;
-          transition: .3s ease;
+          transition: 0.3s ease;
         }
 
         &:hover:after {
@@ -71,9 +71,7 @@
   }
 }
 
-
-@include media("sm-max")
-{
+@include media('sm-max') {
   .user-dropdown {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -83,7 +81,6 @@
     direction: ltr;
   }
 }
-
 
 .panel-header {
   position: fixed;
@@ -99,8 +96,7 @@
 .panel-navBar {
   padding-right: 0;
   padding-left: $general-space;
-  @include media("md-max")
-  {
+  @include media('md-max') {
     padding: 0 $general-space;
   }
   & .panel-logo {
@@ -111,8 +107,7 @@
     justify-content: center;
     align-items: center;
     //medium devices
-    @include media("md-max")
-    {
+    @include media('md-max') {
       width: auto;
       background-color: transparent;
     }

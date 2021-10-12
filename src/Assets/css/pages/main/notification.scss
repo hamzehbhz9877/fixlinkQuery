@@ -1,8 +1,7 @@
-@import "../../abstracts","../../base/helpers";
-
+@import '../../abstracts', '../../base/helpers';
 
 .notification {
-  @include modifier("card") {
+  @include modifier('card') {
     max-width: 70rem;
     margin-right: auto;
     margin-left: auto;
@@ -12,12 +11,12 @@
     }
   }
 
-  @include element("title") {
+  @include element('title') {
     margin-bottom: 0;
     color: $x1;
   }
 
-  @include element("header") {
+  @include element('header') {
     border-bottom: 2px dashed rgba(255, 255, 255, 0.51);
     display: flex;
     padding-bottom: 1rem;
@@ -26,13 +25,16 @@
     flex-wrap: wrap;
   }
 
-  @include element("html-parser") {
-    & ol, & ul {
+  @include element('html-parser') {
+    & ol,
+    & ul {
       padding: 0 1rem;
     }
   }
 
-  & ol li, & ul li, & p {
+  & ol li,
+  & ul li,
+  & p {
     margin: 1rem 0;
     color: white;
   }

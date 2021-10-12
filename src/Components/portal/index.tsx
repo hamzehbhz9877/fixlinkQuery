@@ -1,12 +1,12 @@
-import {FC, ReactNode} from "react";
-import ReactDOM from "react-dom";
+import { FC, ReactNode } from 'react';
+import ReactDOM from 'react-dom';
 
-interface Props{
-  component:Element,
-  children:ReactNode,
+interface Props {
+  component: Element;
+  children: ReactNode;
 }
 
-const PortalWrapper:FC<Props> = ({ component, children }) => {
+const PortalWrapper: FC<Props> = ({ component, children }) => {
   return ReactDOM.createPortal(children, component);
 };
 

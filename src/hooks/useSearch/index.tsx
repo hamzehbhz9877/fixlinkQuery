@@ -1,11 +1,11 @@
-import {useState} from "react";
+import { useState } from 'react';
 
 const useSearch = () => {
-    const [searchValue, setSearchValue] = useState<string>("");
+  const [searchValue, setSearchValue] = useState<string>('');
 
-    const sendData =(values:string) => setSearchValue(values);
+  const sendData = (values: string) => setSearchValue(values);
 
-    return {searchValue,sendData}
+  return { searchValue, sendData };
 };
 
 export default useSearch;

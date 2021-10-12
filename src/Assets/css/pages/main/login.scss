@@ -1,21 +1,20 @@
-@import "../../abstracts","../../base/helpers";
-
+@import '../../abstracts', '../../base/helpers';
 
 .login {
   max-width: 41rem;
-  & .custom-btn{
+  & .custom-btn {
     width: 300px;
   }
-  @include element("forget-password") {
+  @include element('forget-password') {
     margin-top: 1rem;
     & span {
       color: white;
     }
   }
-  @include element("account") {
+  @include element('account') {
     padding-top: 3rem;
   }
-  @include element("register") {
+  @include element('register') {
     & a.register {
       color: white;
     }
@@ -24,5 +23,4 @@
       display: inline-block;
     }
   }
-
 }

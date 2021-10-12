@@ -1,5 +1,5 @@
-import { DetailedHTMLProps, FC, TextareaHTMLAttributes } from "react";
-import { ErrorMessage, useField } from "formik";
+import { DetailedHTMLProps, FC, TextareaHTMLAttributes } from 'react';
+import { ErrorMessage, useField } from 'formik';
 
 type propsType = DetailedHTMLProps<
   TextareaHTMLAttributes<HTMLTextAreaElement>,
@@ -20,15 +20,19 @@ const TextArea: FC<textArea> = ({ label, classes, ...props }) => {
 
   return (
     <>
-      <div className={`form-group ${classes ? classes : ""}`}>
+      <div className={`form-group ${classes ? classes : ''}`}>
         <div className="form__div form__cnu">
-                    <textarea
-                        {...field}
-                        {...props}
-                        className={`form__input ${error && "error"} ${success && "success"}`}
-                        placeholder="وارد کنید"
-                    />
-          <label htmlFor="" className="form__label">{label}</label>
+          <textarea
+            {...field}
+            {...props}
+            className={`form__input ${error && 'error'} ${
+              success && 'success'
+            }`}
+            placeholder="وارد کنید"
+          />
+          <label htmlFor="" className="form__label">
+            {label}
+          </label>
         </div>
         <ErrorMessage
           name={`${props.name}`}

@@ -1,34 +1,36 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
-$x1: #19B5FE;
+$x1: #19b5fe;
 $x2: #222222;
 $x3: #505050;
-$x4: #B9B9B9;
-$x5: #4E4E4E;
+$x4: #b9b9b9;
+$x5: #4e4e4e;
 $x6: rgb(240, 240, 240);
 $x7: rgb(57, 57, 57);
-$x8: #00B063;
-$x9: #D9D9D9;
+$x8: #00b063;
+$x9: #d9d9d9;
 $x10: #707070;
-$x11: #EAD727;
-$x12: #4E4E4E;
+$x11: #ead727;
+$x12: #4e4e4e;
 $x13: #929292;
-$x14: #1F1F1F;
-$x15: #E4E4E4;
-$x16: #00B063;
+$x14: #1f1f1f;
+$x15: #e4e4e4;
+$x16: #00b063;
 $x17: #676767;
 
-$text-mute:#6c757d;
+$text-mute: #6c757d;
 
-$font-family-sans-serif: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$font-family-sans-serif: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+  'Helvetica', 'Arial', sans-serif !default;
 
-$font-family-monospace: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$font-family-monospace: 'Courier New', 'DejaVu Sans Mono',
+  'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
 $font-family-base: 'BYekan' !default;
 
 $font-size-base: 1.6rem !default;
-$font-size-sm: $font-size-base * .875 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
 
 $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
@@ -48,43 +50,62 @@ $text-align-base: right !default;
 
 $line-height-base: 1.5 !default;
 
-
-$headings-margin-bottom: $spacer * .5 !default;
+$headings-margin-bottom: $spacer * 0.5 !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
 $headings-color: null !default;
 
+$border-radius: 0.25rem !default;
 
-$border-radius: .25rem !default;
-
-
-$border-width:  1px !default;
+$border-width: 1px !default;
 $border-widths: (
-        1: 1px,
-        2: 2px,
-        3: 3px,
-        4: 4px,
-        5: 5px
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
 ) !default;
 
 $min-width-breakpoints: (
-        'sm-min': (min-width:576px),
-        'md-min': (min-width:768px),
-        'lg-min': (min-width:992px),
-        'xl-min': (min-width:1200px),
-        'xxl-min': (min-width:1400px)
-)!default;
+  'sm-min': (
+    min-width: 576px,
+  ),
+  'md-min': (
+    min-width: 768px,
+  ),
+  'lg-min': (
+    min-width: 992px,
+  ),
+  'xl-min': (
+    min-width: 1200px,
+  ),
+  'xxl-min': (
+    min-width: 1400px,
+  ),
+) !default;
 
 $max-width-breakpoints: (
-        'xs-max': (max-width:575.98px),
-        'sm-max': (max-width:767.98px),
-        'md-max': (max-width:991.98px),
-        'lg-max': (max-width:1199.98px),
-        'xl-max': (max-width:1399.98px)
-)!default;
+  'xs-max': (
+    max-width: 575.98px,
+  ),
+  'sm-max': (
+    max-width: 767.98px,
+  ),
+  'md-max': (
+    max-width: 991.98px,
+  ),
+  'lg-max': (
+    max-width: 1199.98px,
+  ),
+  'xl-max': (
+    max-width: 1399.98px,
+  ),
+) !default;
 
-$breakpoints: map-merge($min-width-breakpoints, $max-width-breakpoints) !default;
-
+$breakpoints: map-merge(
+  $min-width-breakpoints,
+  $max-width-breakpoints
+) !default;
 
 $h1-font-size: $font-size-base * 2.5 !default;
 $h2-font-size: $font-size-base * 2 !default;
@@ -94,12 +115,12 @@ $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
 $heading: (
-        'h1':$h1-font-size,
-        'h2':$h2-font-size,
-        'h3':$h3-font-size,
-        'h4':$h4-font-size,
-        'h5':$h5-font-size,
-        'h6':$h6-font-size,
+  'h1': $h1-font-size,
+  'h2': $h2-font-size,
+  'h3': $h3-font-size,
+  'h4': $h4-font-size,
+  'h5': $h5-font-size,
+  'h6': $h6-font-size,
 ) !default;
 
 $zindex-modal-backdrop: 1050 !default;
@@ -107,8 +128,6 @@ $zindex-modal: 1055 !default;
 $zindex-tooltip: 1050 !default;
 $zindex-sidebar: 998 !default;
 $zindex-header: 90 !default;
-
-
 
 //sidebar
 $sidebar-width: 270px !default;
@@ -128,7 +147,7 @@ $modal-z-index: $zindex-modal !default;
 //backdrop
 $backdrop-background-color: black !default;
 $backdrop-z-index: $zindex-modal-backdrop !default;
-$backdrop-opacity--open: .5 !default;
+$backdrop-opacity--open: 0.5 !default;
 
 //dropdown menu
 $dropdown-menu-background: white !default;
@@ -140,16 +159,16 @@ $dropdown-menu-list-color: $x2 !default;
 $footer-icon-color: $x6 !default;
 
 //mina header
-$header-height: 70px  !default;
-$header-list-color: $x4  !default;
-$header-list--after-background: $x1  !default;
-$header-list--active: $header-list--after-background  !default;
-$header-login-background: $x5  !default;
+$header-height: 70px !default;
+$header-list-color: $x4 !default;
+$header-list--after-background: $x1 !default;
+$header-list--active: $header-list--after-background !default;
+$header-login-background: $x5 !default;
 
 //panel header
-$panel-header-background: $x2  !default;
-$panel-header-height: $header-height  !default;
-$panel-header-z-index: $zindex-header  !default;
+$panel-header-background: $x2 !default;
+$panel-header-height: $header-height !default;
+$panel-header-z-index: $zindex-header !default;
 
 //tooltip
 $tooltip-z-index: $zindex-tooltip !default;
@@ -158,41 +177,41 @@ $tooltip-max-width: 200px !default;
 $tooltip-color: $x4 !default;
 $tooltip-bg: black !default;
 $tooltip-border-radius: $border-radius !default;
-$tooltip-opacity: .9 !default;
-$tooltip-padding-y: $spacer * .25 !default;
-$tooltip-padding-x: $spacer * .5 !default;
-$tooltip-arrow: .8rem !default;
+$tooltip-opacity: 0.9 !default;
+$tooltip-padding-y: $spacer * 0.25 !default;
+$tooltip-padding-x: $spacer * 0.5 !default;
+$tooltip-arrow: 0.8rem !default;
 $tooltip-arrow-color: $tooltip-bg !default;
 
 //pagination
-$pagination-padding-y:              .8rem !default;
-$pagination-padding-x:              1.1rem !default;
+$pagination-padding-y: 0.8rem !default;
+$pagination-padding-x: 1.1rem !default;
 
-$pagination-color:                  $x4 !default;
-$pagination-bg:                     inherit !default;
-$pagination-border-width:           $border-width !default;
-$pagination-border-color:           rgba(155, 155, 155, .2) !default;
+$pagination-color: $x4 !default;
+$pagination-bg: inherit !default;
+$pagination-border-width: $border-width !default;
+$pagination-border-color: rgba(155, 155, 155, 0.2) !default;
 
-$pagination-disabled-color:         white !default;
-$pagination-disabled-bg:            rgb(4, 7, 26) !default;
-$pagination-disabled-border-color:  $pagination-border-color !default;
+$pagination-disabled-color: white !default;
+$pagination-disabled-bg: rgb(4, 7, 26) !default;
+$pagination-disabled-border-color: $pagination-border-color !default;
 
-$pagination-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+$pagination-transition: color 0.15s ease-in-out,
+  background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out !default;
 
+$table-cell-padding-y: 1.4rem !default;
+$table-cell-padding-x: 1.4rem !default;
 
-$table-cell-padding-y:        1.4rem !default;
-$table-cell-padding-x:        1.4rem !default;
+$table-cell-vertical-align: middle !default;
 
-$table-cell-vertical-align:   middle !default;
+$table-cell-color: $x13 !default;
+$table-bg: transparent !default;
+$table-accent-bg: transparent !default;
 
-$table-cell-color:                 $x13 !default;
-$table-bg:                    transparent !default;
-$table-accent-bg:             transparent !default;
-
-$table-th-font-weight:         null !default;
-$table-th-background-color:    $x1 !default;
-$table-th-color:               white !default;
-
+$table-th-font-weight: null !default;
+$table-th-background-color: $x1 !default;
+$table-th-color: white !default;
 
 //general
 $general-space: 20px !default;

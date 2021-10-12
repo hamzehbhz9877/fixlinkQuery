@@ -1,6 +1,6 @@
-import { QueryKey, useQuery, UseQueryOptions } from "react-query";
-import React from "react";
-import { AxiosError } from "axios";
+import { QueryKey, useQuery, UseQueryOptions } from 'react-query';
+import React from 'react';
+import { AxiosError } from 'axios';
 
 interface Props {
   event: Function;
@@ -12,9 +12,9 @@ interface Option<T> {
   option: UseQueryOptions<T, AxiosError, T, QueryKey>;
 }
 
-const GenericQuery = <T extends { }>(
+const GenericQuery = <T extends {}>(
   { event, queryKey, loadingMessage }: Props,
-  option?: Option<T>["option"]
+  option?: Option<T>['option']
 ) => {
   const { isLoading, isError, data, error, ...restQuery } = useQuery<
     T,
@@ -26,17 +26,23 @@ const GenericQuery = <T extends { }>(
     queryFn: ({ queryKey }) => event(queryKey),
     ...option,
   });
-if(loadingMessage)
-{
-  if (isLoading) {
-    return { restQuery, loadingMessage: <div className="loadingMessage">{loadingMessage}</div> };
-  }
+  if (loadingMessage) {
+    if (isLoading) {
+      return {
+        restQuery,
+        loadingMessage: <div className="loadingMessage">{loadingMessage}</div>,
+      };
+    }
 
-  if (isError) {
-    return { restQuery, errorMessage: <div className="errorMessage">Error: {error?.message}</div> };
+    if (isError) {
+      return {
+        restQuery,
+        errorMessage: (
+          <div className="errorMessage">Error: {error?.message}</div>
+        ),
+      };
+    }
   }
-
-}
 
   return { restQuery, data };
 };

@@ -2,26 +2,29 @@
  * Basic typography style for copy text
  */
 
-html{
+html {
   font-size: 62.5%;
 }
 
 body {
   direction: $direction-base;
   text-align: $text-align-base;
-  font-family: $font-family-base,$font-family-sans-serif,$font-family-monospace !important;
+  font-family: $font-family-base, $font-family-sans-serif,
+    $font-family-monospace !important;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
   overflow-x: hidden;
-  background-color: $x2
+  background-color: $x2;
 }
 
-.form-control,.btn{
+.form-control,
+.btn {
   font-size: $font-size-base;
 }
 
-ul li, ol li {
+ul li,
+ol li {
   font-size: $font-size-base;
   font-weight: $font-weight-base;
 }
@@ -36,8 +39,12 @@ a {
   }
 }
 
-
-#{h1, h2, h3, h4, h5,h6} {
+#{h1,
+h2,
+h3,
+h4,
+h5,
+h6} {
   line-height: normal;
   color: $x6;
   margin-bottom: 1.3rem;
@@ -46,7 +53,7 @@ a {
 
 @each $name, $value in $heading {
   #{$name} {
-    font-size: $value
+    font-size: $value;
   }
 }
 
@@ -63,17 +70,20 @@ span {
 }
 
 small {
-  font-size: .833em
+  font-size: 0.833em;
 }
 
-em, i {
-  font-style: italic
+em,
+i {
+  font-style: italic;
 }
 
-strong, b {
-  font-weight: bold
+strong,
+b {
+  font-weight: bold;
 }
 
-code, pre {
+code,
+pre {
   font-family: $font-family-base !important;
 }

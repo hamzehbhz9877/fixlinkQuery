@@ -1,56 +1,55 @@
 interface generateLinkPost {
-    bigLink: string,
-    shortLink: string;
+  bigLink: string;
+  shortLink: string;
 }
 
 interface viewerLinkPost {
-    viewerLink: string
+  viewerLink: string;
 }
 
 interface pagination {
-    page: number,
-    search: string
+  page: number;
+  search: string;
 }
 
 interface contactUsPost {
-    email: string
-    fullName: string
-    subject: string
-    text: string
+  email: string;
+  fullName: string;
+  subject: string;
+  text: string;
 }
 
 interface userPost {
-    userName: string,
-    password: string
+  userName: string;
+  password: string;
 }
 
 interface registerPost {
-    firstName: string,
-    lastName: string,
-    email: string,
-    userName: string,
-    password: string,
-    rePassword: string
+  firstName: string;
+  lastName: string;
+  email: string;
+  userName: string;
+  password: string;
+  rePassword: string;
 }
 
 interface notificationPost {
-    title: string,
-    text: string,
-    id?: string
+  title: string;
+  text: string;
+  id?: string;
 }
 
 interface changePassword {
-    oldPassword: string,
-    newPassword: string,
-    confirmPassword: string
+  oldPassword: string;
+  newPassword: string;
+  confirmPassword: string;
 }
 
 interface forgetPassword {
-    email: string
+  email: string;
 }
 
 interface submitPassword {
-    newPassword: string,
-    confirmPassword: string,
+  newPassword: string;
+  confirmPassword: string;
 }
-

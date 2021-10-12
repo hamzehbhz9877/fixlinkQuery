@@ -9,8 +9,7 @@
   position: relative;
   display: grid;
   //extra small devices
-  @include media("xs-max")
-  {
+  @include media('xs-max') {
     padding: 0;
   }
 
@@ -20,7 +19,7 @@
     flex-wrap: wrap;
     align-items: center;
     //extra small devices
-    @include media("xs-max"){
+    @include media('xs-max') {
       flex-direction: column;
       justify-content: space-evenly;
     }
@@ -31,7 +30,7 @@
     right: 0;
     top: 45%;
     //extra small devices
-    @include media("xs-max") {
+    @include media('xs-max') {
       display: none;
     }
   }
@@ -56,6 +55,3 @@
     white-space: nowrap;
   }
 }
-
-
-

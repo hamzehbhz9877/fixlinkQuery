@@ -1,11 +1,11 @@
-@import "../../abstracts","../../base/helpers";
+@import '../../abstracts', '../../base/helpers';
 
 .register {
   max-width: 75rem;
-  & .custom-btn{
+  & .custom-btn {
     width: 320px;
   }
-  @include element("have-account"){
+  @include element('have-account') {
     margin-top: 1rem;
     color: $x4;
   }

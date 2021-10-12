@@ -1,4 +1,4 @@
-@import "../abstracts/index";
+@import '../abstracts/index';
 
 .action .profile {
   position: relative;
@@ -6,19 +6,17 @@
   display: flex;
   align-items: center;
 }
-.profile .welcome{
-
+.profile .welcome {
   //small devices
 
-  @include media("sm-max")
-  {
+  @include media('sm-max') {
     display: none;
   }
 }
 
 .action .angle {
   color: white;
-  transition: .2s;
+  transition: 0.2s;
   margin-right: 10px;
   &.rotate {
     transform: rotate(180deg);
@@ -31,8 +29,8 @@
   left: 30px;
   padding: 10px 15px;
   background-color: $dropdown-menu-background;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
-  transition: .2s;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
   border-radius: 5px;
   visibility: hidden;
   opacity: 0;
@@ -45,7 +43,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: -3px;
     left: 28px;
@@ -54,7 +52,7 @@
     background-color: $dropdown-menu-caret-background;
     transform: rotate(45deg);
   }
-  & ul a:hover{
+  & ul a:hover {
     color: $dropdown-menu-list--hover;
   }
 
@@ -66,7 +64,7 @@
     & a {
       display: inline-block;
       color: $dropdown-menu-list-color;
-      transition: .2s;
+      transition: 0.2s;
       padding: 15px 10px;
     }
 

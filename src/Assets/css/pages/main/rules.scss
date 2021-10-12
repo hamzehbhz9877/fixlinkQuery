@@ -1,11 +1,10 @@
-@import "../../abstracts","../../base/helpers";
-
+@import '../../abstracts', '../../base/helpers';
 
 .rules {
-  @include element("title"){
+  @include element('title') {
     color: $x6;
   }
-  & p{
-    @extend %justify-text
+  & p {
+    @extend %justify-text;
   }
 }
