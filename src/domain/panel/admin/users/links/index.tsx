@@ -27,7 +27,7 @@ const UserLinks = () => {
   const pages = MakePagination(rest.currentPage, data?.pages, rest.goTo);
   const { isModalOpen, handleClose, handleOpen, modalData } = useModal();
 
-  console.log(data);
+
 
   return (
     <>

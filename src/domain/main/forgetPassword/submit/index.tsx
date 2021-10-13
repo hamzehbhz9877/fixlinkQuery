@@ -5,14 +5,15 @@ import { initialValues, validationSchema } from './validation';
 import { useMutationQuery } from 'hooks/useMutationQuery';
 import { submitForgetPassword } from 'Services/shortlink';
 import 'Assets/css/pages/main/submitPassword.css';
+import Loading from "Components/loading";
 
 const SubmitForgetPassword = () => {
   const history = useHistory();
 
   const { token }: { token: string } = useParams();
 
-  const submit = useMutationQuery<null, submitPassword & { token: string }>(
-    submitForgetPassword
+  const {restQuery,loadingMessage} = useMutationQuery<null, submitPassword & { token: string }>(
+    submitForgetPassword,<Loading/>
   );
 
   const handleSubmit = async (
@@ -20,7 +21,7 @@ const SubmitForgetPassword = () => {
     actions: FormikHelpers<submitPassword>
   ) => {
     actions.resetForm();
-    submit.restQuery.mutate(
+    restQuery.mutate(
       { ...values, token },
       {
         onSuccess: () => {
@@ -51,8 +52,8 @@ const SubmitForgetPassword = () => {
                   label="تکرار رمز عبور"
                 />
                 <div className="text-center">
-                  <button type="submit" className="btn custom-btn">
-                    ورود
+                  <button type="submit" className="btn custom-btn" disabled={!!loadingMessage}>
+                    {loadingMessage??<span>ورود</span>}
                   </button>
                 </div>
               </Form>

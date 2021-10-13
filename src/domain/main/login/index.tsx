@@ -5,11 +5,10 @@ import { initialValues, validationSchema } from './validation';
 import useAuth from 'Context/authentication/useAuth';
 import { useHistory } from 'react-router';
 import Cookie from 'universal-cookie';
-import { AxiosResponse } from 'axios';
 import 'Assets/css/pages/main/login.css';
 
 const Login = () => {
-  const { login } = useAuth();
+  const { login:{loadingMessage,restQuery} } = useAuth();
   const history = useHistory();
   const cookie = new Cookie();
 
@@ -18,11 +17,9 @@ const Login = () => {
     actions: FormikHelpers<userPost>
   ) => {
     actions.resetForm();
-    login.restQuery.mutate(values, {
+    restQuery.mutate(values, {
       onSuccess: (data: any) => {
-        console.log('success');
         if (data) {
-          console.log(data);
           const expire = new Date(
             data.expires_in * 1000 + new Date().getTime()
           );
@@ -33,9 +30,7 @@ const Login = () => {
           history.replace('/');
         }
       },
-      onError: (e: AxiosResponse) => {
-        console.log('error', e);
-      },
+      onError: () => {},
     });
   };
 
@@ -55,8 +50,8 @@ const Login = () => {
               <Input name="userName" type="text" label="نام کاربری یا ایمیل" />
               <Input name="password" type="password" label="رمز عبور" />
               <div className="text-center">
-                <button type="submit" className="btn custom-btn">
-                  ورود
+                <button type="submit" className="btn custom-btn" disabled={!!loadingMessage}>
+                  {loadingMessage?? <span>ورود</span>}
                 </button>
               </div>
             </Form>

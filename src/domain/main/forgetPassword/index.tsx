@@ -1,20 +1,20 @@
-import React from 'react';
 import { Form, Formik, FormikHelpers } from 'formik';
 import { useMutationQuery } from 'hooks/useMutationQuery';
 import { validationSchema, initialValues } from './validation';
 import Input from 'Components/input/input';
 import { forgetPassword } from 'Services/shortlink';
 import 'Assets/css/pages/main/forgetPassword.css';
+import Loading from "Components/loading";
 
 const ForgetPassword = () => {
-  const forget = useMutationQuery<null, forgetPassword>(forgetPassword);
+  const {restQuery,loadingMessage} = useMutationQuery<null, forgetPassword>(forgetPassword,<Loading/>);
 
   const handleSubmit = async (
     values: forgetPassword,
     actions: FormikHelpers<forgetPassword>
   ) => {
     actions.resetForm();
-    forget.restQuery.mutate(values);
+    restQuery.mutate(values);
   };
 
   return (
@@ -33,8 +33,8 @@ const ForgetPassword = () => {
               <Form>
                 <Input name="email" type="email" label="ایمیل" />
                 <div className="text-center">
-                  <button type="submit" className="btn custom-btn">
-                    تایید
+                  <button type="submit" className="btn custom-btn" disabled={!!loadingMessage}>
+                    {loadingMessage??<span>تایید</span>}
                   </button>
                 </div>
               </Form>

@@ -9,7 +9,7 @@ interface Option<T, U> {
 
 export const useMutationQuery = <T, U>(
   event: any,
-  loadingMessage?: string,
+  loadingMessage?: any,
   options?: Option<T, U>['option']
 ) => {
   const alert = useAlert();

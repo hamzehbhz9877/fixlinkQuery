@@ -16,6 +16,7 @@ function App() {
 
   const baseName = baseUrl.getAttribute('href') as string;
 
+
   return (
     <Router basename={baseName}>
       <AlertWrapper>

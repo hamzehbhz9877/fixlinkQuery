@@ -1,4 +1,3 @@
-import React from 'react';
 import { Form, Formik, FormikHelpers } from 'formik';
 import TextArea from 'Components/input/textArea';
 import Input from 'Components/input/input';
@@ -7,17 +6,18 @@ import { useMutationQuery } from 'hooks/useMutationQuery';
 import { contactUs } from 'Services/shortlink';
 import { useHistory } from 'react-router';
 import 'Assets/css/pages/main/contactUs.css';
+import Loading from "Components/loading";
 
 const ContactUs = () => {
   const history = useHistory();
-  const contact = useMutationQuery<null, contactUsPost>(contactUs);
+  const {loadingMessage,restQuery} = useMutationQuery<null, contactUsPost>(contactUs,<Loading/>);
 
   const handleSubmit = async (
     values: contactUsPost,
     actions: FormikHelpers<contactUsPost>
   ) => {
     actions.resetForm();
-    contact.restQuery.mutate(values, {
+    restQuery.mutate(values, {
       onSuccess: () => {
         history.push('/');
       },
@@ -54,8 +54,8 @@ const ContactUs = () => {
               <Input name="subject" type="text" label="موضوع" />
               <TextArea name="text" type="text" label="توضیحات" />
               <div className="text-center">
-                <button type="submit" className="btn custom-btn">
-                  ثبت
+                <button type="submit" className="btn custom-btn" disabled={!!loadingMessage}>
+                  {loadingMessage??<span>ثبت</span>}
                 </button>
               </div>
             </Form>

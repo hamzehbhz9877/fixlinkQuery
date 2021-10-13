@@ -5,16 +5,17 @@ import { Form, Formik, FormikHelpers } from 'formik';
 import 'Assets/css/pages/main/register.css';
 import { useMutationQuery } from 'hooks/useMutationQuery';
 import { register } from 'Services/shortlink';
+import Loading from "Components/loading";
 
 const Register = () => {
-  const registerUser = useMutationQuery<null, registerPost>(register);
+  const {restQuery,loadingMessage} = useMutationQuery<null, registerPost>(register,<Loading/>);
 
   const handleSubmit = async (
     values: registerPost,
     actions: FormikHelpers<registerPost>
   ) => {
     actions.resetForm();
-    registerUser.restQuery.mutate(values);
+   restQuery.mutate(values);
   };
 
   return (
@@ -73,8 +74,8 @@ const Register = () => {
                 />
               </div>
               <div className="text-center">
-                <button type="submit" className="btn custom-btn">
-                  ثبت نام
+                <button type="submit" className="btn custom-btn" disabled={!!loadingMessage}>
+                  {loadingMessage??<span>ثبت نام</span>}
                 </button>
               </div>
             </Form>

@@ -74,7 +74,7 @@ const ContactUsPanel = () => {
                       )
                     }
                   >
-                    <FaEye />
+                    <FaEye className="fa-eye"/>
                   </button>
                 </td>
                 <td>

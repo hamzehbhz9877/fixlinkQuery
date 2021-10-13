@@ -1,10 +1,9 @@
-import React from 'react';
 import { useMutation, UseMutationOptions } from 'react-query';
 import { AxiosError } from 'axios';
 
 interface Props {
   event: any;
-  loadingMessage?: string;
+  loadingMessage?: any;
 }
 
 interface Option<T, U> {

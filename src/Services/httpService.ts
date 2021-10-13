@@ -13,6 +13,7 @@ export const Intercept = () => {
       const cookies = new Cookie();
       const token = cookies.get('token');
 
+
       config.headers = {
         Accept: 'application/json',
       };

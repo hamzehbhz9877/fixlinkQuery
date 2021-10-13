@@ -51,8 +51,8 @@ const QrCode = () => {
                 <span>
                   <img
                     src={'data:image/png;base64,' + qr}
-                    width="50px"
-                    height="50px"
+                    width="40px"
+                    height="40px"
                     alt=""
                   />
                 </span>

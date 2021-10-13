@@ -5,20 +5,21 @@ import { getLinkVisit } from 'Services/shortlink';
 import 'Assets/css/pages/main/viewerStatistics.css';
 import { useEffect, useRef, useState } from 'react';
 import { useGetQuery } from 'hooks/useGetQuery';
+import Loading from "Components/loading";
 
 const ViewerStatistics = () => {
   const ref = useRef<boolean>(false);
 
   const [value, setValue] = useState<string>('');
-  const linkVisit = useGetQuery<getLinkVisit>(
+  const {restQuery,data,loadingMessage} = useGetQuery<getLinkVisit>(
     getLinkVisit,
-    { queryKey: ['viewerStatistics', value] },
+    { queryKey: ['viewerStatistics', value],loadingMessage:<Loading/> },
     value,
     { enabled: false }
   );
 
   useEffect(() => {
-    if (ref.current) linkVisit.restQuery.refetch();
+    if (ref.current) restQuery.refetch();
   }, [value]);
 
   const handleSubmit = async (
@@ -41,7 +42,7 @@ const ViewerStatistics = () => {
         >
           {() => (
             <Form>
-              <WInout
+              <WInout loadingMessage={loadingMessage}
                 name="viewerLink"
                 type="url"
                 label={'نمایش'}
@@ -53,12 +54,12 @@ const ViewerStatistics = () => {
       </div>
       <div className="card-list">
         {[
-          { key: 'تعداد بازدید', value: linkVisit.data?.countVisit },
-          { key: 'بازدید امروز', value: linkVisit.data?.visitToday },
-          { key: 'بازدید این هفته', value: linkVisit.data?.visitThisWeek },
-          { key: 'بازدید این ماه', value: linkVisit.data?.visitThisMonth },
-          { key: 'تاریخ ساخت لینک', value: linkVisit.data?.createAt },
-          { key: 'تاریخ آخرین بازدید', value: linkVisit.data?.lastDateVisit },
+          { key: 'تعداد بازدید', value: data?.countVisit },
+          { key: 'بازدید امروز', value: data?.visitToday },
+          { key: 'بازدید این هفته', value: data?.visitThisWeek },
+          { key: 'بازدید این ماه', value: data?.visitThisMonth },
+          { key: 'تاریخ ساخت لینک', value: data?.createAt },
+          { key: 'تاریخ آخرین بازدید', value: data?.lastDateVisit },
         ].map(({ value, key }, index) => {
           return (
             <div className="card statistics" key={index}>
@@ -66,7 +67,7 @@ const ViewerStatistics = () => {
                 <div>
                   <h6 className="card-title">{key}</h6>
                   <p className="card-text text-center">
-                    {!linkVisit.data ? '...' : value !== null ? value : '...'}
+                    {!data ? '...' : value !== null ? value : '...'}
                   </p>
                 </div>
               </div>

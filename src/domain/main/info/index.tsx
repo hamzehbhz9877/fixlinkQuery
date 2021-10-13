@@ -8,13 +8,12 @@ import { useHistory } from 'react-router';
 import { useMutationQuery } from 'hooks/useMutationQuery';
 import { generateLink } from 'Services/shortlink';
 import { FaAngleDoubleDown } from 'react-icons/fa';
+import Loading from "Components/loading";
 
 const Main = () => {
   const history = useHistory();
 
-  const { restQuery } = useMutationQuery<generatorLink, generateLinkPost>(
-    generateLink
-  );
+  const { restQuery,loadingMessage } = useMutationQuery<generatorLink, generateLinkPost>(generateLink,<Loading/>);
 
   const [show, setShow] = useState(false);
 
@@ -45,7 +44,7 @@ const Main = () => {
         >
           {() => (
             <Form>
-              <WInput
+              <WInput loadingMessage={loadingMessage}
                 name="bigLink"
                 type="url"
                 label={'کوتاه کن'}

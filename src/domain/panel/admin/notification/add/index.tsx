@@ -25,7 +25,7 @@ const AddNotificationsList: FC<Props> = ({ close, search }) => {
     notificationPost
   >(createNotification, '', {
     onError: () => {
-      console.log('error');
+
     },
   });
 

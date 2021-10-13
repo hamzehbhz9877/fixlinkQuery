@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react';
+import { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react';
 import { ErrorMessage, useField } from 'formik';
 
 type propsType = DetailedHTMLProps<
@@ -10,9 +10,10 @@ interface Props extends propsType {
   name: string;
   label: string;
   classes?: string;
+  loadingMessage?:any
 }
 
-const WInput: FC<Props> = ({ label, ...props }) => {
+const WInput: FC<Props> = ({ label,loadingMessage, ...props }) => {
   const [field, meta] = useField(props);
   const error = meta.error && meta.touched;
   const success = !meta.error && meta.touched;
@@ -26,8 +27,8 @@ const WInput: FC<Props> = ({ label, ...props }) => {
           placeholder={props.placeholder}
         />
         <div className="input-group-prepend pl-2">
-          <button type="submit" className="btn custom-btn">
-            {label}
+          <button type="submit" className="btn custom-btn" disabled={!!loadingMessage}>
+            {loadingMessage ?? <span>{label}</span>}
           </button>
         </div>
         <ErrorMessage

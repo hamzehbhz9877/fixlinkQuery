@@ -1,8 +1,9 @@
-import React, { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import Cookie from 'universal-cookie';
 import { useHistory } from 'react-router';
 import { useMutationQuery } from 'hooks/useMutationQuery';
 import { signIn } from 'Services/shortlink';
+import Loading from "Components/loading";
 
 export const AuthProvider = createContext({} as any);
 
@@ -15,7 +16,7 @@ const Auth = (props: any) => {
 
   const cookie = new Cookie();
 
-  const login = useMutationQuery<login, userPost>(signIn);
+  const login = useMutationQuery<login, userPost>(signIn,<Loading/>);
 
   const {
     location: { pathname },

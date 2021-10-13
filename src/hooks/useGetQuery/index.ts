@@ -9,7 +9,7 @@ interface Option<T> {
 interface Event<T> {
   queryKey: string | unknown[];
   queryFn?: (context: QueryFunctionContext) => Promise<T>;
-  loadingMessage?: string;
+  loadingMessage?: any;
 }
 
 export const useGetQuery = <T>(
@@ -27,7 +27,7 @@ export const useGetQuery = <T>(
         if (data.isSuccess) {
           return data.data;
         } else {
-          console.log(data);
+          console.log(data)
           alert.addAlert({
             showProgress: true,
             message:

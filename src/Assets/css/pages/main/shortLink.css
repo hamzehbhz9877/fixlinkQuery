@@ -49,6 +49,9 @@
 .short-link__alert-warning {
   color: #ead727;
 }
+.short-link__alert-day {
+  color: #19b5fe;
+}
 
 .short-link__go-back-btn {
   position: absolute;

@@ -45,6 +45,9 @@
     &-warning {
       color: $x11;
     }
+    &-day{
+      color: $x1;
+    }
   }
 
   @include element('go-back-btn') {

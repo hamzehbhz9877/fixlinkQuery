@@ -1,11 +1,10 @@
 import { QueryKey, useQuery, UseQueryOptions } from 'react-query';
-import React from 'react';
 import { AxiosError } from 'axios';
 
 interface Props {
   event: Function;
   queryKey: QueryKey;
-  loadingMessage?: string;
+  loadingMessage?: any;
 }
 
 interface Option<T> {

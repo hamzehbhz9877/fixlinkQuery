@@ -17,7 +17,7 @@ const PanelHeader: FC<Props> = ({ open }) => {
         <FaBars />
       </div>
       <div className="panel-logo">
-        <NavLink to="/" className="nav-link" exact>
+        <NavLink to="/" exact>
           <img src={logo} alt="logo" />
         </NavLink>
       </div>

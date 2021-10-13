@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import successLink from 'Assets/images/successLink.svg';
 import useCopyToClipboard from 'hooks/useCopyToClipboard';
@@ -76,23 +76,23 @@ const ShortLink = () => {
       </div>
       <div className="card short-link__alert text-center">
         <p>
-          <span className="text-warning">
+          <span className="short-link__alert-warning">
             <FaExclamationTriangle />
           </span>
           &nbsp;
-          <span className="warning-text">توجه:</span>
+          <span className="short-link__alert-warning">توجه:</span>
           &nbsp;
           {!user ? (
             <>
               مدت فعال بودن لینک شما{' '}
-              <span style={{ color: '#19B5FE' }}>10</span> روز است برای ساختن{' '}
+              <span className="short-link__alert-day">10</span> روز است برای ساختن{' '}
               <span className="short-link__alert-warning">لینک نامحدود</span>
               &nbsp;
               <NavLink to={'/user/register'}>ثبت نام</NavLink>
               &nbsp; کنید
             </>
           ) : (
-            <>مدت فعال بودن لینک های شما دائمی میباشد</>
+            <>مدت فعال بودن لینک های شما دائمی میباشد.</>
           )}
         </p>
       </div>
