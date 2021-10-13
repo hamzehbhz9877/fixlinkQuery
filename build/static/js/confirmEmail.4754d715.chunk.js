@@ -1,1 +1,0 @@
-(this["webpackJsonpfixlink-typescript"]=this["webpackJsonpfixlink-typescript"]||[]).push([[8],{462:function(t,e,n){"use strict";n.r(e);var c=n(8),i=n(49),s=n(48);e.default=function(){var t=Object(c.g)().token,e=Object(c.f)();return Object(i.a)(s.d).restQuery.mutate(t,{onSuccess:function(){e.replace("/user/login")}}),null}}}]);
