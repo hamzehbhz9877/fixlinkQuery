@@ -47,16 +47,16 @@
       padding: 0.7rem 1rem;
     }
     @include modifier('success') {
-      background-color: var(--success);
+      background-color: $tooltip-success;
     }
     @include modifier('error') {
-      background-color: var(--danger);
+      background-color: $tooltip-error;
     }
     @include modifier('info') {
-      background-color: var(--info);
+      background-color: $tooltip-info;
     }
     @include modifier('warning') {
-      background-color: var(--warning);
+      background-color: $tooltip-warning;
     }
   }
 }

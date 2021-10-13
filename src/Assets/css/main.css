@@ -1611,7 +1611,7 @@ table {
     width: 50%;
   }
 }
-@media (max-width: 470px) {
+@media (max-width: 400px) {
   .statistics {
     width: 100%;
   }
@@ -1752,19 +1752,19 @@ table {
   padding: 0.7rem 1rem;
 }
 .alert__wrapper--success {
-  background-color: var(--success);
+  background-color: #28A643;
 }
 
 .alert__wrapper--error {
-  background-color: var(--danger);
+  background-color: #DB3747;
 }
 
 .alert__wrapper--info {
-  background-color: var(--info);
+  background-color: #18A2B8;
 }
 
 .alert__wrapper--warning {
-  background-color: var(--warning);
+  background-color: #FFC108;
 }
 
 @keyframes animate {

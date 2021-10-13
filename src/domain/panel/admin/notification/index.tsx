@@ -12,6 +12,7 @@ import usePagination from 'hooks/usePagination';
 import { GetNotification } from 'domain/main/notification/services';
 import NoInformation from 'Components/noInfo';
 import { FaEdit, FaTrash } from 'react-icons/fa';
+import "./ckeditor/index.css"
 
 const Post = () => {
   const { searchValue, sendData } = useSearch();

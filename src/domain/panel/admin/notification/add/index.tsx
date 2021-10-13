@@ -10,7 +10,6 @@ import '@ckeditor/ckeditor5-build-classic/build/translations/fa.js';
 import { queryClient } from 'Store';
 import { FC } from 'react';
 import Ckeditor from 'Components/ckeditor';
-import '../ckeditor/index.css';
 import { createNotification } from 'Services/shortlink';
 import { useMutationQuery } from 'hooks/useMutationQuery';
 

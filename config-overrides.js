@@ -12,7 +12,7 @@ module.exports = function override(webpackConfig) {
       patterns: [
         {
           from: 'public/images/logo.ico',
-          to: 'static/media/[path][contenthash].[ext]',
+          to: 'static/media/[name].[contenthash].[ext]',
         },
       ],
     })

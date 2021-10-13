@@ -19,6 +19,7 @@ $x15: #e4e4e4;
 $x16: #00b063;
 $x17: #676767;
 
+
 $text-mute: #6c757d;
 
 $font-family-sans-serif: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
@@ -182,6 +183,10 @@ $tooltip-padding-y: $spacer * 0.25 !default;
 $tooltip-padding-x: $spacer * 0.5 !default;
 $tooltip-arrow: 0.8rem !default;
 $tooltip-arrow-color: $tooltip-bg !default;
+$tooltip-success:#28A643;
+$tooltip-error:#DB3747;
+$tooltip-info:#18A2B8;
+$tooltip-warning:#FFC108;
 
 //pagination
 $pagination-padding-y: 0.8rem !default;
@@ -212,6 +217,7 @@ $table-accent-bg: transparent !default;
 $table-th-font-weight: null !default;
 $table-th-background-color: $x1 !default;
 $table-th-color: white !default;
+
 
 //general
 $general-space: 20px !default;
