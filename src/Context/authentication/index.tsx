@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'preact/compat';
 import Cookie from 'universal-cookie';
 import { useHistory } from 'react-router';
 import { useMutationQuery } from 'hooks/useMutationQuery';

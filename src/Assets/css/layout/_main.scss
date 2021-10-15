@@ -1,6 +1,6 @@
 .main_bg:before {
   content: ' ';
-  background: image('fixLink.svg') no-repeat center center;
+  background:image("fixLink.svg") no-repeat center center;
   z-index: -1;
   will-change: transform;
   inset: 0;

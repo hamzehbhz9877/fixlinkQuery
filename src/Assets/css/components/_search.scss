@@ -42,7 +42,7 @@
     z-index: 10;
     @extend %center-vertically;
 
-    & i {
+    & svg {
       font-size: 20px;
       color: red !important;
     }

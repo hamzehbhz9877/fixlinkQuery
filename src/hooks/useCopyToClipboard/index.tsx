@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState } from 'preact/compat';
 
 const useCopyToClipboard = () => {
   const copyToClipboard = (str: string) => {
@@ -22,7 +22,7 @@ const useCopyToClipboard = () => {
 
   const [text, setText] = useState('');
 
-  const copy = useCallback((data) => {
+  const copy = useCallback((data:any) => {
     copyToClipboard(data);
     setText(data);
   }, []);

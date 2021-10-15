@@ -46,6 +46,20 @@ button:hover {
   color: inherit !important;
 }
 
+.input-group-prepend > * {
+  border-radius: 0 !important;
+  height: 100%;
+  margin-right: .5rem;
+}
+
+.input-group-prepend button {
+  border-radius: .3rem 0 0 .3rem !important;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -99,7 +113,7 @@ q:after {
 
 input.success,
 textarea.success {
-  border-color: var(--success);
+  border-color: var(--bs-green);
 }
 
 tr td,
@@ -109,7 +123,7 @@ tr th {
 
 input.error,
 textarea.error {
-  border-color: var(--danger);
+  border-color: var(--bs-red);
 }
 
 textarea {

@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'preact/compat';
 import {alert} from 'Context/alert';
 
 const Alert = ({
@@ -9,7 +9,7 @@ const Alert = ({
   timeout,
   showProgress,
 }: alert & {
-  remove: (id: number) => void;
+  remove: (id: string) => void;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -32,7 +32,7 @@ const Alert = ({
 
   const handleRemoveAlertFocusEnd = () => {
     alert.current = setTimeout(() => {
-      remove(parseInt(id));
+      remove(id);
     }, animationDuration.current * 100);
   };
 

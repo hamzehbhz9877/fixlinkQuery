@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'preact/compat';
 import { NavLink } from 'react-router-dom';
 import successLink from 'Assets/images/successLink.svg';
 import useCopyToClipboard from 'hooks/useCopyToClipboard';
@@ -89,7 +89,7 @@ const ShortLink = () => {
               <span className="short-link__alert-warning">لینک نامحدود</span>
               &nbsp;
               <NavLink to={'/user/register'}>ثبت نام</NavLink>
-              &nbsp; کنید
+              &nbsp; کنید.
             </>
           ) : (
             <>مدت فعال بودن لینک های شما دائمی میباشد.</>

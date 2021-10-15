@@ -23,9 +23,7 @@ const AddNotificationsList: FC<Props> = ({ close, search }) => {
     notifications['notifications'][0],
     notificationPost
   >(createNotification, '', {
-    onError: () => {
-
-    },
+    onError: () => {},
   });
 
   const handleSubmit = async (
@@ -65,7 +63,7 @@ const AddNotificationsList: FC<Props> = ({ close, search }) => {
               <Input label="عنوان" name="title" type="text" onBlur={touched} />
               <Ckeditor
                 options={{
-                  onChange: (event: any, editor: any) =>
+                  onChange: (_: any, editor: any) =>
                     props.setFieldValue('text', editor.getData()),
                   data: props.values.text,
                   onBlur: () => touched(),
@@ -73,6 +71,7 @@ const AddNotificationsList: FC<Props> = ({ close, search }) => {
                 type={ClassicEditor}
                 config={editorConfig}
               />
+              <div />
               <ErrorMessage
                 name="text"
                 className="form--ckeditor-error"

@@ -28,9 +28,9 @@ $font-family-sans-serif: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
 $font-family-monospace: 'Courier New', 'DejaVu Sans Mono',
   'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
-$font-family-base: 'BYekan' !default;
+$font-family-base: 'irYekan' !default;
 
-$font-size-base: 1.6rem !default;
+$font-size-base: 1.4rem !default;
 $font-size-sm: $font-size-base * 0.875 !default;
 
 $font-weight-lighter: lighter !default;
@@ -183,16 +183,17 @@ $tooltip-padding-y: $spacer * 0.25 !default;
 $tooltip-padding-x: $spacer * 0.5 !default;
 $tooltip-arrow: 0.8rem !default;
 $tooltip-arrow-color: $tooltip-bg !default;
-$tooltip-success:#28A643;
-$tooltip-error:#DB3747;
-$tooltip-info:#18A2B8;
-$tooltip-warning:#FFC108;
+$tooltip-success:var(--bs-green);
+$tooltip-error:var(--bs-red);
+$tooltip-info:var(--bs-info);
+$tooltip-warning:var(--bs-yellow);
 
 //pagination
-$pagination-padding-y: 0.8rem !default;
-$pagination-padding-x: 1.1rem !default;
+$pagination-padding-y: .7rem !default;
+$pagination-padding-x: 1.3rem !default;
 
-$pagination-color: $x4 !default;
+$pagination-color: white !default;
+$pagination-color-active: $x1 !default;
 $pagination-bg: inherit !default;
 $pagination-border-width: $border-width !default;
 $pagination-border-color: rgba(155, 155, 155, 0.2) !default;

@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState } from 'preact/compat';
 
 const usePagination = () => {
   const [currentPage, setCurrentPage] = useState<any>(1);

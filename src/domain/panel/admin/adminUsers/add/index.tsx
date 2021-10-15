@@ -40,7 +40,7 @@ const AddAminUser: FC<Props> = ({ close }) => {
       >
         {() => (
           <Form>
-            <div className="form-row">
+            <div className="row">
               <Input
                 name="firstName"
                 classes="col-md-6"
@@ -54,7 +54,7 @@ const AddAminUser: FC<Props> = ({ close }) => {
                 label="نام خانوادگی"
               />
             </div>
-            <div className="form-row">
+            <div className="row">
               <Input
                 name="userName"
                 classes="col-md-6"
@@ -68,7 +68,7 @@ const AddAminUser: FC<Props> = ({ close }) => {
                 label="ایمیل"
               />
             </div>
-            <div className="form-row">
+            <div className="row">
               <Input
                 name="password"
                 classes="col-md-6"

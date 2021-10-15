@@ -1,5 +1,6 @@
 .custom-btn {
   border-radius: 2.7rem;
+  padding: .5rem;
   background-color: $x1;
   @include on-event(true) {
     color: white !important;

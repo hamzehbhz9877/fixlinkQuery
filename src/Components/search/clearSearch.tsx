@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import {FaTimes} from "react-icons/fa";
 
 interface Props {
   clearSearch: (data: string) => void;
@@ -13,7 +14,7 @@ const ClearSearch: FC<Props> = ({ clearSearch, reset }) => {
 
   return (
     <span className="search__close-filter-btn" onClick={handleClear}>
-      <i className="fas fa-times" />
+      <FaTimes className="fa-times"/>
     </span>
   );
 };

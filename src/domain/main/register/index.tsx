@@ -31,7 +31,7 @@ const Register = () => {
         >
           {() => (
             <Form>
-              <div className="form-row">
+              <div className="row">
                 <Input
                   name="firstName"
                   classes="col-md-6"
@@ -45,7 +45,7 @@ const Register = () => {
                   label="نام خانوادگی"
                 />
               </div>
-              <div className="form-row">
+              <div className="row">
                 <Input
                   name="userName"
                   classes="col-md-6"
@@ -59,7 +59,7 @@ const Register = () => {
                   label="ایمیل"
                 />
               </div>
-              <div className="form-row">
+              <div className="row">
                 <Input
                   name="password"
                   classes="col-md-6"

@@ -38,10 +38,10 @@ const QrCode = () => {
           classes={'table__fixed'}
           cols={
             <colgroup>
-              <col width="10%" />
-              <col width="45%" />
-              <col width="25%" />
-              <col width="10%" />
+              <col width="100px" />
+              <col width="50%" />
+              <col width="270px" />
+              <col width="100px" />
             </colgroup>
           }
         >
@@ -51,9 +51,8 @@ const QrCode = () => {
                 <span>
                   <img
                     src={'data:image/png;base64,' + qr}
-                    width="40px"
-                    height="40px"
-                    alt=""
+                    alt="qrcode"
+                    style={{width:"40px"}}
                   />
                 </span>
               </td>

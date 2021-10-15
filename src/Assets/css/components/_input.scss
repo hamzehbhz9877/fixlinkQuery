@@ -1,10 +1,10 @@
 %input-label {
-  top: -1.2rem;
+  top: 0;
   right: 0.7rem;
   z-index: 1;
   font-weight: 500;
   border-radius: 4px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   overflow: hidden;
   white-space: nowrap;
   width: auto;
@@ -20,13 +20,13 @@
 .form {
   @include element('error') {
     position: absolute;
-    color: var(--danger);
+    color: var(--bs-red);
     font-size: 14px;
     top: 100%;
   }
   @include modifier('ckeditor-error') {
-    color: var(--danger);
-    font-size: 14px;
+    color: var(--bs-red);
+    font-size: 1.4rem;
   }
 
   &-group {
@@ -86,7 +86,7 @@
   @include element('label') {
     position: absolute;
     right: 1rem;
-    top: 1rem;
+    @extend %center-vertically;
     padding: 0 0.7rem;
     background-color: $x7;
     color: $x6;
@@ -98,6 +98,7 @@
   height: 48px !important;
   background-color: $x7 !important;
   color: white;
-  padding-right: 2rem !important;
   font-size: $font-size-base;
+  width: 100%;
+  border: 1px solid $x4;
 }

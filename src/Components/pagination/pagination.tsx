@@ -21,7 +21,7 @@ const Pagination: FC<Props> = ({
     <li
       key={index}
       id={index.toString()}
-      className={`pagination__item ${currentPage === item ? 'custom-btn' : ''}`}
+      className={`pagination__item ${currentPage === item ? 'pagination__item--active' : ''}`}
       onClick={() => goTo(item)}
     >
       <span className="pagination__link">{item}</span>

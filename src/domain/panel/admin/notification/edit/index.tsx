@@ -62,7 +62,7 @@ const EditNotificationList: FC<Props> = ({
               <Input label="عنوان" name="title" type="text" onBlur={touched} />
               <Ckeditor
                 options={{
-                  onChange: (event: any, editor: any) =>
+                  onChange: (_: any, editor: any) =>
                     props.setFieldValue('text', editor.getData()),
                   data: props.values.text,
                   onBlur: () => touched(),
@@ -70,12 +70,13 @@ const EditNotificationList: FC<Props> = ({
                 type={ClassicEditor}
                 config={editorConfig}
               />
-              <ErrorMessage
-                name="text"
-                className="form--ckeditor-error"
-                component="div"
-              />
-              <br />
+                <span />
+                <ErrorMessage
+                    name="text"
+                    className="form--ckeditor-error"
+                    component="div"
+                />
+                <br />
               <button className="btn custom-mutate-button" type="submit">
                 تایید
               </button>

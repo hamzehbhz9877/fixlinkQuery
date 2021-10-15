@@ -14,7 +14,7 @@ const Table: FC<Props> = ({ children, cols, tableHeadingItem, classes }) => {
   return (
     <div className="table-overflow">
       <table
-        className={`table table-striped table-bordered ${
+        className={`table  table-bordered ${
           classes ? classes : ''
         }`}
         width="100%"

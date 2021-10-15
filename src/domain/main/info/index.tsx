@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'preact/compat';
 import { Field, FieldMetaProps, Form, Formik, FormikHelpers } from 'formik';
 import Statistics from 'domain/main/info/statistics';
 import WInput from 'Components/input/cuInput';

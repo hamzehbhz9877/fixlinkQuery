@@ -3,7 +3,7 @@ import WInout from 'Components/input/cuInput';
 import { validationSchema, initialValues } from './validation';
 import { getLinkVisit } from 'Services/shortlink';
 import 'Assets/css/pages/main/viewerStatistics.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'preact/compat';
 import { useGetQuery } from 'hooks/useGetQuery';
 import Loading from "Components/loading";
 

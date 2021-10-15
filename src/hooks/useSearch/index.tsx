@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'preact/compat';
 
 const useSearch = () => {
   const [searchValue, setSearchValue] = useState<string>('');

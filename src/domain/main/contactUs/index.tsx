@@ -37,7 +37,7 @@ const ContactUs = () => {
         >
           {() => (
             <Form>
-              <div className="form-row">
+              <div className="row">
                 <Input
                   name="fullName"
                   classes={'col-md-6'}

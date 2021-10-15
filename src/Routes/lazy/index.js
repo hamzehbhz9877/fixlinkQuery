@@ -90,7 +90,7 @@ export const viewerStatistics = Loadable(
   { fallback: <AsyncLoading /> }
 );
 
-export const main = Loadable(
+export const home = Loadable(
   () => import(/* webpackChunkName:"home" */ 'domain/main/info'),
   { fallback: <AsyncLoading /> }
 );

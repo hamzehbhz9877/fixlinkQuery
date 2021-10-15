@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'preact/compat';
 import { useGetQuery } from 'hooks/useGetQuery';
 import {
   getDailyData,

@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState } from 'preact/compat';
 import { v4 } from 'uuid';
 
 export const AlertProvider = createContext({} as any);
@@ -19,6 +19,7 @@ const AlertWrapper = (props: any) => {
   };
 
   const removeAlert = (id: alert['id']) => {
+    console.log(id)
     setAlert((state) => state.filter((el) => el.id !== id));
   };
 

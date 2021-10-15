@@ -1,4 +1,5 @@
-import { FC, memo, MouseEventHandler } from 'react';
+import { FC, memo } from 'preact/compat';
+import {MouseEventHandler} from "react"
 import { NavLink } from 'react-router-dom';
 import Logo from 'Assets/images/logo.svg';
 import DropDownMenu from 'Layout/main/header/dropdown';

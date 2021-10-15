@@ -55,7 +55,7 @@ export const mainPath = [
     path: '/link/viewerStatistics',
   },
   {
-    component: AsyncComponent.main,
+    component: AsyncComponent.home,
     path: '/',
     exact: true,
   },

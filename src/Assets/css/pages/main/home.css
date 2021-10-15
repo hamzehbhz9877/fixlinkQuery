@@ -11,7 +11,7 @@
 }
 
 .home__title {
-  font-size: 2.4rem;
+  font-size: 2.1rem;
 }
 
 .home__custom-link {
@@ -20,7 +20,7 @@
 .home__custom-link-prepend {
   direction: ltr;
   background-color: #393939;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #969696;
   border: none;
 }
