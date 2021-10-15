@@ -1,0 +1,1 @@
+(this["webpackJsonpfixlink-typescript"]=this["webpackJsonpfixlink-typescript"]||[]).push([[15],{456:function(t,i,e){"use strict";e.r(i);var n=e(35);i.default=function(){return(0,Object(n.a)().reset)(),null}}}]);
