@@ -1359,7 +1359,7 @@ table {
 .custom-download-btn {
   position: relative;
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 1rem 1.5rem;
   background-color: #1f1f1f !important;
   border: 1px dashed #e4e4e4;
 }
