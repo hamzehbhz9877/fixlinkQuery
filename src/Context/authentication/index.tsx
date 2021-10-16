@@ -30,7 +30,7 @@ const Auth = (props: any) => {
     cookie.remove('Ro', { path: '/' });
     cookie.remove('user', { path: '/' });
     cookie.remove('token', { path: '/' });
-    history.replace('/user/login');
+    history.replace('/');
   };
 
   useEffect(() => {

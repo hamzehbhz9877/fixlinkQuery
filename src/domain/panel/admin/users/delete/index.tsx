@@ -18,15 +18,15 @@ const DeleteUserList: FC<Props> = ({
   currentPage,
   search,
 }) => {
-  const remove = useMutationQuery(deleteUsers);
+  const remove = useMutationQuery(deleteUsers,null,{
+    onSuccess: () => {
+      queryClient.invalidateQueries(['users', currentPage, search]);
+      close();
+    },
+  });
 
   const handleSubmit = () => {
-    remove.restQuery.mutate(id, {
-      onSuccess: () => {
-        queryClient.invalidateQueries(['users', currentPage, search]);
-        close();
-      },
-    });
+    remove.restQuery.mutate(id);
   };
 
   return (

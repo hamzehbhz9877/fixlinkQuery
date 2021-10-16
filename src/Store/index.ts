@@ -6,6 +6,12 @@ export const queryClient = new QueryClient({
       refetchOnWindowFocus: false,
       retry: true,
       retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
+      onSuccess: () => {},
+      onError: () => {},
+    },
+    mutations: {
+      onSuccess: () => {},
+      onError: () => {},
     },
   },
 });

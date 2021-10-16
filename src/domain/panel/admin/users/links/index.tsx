@@ -28,7 +28,6 @@ const UserLinks = () => {
   const { isModalOpen, handleClose, handleOpen, modalData } = useModal();
 
 
-
   return (
     <>
       <section>

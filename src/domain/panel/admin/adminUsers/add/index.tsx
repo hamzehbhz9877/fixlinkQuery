@@ -14,19 +14,19 @@ interface Props {
 }
 
 const AddAminUser: FC<Props> = ({ close }) => {
-  const register = useMutationQuery<adminUser, registerPost>(addNewAdminUser);
+  const register = useMutationQuery<adminUser, registerPost>(addNewAdminUser,null,{
+    onSuccess: () => {
+      queryClient.invalidateQueries('adminUser');
+      close();
+    },
+  });
 
   const handleSubmit = async (
     values: registerPost,
     actions: FormikHelpers<registerPost>
   ) => {
     actions.resetForm();
-    register.restQuery.mutate(values, {
-      onSuccess: () => {
-        queryClient.invalidateQueries('adminUser');
-        close();
-      },
-    });
+    register.restQuery.mutate(values);
     //register
   };
 

@@ -1,18 +1,19 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import Cookie from 'universal-cookie';
 
-var CancelToken = axios.CancelToken;
-export var axiosSource = CancelToken.source();
+export const CancelToken = () => {
+  let source = axios.CancelToken.source();
+  axios.defaults.cancelToken = source.token;
+  return source;
+};
 
 axios.defaults.baseURL = process.env.REACT_APP_PUBLICK_URL;
-axios.defaults.cancelToken = axiosSource.token;
 
 export const Intercept = () => {
   axios.interceptors.request.use(
     function (config: AxiosRequestConfig): AxiosRequestConfig {
       const cookies = new Cookie();
       const token = cookies.get('token');
-
 
       config.headers = {
         Accept: 'application/json',

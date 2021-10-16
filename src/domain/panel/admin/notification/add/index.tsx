@@ -24,6 +24,16 @@ const AddNotificationsList: FC<Props> = ({ close, search }) => {
     notificationPost
   >(createNotification, '', {
     onError: () => {},
+    onSuccess: (data: any) => {
+      queryClient.setQueryData<notifications>(
+        ['notifications', 1, search],
+        (old: any) => ({
+          ...old,
+          notifications: [...old.notifications, data],
+        })
+      );
+      close();
+    },
   });
 
   const handleSubmit = async (
@@ -31,18 +41,7 @@ const AddNotificationsList: FC<Props> = ({ close, search }) => {
     actions: FormikHelpers<notificationPost>
   ) => {
     actions.resetForm();
-    create.restQuery.mutate(values, {
-      onSuccess: (data: any) => {
-        queryClient.setQueryData<notifications>(
-          ['notifications', 1, search],
-          (old: any) => ({
-            ...old,
-            notifications: [...old.notifications, data],
-          })
-        );
-        close();
-      },
-    });
+    create.restQuery.mutate(values);
   };
 
   return (

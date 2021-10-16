@@ -11,14 +11,15 @@ interface Props {
 }
 
 const DeleteContactUs: FC<Props> = ({ subject, id, currentPage, close }) => {
-  const remove = useMutationQuery(deleteContactUs);
+  const remove = useMutationQuery(deleteContactUs,null,{
+    onSuccess: () => {
+      queryClient.invalidateQueries(['contactUs', currentPage, '']);
+      close();
+    },
+  });
+
   const handleSubmit = () => {
-    remove.restQuery.mutate(id, {
-      onSuccess: () => {
-        queryClient.invalidateQueries(['contactUs', currentPage, '']);
-        close();
-      },
-    });
+    remove.restQuery.mutate(id);
   };
 
   return (

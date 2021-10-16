@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import Backdrop from 'Layout/common/sideBar/backdrop';
 import { NavLink, useRouteMatch } from 'react-router-dom';
 import { getAllowedRoutes } from 'Routes/premissions/route';
-import { FaSignOutAlt, FaTimes } from 'react-icons/fa';
+import {FaSignOutAlt, FaTimes} from 'react-icons/fa';
 import { IconType } from 'react-icons';
+import Backdrop from "Layout/common/sideBar/backdrop";
 
 interface Props {
   items: {
@@ -43,6 +43,16 @@ const PanelSidebar: FC<Props> = ({ items, open, close, name }) => {
                     to={url + item.to}
                     className="nav-link"
                     activeClassName="active-side-bar"
+                    isActive={(match, { pathname }) => {
+                      if (
+                        (url + item.to !== url &&
+                          pathname.includes(url + item.to)) ||
+                        match?.isExact
+                      ) {
+                        return true;
+                      }
+                      return false;
+                    }}
                     exact
                   >
                     <item.fa />

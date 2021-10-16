@@ -1,4 +1,3 @@
-import React from 'react';
 import accessDeny from 'Assets/images/accsessDeny.svg';
 
 const AccessDeny = () => {

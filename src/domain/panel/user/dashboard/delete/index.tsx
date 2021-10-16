@@ -11,15 +11,15 @@ interface Props {
 }
 
 const DeleteLink: FC<Props> = ({ link, close, searchValue, currentPage }) => {
-  const remove = useMutationQuery(deleteLink);
+  const remove = useMutationQuery(deleteLink,null,{
+    onSuccess: () => {
+      queryClient.invalidateQueries(['links', currentPage, searchValue]);
+      close();
+    },
+  });
 
   const handleSubmit = () => {
-    remove.restQuery.mutate(link, {
-      onSuccess: () => {
-        queryClient.invalidateQueries(['links', currentPage, searchValue]);
-        close();
-      },
-    });
+    remove.restQuery.mutate(link);
   };
 
   return (

@@ -27,22 +27,17 @@ const EditNotificationList: FC<Props> = ({
   const edit = useMutationQuery<
     notifications['notifications'][0],
     notificationPost
-  >(editNotification);
+  >(editNotification,null,{ onSuccess: () => {
+          queryClient.invalidateQueries(['notifications', currentPage, search]);
+          close();
+      },});
 
   const handleSubmit = async (
     values: notificationPost,
     actions: FormikHelpers<notificationPost>
   ) => {
-    edit.restQuery.mutate(
-      { ...values, id },
-      {
-        onSuccess: () => {
-          queryClient.invalidateQueries(['notifications', currentPage, search]);
-          close();
-          actions.resetForm();
-        },
-      }
-    );
+      actions.resetForm()
+    edit.restQuery.mutate({ ...values, id });
   };
 
   return (

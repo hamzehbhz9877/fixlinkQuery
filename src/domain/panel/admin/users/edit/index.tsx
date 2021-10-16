@@ -13,16 +13,16 @@ interface Props {
 }
 
 const EditUserList: FC<Props> = ({ currentPage, search, close }) => {
-  const remove = useMutationQuery(changePasswordUsers);
+  const remove = useMutationQuery(changePasswordUsers,null,{
+    onSuccess: () => {
+      queryClient.invalidateQueries(['users', currentPage, search]);
+      close();
+    },
+  });
 
   const handleSubmit = async (values: any, actions: any) => {
     actions.resetForm();
-    remove.restQuery.mutate(values, {
-      onSuccess: () => {
-        queryClient.invalidateQueries(['users', currentPage, search]);
-        close();
-      },
-    });
+    remove.restQuery.mutate(values);
   };
 
   return (

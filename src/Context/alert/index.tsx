@@ -19,7 +19,7 @@ const AlertWrapper = (props: any) => {
   };
 
   const removeAlert = (id: alert['id']) => {
-    console.log(id)
+
     setAlert((state) => state.filter((el) => el.id !== id));
   };
 

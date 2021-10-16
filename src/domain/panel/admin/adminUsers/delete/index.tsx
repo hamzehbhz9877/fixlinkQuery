@@ -10,15 +10,15 @@ interface Props {
 }
 
 const DeleteAminUser: FC<Props> = ({ fullName, id, close }) => {
-  const remove = useMutationQuery(deleteAdminUser);
+  const remove = useMutationQuery(deleteAdminUser, '', {
+    onSuccess: () => {
+      queryClient.invalidateQueries('adminUser');
+      close();
+    },
+  });
 
   const handleSubmit = () => {
-    remove.restQuery.mutate(id, {
-      onSuccess: () => {
-        queryClient.invalidateQueries('adminUser');
-        close();
-      },
-    });
+    remove.restQuery.mutate(id);
   };
 
   return (
