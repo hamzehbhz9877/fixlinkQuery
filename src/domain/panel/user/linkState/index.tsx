@@ -12,6 +12,7 @@ import { initialValues, validationSchema } from './validation';
 import { chartOption } from './chartOption';
 import BarChart from 'Components/chart/bar/barChart';
 import 'Assets/css/pages/panel/admin/dashboard.css';
+import {FaAngleDown} from "react-icons/fa";
 
 const LinkState = () => {
   const ref = useRef(false);
@@ -143,6 +144,7 @@ const LinkState = () => {
                     <option value="2">آمار ماهیانه</option>
                     <option value="3">آمار سالیانه</option>
                   </Field>
+                  <FaAngleDown className="fa-arrow-down"/>
                   <div className="search__btn">
                     <button type="submit" className="btn">
                       اعمال فیلتر

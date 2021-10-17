@@ -9,6 +9,7 @@ table {
 .table {
   min-width: max-content;
   border: none;
+  margin: 0;
 
   &-overflow {
     overflow-x: auto;
@@ -28,6 +29,7 @@ table {
     border: none;
 
     & th {
+      padding: $table-cell-padding-y $table-cell-padding-x !important;
       border: none;
     }
   }
@@ -36,7 +38,7 @@ table {
     & tr {
       background-color: $x7 !important;
 
-      & td {
+      & td  {
         padding: $table-cell-padding-y $table-cell-padding-x !important;
         color: $table-cell-color;
         position: relative;

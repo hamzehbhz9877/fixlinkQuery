@@ -19,12 +19,12 @@
     "home.css": "/static/css/home.6a50e606.chunk.css",
     "home.js": "/static/js/home.13bdcc1d.chunk.js",
     "linkState.css": "/static/css/linkState.a80dd6b1.chunk.css",
-    "linkState.js": "/static/js/linkState.66085ceb.chunk.js",
+    "linkState.js": "/static/js/linkState.6c2076ec.chunk.js",
     "login.css": "/static/css/login.cc255b4c.chunk.css",
     "login.js": "/static/js/login.d0685152.chunk.js",
     "logout.js": "/static/js/logout.bd45bf27.chunk.js",
-    "main.css": "/static/css/main.41ef2f48.chunk.css",
-    "main.js": "/static/js/main.822a0918.chunk.js",
+    "main.css": "/static/css/main.1bc5fb82.chunk.css",
+    "main.js": "/static/js/main.a7d021c5.chunk.js",
     "notfound.js": "/static/js/notfound.5a482e1c.chunk.js",
     "notifications.css": "/static/css/notifications.bf70062c.chunk.css",
     "notifications.js": "/static/js/notifications.61fa1093.chunk.js",
@@ -35,7 +35,7 @@
     "register.js": "/static/js/register.947e1fc0.chunk.js",
     "rules.css": "/static/css/rules.46a7d416.chunk.css",
     "rules.js": "/static/js/rules.76743ce5.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.ce30b769.js",
+    "runtime-main.js": "/static/js/runtime-main.99dcaefa.js",
     "shortLink.css": "/static/css/shortLink.1e76c50e.chunk.css",
     "shortLink.js": "/static/js/shortLink.c387e36d.chunk.js",
     "submitAccount.css": "/static/css/submitAccount.457f61f5.chunk.css",
@@ -65,10 +65,10 @@
     "static/media/successLink.svg": "/static/media/successLink.3454dc1e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ce30b769.js",
+    "static/js/runtime-main.99dcaefa.js",
     "static/css/31.0f577109.chunk.css",
     "static/js/31.081606fc.chunk.js",
-    "static/css/main.41ef2f48.chunk.css",
-    "static/js/main.822a0918.chunk.js"
+    "static/css/main.1bc5fb82.chunk.css",
+    "static/js/main.a7d021c5.chunk.js"
   ]
 }

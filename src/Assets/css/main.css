@@ -748,6 +748,19 @@ main .center-content {
   font-size: 1.4rem;
   width: 100%;
   border: 1px solid #b9b9b9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  padding: 0 1.5rem;
+}
+.custom-select option {
+  padding: 1rem !important;
+  margin: 1rem !important;
+}
+.custom-select + .fa-arrow-down {
+  position: relative;
+  left: 2.5rem;
+  top: 1.5rem;
 }
 
 .search__close-filter-btn, .form__label {
@@ -917,6 +930,7 @@ table {
 .table {
   min-width: max-content;
   border: none;
+  margin: 0;
 }
 .table-overflow {
   overflow-x: auto;
@@ -935,6 +949,7 @@ table {
   border: none;
 }
 .table thead th {
+  padding: 1.4rem 1.4rem !important;
   border: none;
 }
 .table tbody tr {
@@ -1364,7 +1379,7 @@ table {
   border: 1px dashed #e4e4e4;
 }
 
-.fa-edit, .fa-trash, .fa-eye {
+.fa-edit, .fa-trash, .fa-eye, .fa-arrow-down {
   color: #c7c7c7;
   font-size: 2rem;
 }
