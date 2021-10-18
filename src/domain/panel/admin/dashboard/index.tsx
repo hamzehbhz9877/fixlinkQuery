@@ -21,27 +21,46 @@ const Dashboard = () => {
   return (
     <>
       <section className="dashboard">
-        <div className="card-list">
-          <div className="card dashboard__card">
-            <div className="card-body ">
-              <h6 className="card-title">تعداد لینک های کوتاه شده موقت</h6>
-              <p className="card-text">
-                {loadingMessage ?? data?.countTemporaryLink}
-              </p>
+        <div className="card-container dashboard__card">
+          <div className="row g-2">
+            <div className="col-md-4 col-sm-6">
+              <div className="card">
+                <div className="card__body ">
+                  <div>
+                    <h6 className="card-title">تعداد لینک های کوتاه شده موقت</h6>
+                    <p className="card-text">
+                      {loadingMessage ?? data?.countTemporaryLink}
+                    </p>
+                  </div>
+
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="card dashboard__card">
-            <div className="card-body ">
-              <h6 className="card-title">تعداد کاربران</h6>
-              <p className="card-text">{loadingMessage ?? data?.countUsers}</p>
+            <div className="col-md-4 col-sm-6" >
+              <div className="card">
+                <div className="card__body ">
+                  <div>
+                    <h6 className="card-title">تعداد کاربران</h6>
+                    <p className="card-text">
+                      {loadingMessage ?? data?.countUsers}
+                    </p>
+                  </div>
+
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="card dashboard__card">
-            <div className="card-body ">
-              <h6 className="card-title">تعداد لینک های کوتاه شده دائمی</h6>
-              <p className="card-text">
-                {loadingMessage ?? data?.countPermanentLink}
-              </p>
+            <div className="col-md-4 col-sm-6">
+              {' '}
+              <div className="card">
+                <div className="card__body ">
+                  <div>
+                    <h6 className="card-title">تعداد لینک های کوتاه شده دائمی</h6>
+                    <p className="card-text">
+                      {loadingMessage ?? data?.countPermanentLink}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

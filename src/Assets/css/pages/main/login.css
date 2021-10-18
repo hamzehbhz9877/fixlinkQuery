@@ -1,7 +1,7 @@
 .login {
   max-width: 41rem;
 }
-.login .custom-btn {
+.login .btn__custom {
   width: 300px;
 }
 .login__forget-password {

@@ -4,8 +4,7 @@ import { QueryClientProvider } from 'react-query';
 import { queryClient } from 'Store';
 import App from 'App';
 
-import "bootstrap/dist/css/bootstrap.rtl.min.css"
-
+import "Assets/css/bootstrap/bootstrap-rtl.css"
 import 'Assets/css/main.css';
 
 

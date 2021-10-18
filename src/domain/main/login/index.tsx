@@ -36,9 +36,9 @@ const Login = () => {
 
   return (
     <section className="login center-content">
-      <div className="card login--card custom--card">
+      <div className="card login--card card__custom">
         <div className="card__header-title">
-          <h4 className="text-center">ورود به حساب کاربری</h4>
+          <h5 className="text-center">ورود به حساب کاربری</h5>
         </div>
         <Formik
           initialValues={initialValues}
@@ -50,7 +50,7 @@ const Login = () => {
               <Input name="userName" type="text" label="نام کاربری یا ایمیل" />
               <Input name="password" type="password" label="رمز عبور" />
               <div className="text-center">
-                <button type="submit" className="btn custom-btn" disabled={!!loadingMessage}>
+                <button type="submit" className="btn__custom" disabled={!!loadingMessage}>
                   {loadingMessage?? <span>ورود</span>}
                 </button>
               </div>

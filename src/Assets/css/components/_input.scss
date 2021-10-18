@@ -4,7 +4,7 @@
   z-index: 1;
   font-weight: 500;
   border-radius: 4px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   overflow: hidden;
   white-space: nowrap;
   width: auto;
@@ -21,7 +21,7 @@
   @include element('error') {
     position: absolute;
     color: var(--bs-red);
-    font-size: 14px;
+    font-size: 1.4rem;
     top: 100%;
   }
   @include modifier('ckeditor-error') {
@@ -66,6 +66,7 @@
     &:focus + .form__label {
       @extend %input-label;
       color: $x1;
+
     }
 
     &:not(:placeholder-shown):not(:focus) + .form__label {
@@ -98,7 +99,6 @@
   height: 48px !important;
   background-color: $x7 !important;
   color: white;
-  font-size: $font-size-base;
   width: 100%;
   border: 1px solid $x4;
   -webkit-appearance: none;
@@ -115,3 +115,4 @@
     top: 1.5rem;
   }
 }
+

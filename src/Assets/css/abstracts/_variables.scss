@@ -2,8 +2,6 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
-
 $x1: #19b5fe;
 $x2: #222222;
 $x3: #505050;
@@ -19,208 +17,159 @@ $x12: #4e4e4e;
 $x13: #929292;
 $x14: #1f1f1f;
 $x15: #e4e4e4;
-$x16: #00b063;
 $x17: #676767;
 
+@import "../../../../node_modules/bootstrap/scss/functions";
 
-$text-mute: #6c757d;
+//Include any default variable overrides here
 
-$font-family-sans-serif: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
-  'Helvetica', 'Arial', sans-serif !default;
+$font-size-base: 1.6rem;
+$font-family-base: 'irYekan';
+$headings-font-weight: bold;
 
-$font-family-monospace: 'Courier New', 'DejaVu Sans Mono',
-  'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
-$font-family-base: 'irYekan' !default;
+$table-cell-padding-x: 1.4rem;
+$table-cell-padding-y: 1.4rem;
+$table-cell-vertical-align:middle;
 
-$font-size-base: 1.4rem !default;
-$font-size-sm: $font-size-base * 0.875 !default;
+$card-border-radius:.8rem;
 
-$font-weight-lighter: lighter !default;
-$font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
-$font-weight-bold: 700 !default;
-$font-weight-bolder: bolder !default;
 
-$font-weight-base: $font-weight-normal !default;
+@import "../../../../node_modules/bootstrap/scss/variables";
 
-$base-url: 'Assets/' !default;
 
-$spacer: 1rem !default;
+$base-url: 'Assets/';
 
-$direction-base: rtl !default;
-
-$text-align-base: right !default;
-
-$line-height-base: 1.5 !default;
-
-$headings-margin-bottom: $spacer * 0.5 !default;
-$headings-font-weight: 500 !default;
-$headings-line-height: 1.2 !default;
-$headings-color: null !default;
-
-$border-radius: 0.25rem !default;
-
-$border-width: 1px !default;
-$border-widths: (
-  1: 1px,
-  2: 2px,
-  3: 3px,
-  4: 4px,
-  5: 5px,
-) !default;
+$direction-base: rtl;
 
 $min-width-breakpoints: (
-  'sm-min': (
-    min-width: 576px,
-  ),
-  'md-min': (
-    min-width: 768px,
-  ),
-  'lg-min': (
-    min-width: 992px,
-  ),
-  'xl-min': (
-    min-width: 1200px,
-  ),
-  'xxl-min': (
-    min-width: 1400px,
-  ),
-) !default;
+        'sm-min': (
+                min-width: 576px,
+        ),
+        'md-min': (
+                min-width: 768px,
+        ),
+        'lg-min': (
+                min-width: 992px,
+        ),
+        'xl-min': (
+                min-width: 1200px,
+        ),
+        'xxl-min': (
+                min-width: 1400px,
+        ),
+);
 
 $max-width-breakpoints: (
-  'xs-max': (
-    max-width: 575.98px,
-  ),
-  'sm-max': (
-    max-width: 767.98px,
-  ),
-  'md-max': (
-    max-width: 991.98px,
-  ),
-  'lg-max': (
-    max-width: 1199.98px,
-  ),
-  'xl-max': (
-    max-width: 1399.98px,
-  ),
-) !default;
+        'xs-max': (
+                max-width: 575.98px,
+        ),
+        'sm-max': (
+                max-width: 767.98px,
+        ),
+        'md-max': (
+                max-width: 991.98px,
+        ),
+        'lg-max': (
+                max-width: 1199.98px,
+        ),
+        'xl-max': (
+                max-width: 1399.98px,
+        ),
+);
 
 $breakpoints: map-merge(
-  $min-width-breakpoints,
-  $max-width-breakpoints
-) !default;
+                $min-width-breakpoints,
+                $max-width-breakpoints
+);
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
 
-$heading: (
-  'h1': $h1-font-size,
-  'h2': $h2-font-size,
-  'h3': $h3-font-size,
-  'h4': $h4-font-size,
-  'h5': $h5-font-size,
-  'h6': $h6-font-size,
-) !default;
-
-$zindex-modal-backdrop: 1050 !default;
-$zindex-modal: 1055 !default;
-$zindex-tooltip: 1050 !default;
-$zindex-sidebar: 998 !default;
-$zindex-header: 90 !default;
+$zindex-modal-backdrop: 1050;
+$zindex-modal: 1055;
+$zindex-tooltip: 1050;
+$zindex-sidebar: 998;
+$zindex-header: 90;
 
 //sidebar
-$sidebar-width: 270px !default;
-$sidebar-z-index: $zindex-sidebar !default;
-$sidebar-background: $x7 !default;
-$sidebar-box-background: $x2 !default;
-$sidebar-list-color: $x4 !default;
-$sidebar-list--after-background: $x1 !default;
-$sidebar-list--active: $x6 !default;
-$sidebar-icon-color: white !default;
+$sidebar-width: 270px;
+$sidebar-z-index: $zindex-sidebar;
+$sidebar-background: $x7;
+$sidebar-box-background: $x2;
+$sidebar-list-color: $x4;
+$sidebar-list--after-background: $x1;
+$sidebar-list--active: $x6;
+$sidebar-icon-color: white;
 
 //modal
-$modal-background: #393939 !default;
-$modal-overlay-background: #0000009e !default;
-$modal-z-index: $zindex-modal !default;
+$modal-background: #393939;
+$modal-overlay-background: #0000009e;
+$modal-z-index: $zindex-modal;
 
 //backdrop
-$backdrop-background-color: black !default;
-$backdrop-z-index: $zindex-modal-backdrop !default;
-$backdrop-opacity--open: 0.5 !default;
+$backdrop-background-color: black;
+$backdrop-z-index: $zindex-modal-backdrop;
+$backdrop-opacity--open: 0.5;
 
 //dropdown menu
-$dropdown-menu-background: white !default;
-$dropdown-menu-caret-background: $dropdown-menu-background !default;
-$dropdown-menu-list--hover: $x1 !default;
-$dropdown-menu-list-color: $x2 !default;
+$dropdown-menu-background: white;
+$dropdown-menu-caret-background: $dropdown-menu-background;
+$dropdown-menu-list--hover: $x1;
+$dropdown-menu-list-color: $x2;
 
 //footer
-$footer-icon-color: $x6 !default;
+$footer-icon-color: $x6;
 
 //mina header
-$header-height: 70px !default;
-$header-list-color: $x4 !default;
-$header-list--after-background: $x1 !default;
-$header-list--active: $header-list--after-background !default;
-$header-login-background: $x5 !default;
+$header-height: 70px;
+$header-list-color: $x4;
+$header-list--after-background: $x1;
+$header-list--active: $header-list--after-background;
+$header-login-background: $x5;
 
 //panel header
-$panel-header-background: $x2 !default;
-$panel-header-height: $header-height !default;
-$panel-header-z-index: $zindex-header !default;
+$panel-header-background: $x2;
+$panel-header-height: $header-height;
+$panel-header-z-index: $zindex-header;
 
 //tooltip
-$tooltip-z-index: $zindex-tooltip !default;
-$tooltip-font-size: $font-size-sm !default;
-$tooltip-max-width: 200px !default;
-$tooltip-color: $x4 !default;
-$tooltip-bg: black !default;
-$tooltip-border-radius: $border-radius !default;
-$tooltip-opacity: 0.9 !default;
-$tooltip-padding-y: $spacer * 0.25 !default;
-$tooltip-padding-x: $spacer * 0.5 !default;
-$tooltip-arrow: 0.8rem !default;
-$tooltip-arrow-color: $tooltip-bg !default;
-$tooltip-success:var(--bs-green);
-$tooltip-error:var(--bs-red);
-$tooltip-info:var(--bs-info);
-$tooltip-warning:var(--bs-yellow);
+$tooltip-z-index: $zindex-tooltip;
+$tooltip-font-size: 1.4rem;
+$tooltip-max-width: 200px;
+$tooltip-color: $x4;
+$tooltip-bg: black;
+$tooltip-border-radius: $border-radius;
+$tooltip-opacity: 0.9;
+$tooltip-padding-y: $spacer * 0.25;
+$tooltip-padding-x: $spacer * 0.5;
+$tooltip-arrow: 0.8rem;
+$tooltip-arrow-color: $tooltip-bg;
+$tooltip-success: var(--bs-green);
+$tooltip-error: var(--bs-red);
+$tooltip-info: var(--bs-info);
+$tooltip-warning: var(--bs-yellow);
 
 //pagination
-$pagination-padding-y: .7rem !default;
-$pagination-padding-x: 1.3rem !default;
+$pagination-padding-y: .7rem;
+$pagination-padding-x: 1.3rem;
 
-$pagination-color: white !default;
-$pagination-color-active: $x1 !default;
-$pagination-bg: inherit !default;
-$pagination-border-width: $border-width !default;
-$pagination-border-color: rgba(155, 155, 155, 0.2) !default;
+$pagination-color: white;
+$pagination-color-active: $x1;
+$pagination-bg: inherit;
+$pagination-border-width: $border-width;
+$pagination-border-color: rgba(155, 155, 155, 0.2);
 
-$pagination-disabled-color: white !default;
-$pagination-disabled-bg: rgb(4, 7, 26) !default;
-$pagination-disabled-border-color: $pagination-border-color !default;
+$pagination-disabled-color: white;
+$pagination-disabled-bg: rgb(4, 7, 26);
+$pagination-disabled-border-color: $pagination-border-color;
 
 $pagination-transition: color 0.15s ease-in-out,
-  background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-  box-shadow 0.15s ease-in-out !default;
+background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+box-shadow 0.15s ease-in-out;
 
-$table-cell-padding-y: 1.4rem !default;
-$table-cell-padding-x: 1.4rem !default;
+//table
+$table-th-background-color: $x1;
+$table-th-color: white;
+$table-cell-color: $x13;
 
-$table-cell-vertical-align: middle !default;
-
-$table-cell-color: $x13 !default;
-$table-bg: transparent !default;
-$table-accent-bg: transparent !default;
-
-$table-th-font-weight: null !default;
-$table-th-background-color: $x1 !default;
-$table-th-color: white !default;
-
-  //general
-$general-space: 20px !default;
+//general
+$general-space: 20px;

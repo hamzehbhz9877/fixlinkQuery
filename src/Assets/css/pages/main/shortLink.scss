@@ -4,9 +4,6 @@
   max-width: 55rem;
   @include element('copy-btn') {
     background-color: $x1;
-    @include on-event(true) {
-      color: white !important;
-    }
   }
 
   @include element('input') {
@@ -14,6 +11,9 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 1rem;
+    & .input-group-custom{
+      margin-right: 0 !important;
+    }
     & input {
       text-align: center;
     }
@@ -42,7 +42,7 @@
     background-color: $x12;
     border: none;
     margin: 1rem 0;
-    padding: 0 1rem;
+    padding: 1rem;
     &-warning {
       color: $x11;
     }

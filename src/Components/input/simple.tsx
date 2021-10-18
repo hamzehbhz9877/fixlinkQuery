@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { propsType } from 'Components/input/input';
 
 interface Props extends propsType {

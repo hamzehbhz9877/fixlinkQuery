@@ -26,11 +26,10 @@ const WInput: FC<Props> = ({ label,loadingMessage, ...props }) => {
           className={`form-control ${error && 'error'} ${success && 'success'}`}
           placeholder={props.placeholder}
         />
-        <div className="input-group-prepend pl-2">
-          <button type="submit" className="btn custom-btn" disabled={!!loadingMessage}>
-            {loadingMessage ?? <span>{label}</span>}
-          </button>
-        </div>
+        <button className="input-group-text input-group-custom"
+                disabled={!!loadingMessage}>
+          {loadingMessage ?? <span>{label}</span>}
+        </button>
         <ErrorMessage
           name={`${props.name}`}
           className="form__error"

@@ -26,9 +26,9 @@ const ContactUs = () => {
 
   return (
     <section className="contact-us center-content">
-      <div className="card contact-us--card custom--card">
+      <div className="card contact-us--card card__custom">
         <div className="card__header-title">
-          <h4 className="text-center">تماس با ما</h4>
+          <h5 className="text-center">تماس با ما</h5>
         </div>
         <Formik
           initialValues={initialValues}
@@ -54,7 +54,7 @@ const ContactUs = () => {
               <Input name="subject" type="text" label="موضوع" />
               <TextArea name="text" type="text" label="توضیحات" />
               <div className="text-center">
-                <button type="submit" className="btn custom-btn" disabled={!!loadingMessage}>
+                <button type="submit" className="btn__custom" disabled={!!loadingMessage}>
                   {loadingMessage??<span>ثبت</span>}
                 </button>
               </div>

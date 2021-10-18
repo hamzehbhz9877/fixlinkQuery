@@ -32,9 +32,9 @@ const ChangePassword = () => {
             در این قسمت شما میتوانید رمز عبور خود را در صورت نیاز تغییر دهید
           </p>
         </div>
-        <div className="card change-password--card custom--card">
+        <div className="card change-password--card card__custom">
           <div className="card__header-title">
-            <h4 className="text-center">تغییر رمز</h4>
+            <h5 className="text-center">تغییر رمز</h5>
           </div>
           <Formik
             initialValues={initialValues}
@@ -56,7 +56,7 @@ const ChangePassword = () => {
                     label="تکرار رمز عبور جدید"
                   />
                   <div className="text-center">
-                    <button type="submit" className="btn custom-btn">
+                    <button type="submit" className="btn__custom">
                       ثبت
                     </button>
                   </div>

@@ -2,7 +2,7 @@
 
 .register {
   max-width: 75rem;
-  & .custom-btn {
+  & .btn__custom {
     width: 320px;
   }
   @include element('have-account') {

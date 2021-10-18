@@ -37,7 +37,7 @@ const Post = () => {
           title={'جدول اطلاعیه ها'}
         />
         <button
-          className="btn custom-mutate-button"
+          className="btn__custom--mutate"
           onClick={() =>
             handleOpen(
               <AddNotificationsList search={searchValue} close={handleClose} />,

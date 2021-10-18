@@ -8,14 +8,20 @@ import { useHistory } from 'react-router';
 import { useMutationQuery } from 'hooks/useMutationQuery';
 import { generateLink } from 'Services/shortlink';
 import { FaAngleDoubleDown } from 'react-icons/fa';
-import Loading from "Components/loading";
+import Loading from 'Components/loading';
+import useAlert from 'Context/alert/useAlert';
 
 const Main = () => {
   const history = useHistory();
 
-  const { restQuery,loadingMessage } = useMutationQuery<generatorLink, generateLinkPost>(generateLink,<Loading/>);
+  const { restQuery, loadingMessage } = useMutationQuery<
+    generatorLink,
+    generateLinkPost
+  >(generateLink, <Loading />);
 
   const [show, setShow] = useState(false);
+
+  const alert = useAlert();
 
   const handleSubmit = async (
     values: generateLinkPost,
@@ -23,11 +29,47 @@ const Main = () => {
   ) => {
     actions.resetForm();
     restQuery.mutate(values, {
-      onSuccess: (data) => {
-        if (data.statusLink === 0 || data.statusLink === 1) {
-          localStorage.setItem('shortLink', data.shortLink);
-          localStorage.setItem('qr', data.qr);
+      onSuccess: ({ statusLink, shortLink, qr }) => {
+        if (statusLink === 0 || statusLink === 1) {
+          localStorage.setItem('shortLink', shortLink);
+          localStorage.setItem('qr', qr);
           history.replace('/link/shortLink');
+        }
+        if (statusLink === 0) {
+          alert.addAlert({
+            showProgress: true,
+            message: 'لینک کوتاه شده آماده است',
+            timeout: 5,
+            type: 'success',
+          });
+        } else if (statusLink === 1) {
+          alert.addAlert({
+            showProgress: true,
+            message: 'این لینک قبلا ساخته شده است',
+            timeout: 5,
+            type: 'success',
+          });
+        } else if (statusLink === 2) {
+          alert.addAlert({
+            showProgress: true,
+            message: 'لینک نانعتبر است',
+            timeout: 5,
+            type: 'error',
+          });
+        } else if (statusLink === 3) {
+          alert.addAlert({
+            showProgress: true,
+            message: 'این لینک توسط شخص دیگری انتخاب شده است',
+            timeout: 5,
+            type: 'error',
+          });
+        } else if (statusLink === 4) {
+          alert.addAlert({
+            showProgress: true,
+            message: 'لینک داده شده حاوی محتوای مستهجن می باشد',
+            timeout: 5,
+            type: 'error',
+          });
         }
       },
     });
@@ -44,7 +86,8 @@ const Main = () => {
         >
           {() => (
             <Form>
-              <WInput loadingMessage={loadingMessage}
+              <WInput
+                loadingMessage={loadingMessage}
                 name="bigLink"
                 type="url"
                 label={'کوتاه کن'}
@@ -61,10 +104,8 @@ const Main = () => {
                           {...field}
                           className="form-control"
                         />
-                        <div className="input-group-prepend">
-                          <div className="input-group-text home__custom-link-prepend">
-                            https://Fixlink.ir/
-                          </div>
+                        <div className="input-group-text home__custom-link-prepend">
+                          https://Fixlink.ir/
                         </div>
                       </div>
                     </div>
@@ -73,7 +114,7 @@ const Main = () => {
               )}
               {!show && (
                 <div className="home__custom-link-button-wrapper">
-                  <button className="btn" onClick={() => setShow(true)}>
+                  <button onClick={() => setShow(true)}>
                     لینک دلخواه
                   </button>
                   <span>

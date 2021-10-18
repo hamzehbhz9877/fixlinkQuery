@@ -99,7 +99,7 @@ const SearchBar: FC<Props> = ({
                         />
                       </div>
                       <div className="search__btn">
-                        <button type="submit" className="btn">
+                        <button type="submit">
                           جستجو
                         </button>
                       </div>

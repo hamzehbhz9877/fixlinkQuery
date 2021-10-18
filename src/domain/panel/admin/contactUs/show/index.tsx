@@ -45,7 +45,7 @@ const ShowContactUs: FC<Props> = ({ data, close }) => {
         readOnly
       />
       <button
-        className="btn custom-mutate-button"
+        className="btn__custom--mutate"
         type="submit"
         onClick={close}
       >

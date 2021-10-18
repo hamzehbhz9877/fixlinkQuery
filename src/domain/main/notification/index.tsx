@@ -21,7 +21,7 @@ const Notification = () => {
       <section className="notification">
         {data?.notifications.map((item: any, index: number) => {
           return (
-            <div key={index} className="card notification--card custom--card">
+            <div key={index} className="card notification--card card__custom">
               <div className="notification__header">
                 <h5 className="notification__title">
                   <strong>{item.title}</strong>

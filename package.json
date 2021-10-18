@@ -35,7 +35,8 @@
     "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "purgecss --config purgecss.config.js --css build/static/css/31.0f577109.chunk.css --content build/index.html build/static/js/*.js --output build/static/css"
+    "postbuild": "purgecss --config purgecss.config.js --css build/static/css/main.33e5a760.chunk.css --content build/index.html build/static/js/*.js --output build/static/css",
+    "rtlcss": "rtlcss src/Assets/css/bootstrap/bootstrap.css src/Assets/css/bootstrap/bootstrap-rtl.css"
   },
   "eslintConfig": {
     "extends": [

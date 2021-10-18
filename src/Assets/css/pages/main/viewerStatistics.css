@@ -10,4 +10,8 @@
   }
 }
 
+.viewer-statistics__card {
+  max-width: 90rem;
+}
+
 /*# sourceMappingURL=viewerStatistics.css.map */

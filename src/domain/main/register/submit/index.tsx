@@ -1,11 +1,10 @@
-import React from 'react';
 import successLink from 'Assets/images/successLink.svg';
 import 'Assets/css/pages/main/submitAccount.css';
 
 const Submit = () => {
   return (
     <section className="submit-account center-content">
-      <div className="card submit-account--card custom--card text-center">
+      <div className="card submit-account--card card__custom text-center">
         <div className="card__header-title">
           <img src={successLink} alt="successLink" />
           <br />

@@ -66,9 +66,6 @@
   background-color: $header-login-background;
   border-radius: 35px;
   width: 98px;
-  @include on-event(true) {
-    color: white !important;
-  }
 }
 
 @include media('sm-max') {

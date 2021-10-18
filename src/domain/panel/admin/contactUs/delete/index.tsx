@@ -26,7 +26,7 @@ const DeleteContactUs: FC<Props> = ({ subject, id, currentPage, close }) => {
     <>
       <h5>حذف پیام</h5>
       <p> آیا میخواهید پیغام {subject} را حذف کنید؟ </p>
-      <button className="btn custom-mutate-button" onClick={handleSubmit}>
+      <button className="btn__custom--mutate" onClick={handleSubmit}>
         تایید
       </button>
     </>

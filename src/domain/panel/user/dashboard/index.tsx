@@ -89,7 +89,7 @@ const Dashboard = () => {
                     <button
                       type="button"
                       onClick={() => copy('https://fixLink.ir/' + shortLink)}
-                      className="btn custom-copy-btn"
+                      className="btn__custom--copy"
                     >
                       {'https://FixLink.ir/' + shortLink}
                       &nbsp;

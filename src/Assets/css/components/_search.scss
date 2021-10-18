@@ -18,6 +18,19 @@
     width: 100%;
   }
 
+  @include element('btn') {
+    & button {
+      height: 100%;
+      width: 14rem;
+      margin-right: 15px;
+      background-color: $x8;
+      @include media('xs-max') {
+        margin-top: 10px;
+        margin-right: 0;
+        width: inherit;
+      }
+    }
+  }
   @include element('filter') {
     padding: 30px;
     background-color: $x7;
@@ -43,7 +56,7 @@
     @extend %center-vertically;
 
     & svg {
-      font-size: 20px;
+      font-size: 2rem;
       color: red !important;
     }
     & + .search__padding-btn {

@@ -29,7 +29,6 @@ table {
     border: none;
 
     & th {
-      padding: $table-cell-padding-y $table-cell-padding-x !important;
       border: none;
     }
   }
@@ -39,13 +38,9 @@ table {
       background-color: $x7 !important;
 
       & td  {
-        padding: $table-cell-padding-y $table-cell-padding-x !important;
-        color: $table-cell-color;
         position: relative;
         border: none;
-        vertical-align: $table-cell-vertical-align !important;
-        font-size: $font-size-base;
-
+        color: $table-cell-color;
         & button {
           background-color: transparent;
         }

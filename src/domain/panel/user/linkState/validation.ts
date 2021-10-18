@@ -8,6 +8,6 @@ export const initialValues = {
 export const validationSchema = Yup.object({
   searchStatistics: Yup.string()
     .url('لینک وارد شده نامعتبر میباشد')
-    .required('لطفا فیلد مورد نظر خود را را وارد کنید')
+    .required('لطفا لینک کوتاه خود را وارد کنید')
     .trim(),
 });

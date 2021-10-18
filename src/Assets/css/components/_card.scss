@@ -1,94 +1,67 @@
-.card-list {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  max-width: 75rem;
-  @include media('sm-max') {
-    margin: -0.3rem;
-  }
+.card-container {
+  margin: auto;
 }
 
-.card-body{
-  padding: 1.8rem;
-}
+.card {
+  background-color: $x7;
 
-.custom--card {
-  background: $x7;
-  padding: 20px;
-}
+  @include element("header-title") {
+      text-align: center;
+      padding-bottom: 40px;
 
-.card__header-title {
-  text-align: center;
-  padding-bottom: 40px;
+      & h5 {
+        display: inline-block;
+        position: relative;
+        margin-top: 1rem;
 
-  & h4 {
-    display: inline-block;
-    position: relative;
-    margin-top: 1rem;
-
-    &:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      top: 130%;
-      height: 2px;
-      right: 0;
-      border-radius: 12px;
-      background-color: $x1;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          top: 130%;
+          height: 2px;
+          right: 0;
+          border-radius: 12px;
+          background-color: $x1;
+        }
     }
   }
-}
-
-.banner,
-.statistics {
-  width: calc(100% / 3);
-  border: none;
-  background-color: transparent;
-  padding: 0.3rem;
-
-  @media (max-width: 768.98px) {
-    width: 50%;
-  }
-
-  & .card-body {
+  @include element("body") {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $x7;
-    border-radius: 8px;
+    padding: 2rem;
+
+    p {
+      margin-top: 2rem;
+    }
+
     & > div:last-of-type {
       text-align: center;
     }
   }
-}
+  @include element("icon") {
+    color: $x6;
+    background-color: $x2;
+    border-radius: 50%;
+    position: absolute;
+    line-height: 1.15;
+    right: 5%;
+    padding: 1rem;
 
-.banner {
-  @media (max-width: 575.98px) {
-    width: 100%;
+    & svg {
+      font-size: 1.4em;
+    }
+  }
+  @include element("custom"){
+      background: $x7;
+      padding: 20px;
   }
 }
 
-.statistics {
-  @media (max-width: 575.98px) {
-    width: 50%;
-  }
-  @media (max-width: 400px) {
-    width: 100%;
-  }
-}
 
-.link-icon {
-  color: $x6;
-  background-color: $x2;
-  border-radius: 50%;
-  margin-left: 20px;
-  position: absolute;
-  right: 5%;
-  padding: 1rem;
 
-  & svg {
-    font-size: 1.4em !important;
-  }
-}
+
+
+

@@ -11,9 +11,14 @@
       margin-bottom: 5rem;
     }
   }
+  @include element("card")
+  {
+    max-width: 90rem;
+  }
 
   @include element('title') {
-    font-size: $h4-font-size;
+    font-size: min(4vw,2rem) !important;
+    margin-bottom: 2rem;
   }
 
   @include element('custom-link') {
@@ -22,7 +27,6 @@
     &-prepend {
       direction: ltr;
       background-color: #393939;
-      font-size: $font-size-base;
       color: #969696;
       border: none;
     }
@@ -42,10 +46,7 @@
       }
 
       button {
-        @include on-event(true) {
-          color: white !important;
-        }
-        background: $x16;
+        background: $x8;
         padding: 0.8rem 0;
         border-radius: 2.7rem;
         width: 15rem;

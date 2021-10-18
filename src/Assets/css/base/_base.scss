@@ -2,17 +2,6 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -46,25 +35,13 @@ button:hover {
   color: inherit !important;
 }
 
-.input-group-prepend > * {
-  border-radius: 0 !important;
-  height: 100%;
-  margin-right: .5rem;
-}
-
-.input-group-prepend button {
-  border-radius: .3rem 0 0 .3rem !important;
-}
-
-.btn:focus {
-  box-shadow: none;
-}
-
 img {
   max-width: 100%;
   height: auto;
 }
-
+ol,ul{
+  padding: 0;
+}
 ol:not(.ck ol),
 ul:not(.ck ul) {
   list-style-type: none;
@@ -125,6 +102,22 @@ input.error,
 textarea.error {
   border-color: var(--bs-red);
 }
+.input-group-custom{
+  margin-right: .5rem !important;
+  background-color: $x1;
+  border: none;
+  color: white;
+}
+
+button {
+  @include on-event(true) {
+    color: white !important;
+  }
+}
+
+input:placeholder-shown {
+  text-overflow: ellipsis;
+}
 
 textarea {
   resize: none;
@@ -143,9 +136,6 @@ input[type='searchStatistics'] {
   direction: ltr;
 }
 
-input:placeholder-shown {
-  text-overflow: ellipsis;
-}
 
 hr {
   background-color: #fff;
@@ -178,24 +168,6 @@ blockquote {
   margin: auto;
 }
 
-@include media('md-min') {
-  .container {
-    width: 750px;
-  }
-}
-
-@include media('lg-min') {
-  .container {
-    width: 970px;
-  }
-}
-
-@include media('xl-min') {
-  .container {
-    width: 1170px;
-  }
-}
-
 .ck-content > ol,
 .ck-content > ul {
   margin: revert !important;
@@ -218,3 +190,23 @@ blockquote {
 .no-info {
   color: white;
 }
+
+
+@include media('md-min') {
+  .container {
+    width: 750px;
+  }
+}
+
+@include media('lg-min') {
+  .container {
+    width: 970px;
+  }
+}
+
+@include media('xl-min') {
+  .container {
+    width: 1170px;
+  }
+}
+

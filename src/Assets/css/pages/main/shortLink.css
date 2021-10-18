@@ -4,18 +4,15 @@
 .short-link__copy-btn {
   background-color: #19b5fe;
 }
-.short-link__copy-btn:hover, .short-link__copy-btn:active, .short-link__copy-btn:focus {
-  color: white !important;
-}
-.short-link__copy-btn {
-  color: white !important;
-}
 
 .short-link__input {
   width: 30rem;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 1rem;
+}
+.short-link__input .input-group-custom {
+  margin-right: 0 !important;
 }
 .short-link__input input {
   text-align: center;
@@ -45,7 +42,7 @@
   background-color: #4e4e4e;
   border: none;
   margin: 1rem 0;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 .short-link__alert-warning {
   color: #ead727;

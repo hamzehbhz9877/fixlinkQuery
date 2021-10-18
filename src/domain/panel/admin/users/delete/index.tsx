@@ -33,7 +33,7 @@ const DeleteUserList: FC<Props> = ({
     <>
       <h5>حذف کاربر</h5>
       <p> آیا میخواهید کاربر{fullName} را حذف کنید؟ </p>
-      <button className="btn custom-mutate-button" onClick={handleSubmit}>
+      <button className="btn__custom--mutate" onClick={handleSubmit}>
         تایید
       </button>
     </>

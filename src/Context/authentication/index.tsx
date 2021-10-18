@@ -25,6 +25,7 @@ const Auth = (props: any) => {
   } = useHistory();
 
   const reset = async () => {
+
     setUserName('');
     setRole('');
     cookie.remove('Ro', { path: '/' });

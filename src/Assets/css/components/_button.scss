@@ -1,46 +1,31 @@
-.custom-btn {
-  border-radius: 2.7rem;
-  padding: .5rem;
-  background-color: $x1;
-  @include on-event(true) {
-    color: white !important;
-  }
-  @include media('xs-max') {
-    width: 100% !important;
-  }
-}
-
-.custom-mutate-button {
-  border-radius: 0.3rem;
-  background-color: $x16;
-  padding: 0.6rem 1rem;
-  @include on-event(true) {
-    color: white !important;
-  }
-}
-
-.search {
-  @include element('btn') {
-    & button {
-      @extend .custom-mutate-button;
-      height: 100%;
-      width: 14rem;
-      margin-right: 15px;
-
-      @include media('xs-max') {
-        margin-top: 10px;
-        margin-right: 0;
-        width: inherit;
-      }
-    }
-  }
-}
-
-.custom-copy-btn,
-.custom-download-btn {
+%dff {
   position: relative;
   color: white;
   padding: 1rem 1.5rem;
   background-color: $x14 !important;
   border: 1px dashed $x15;
 }
+
+.btn {
+  @include element("custom") {
+    border-radius: 2.7rem;
+    padding: .5rem;
+    background-color: $x1;
+    @include modifier("mutate") {
+      border-radius: 0.3rem;
+      background-color: $x8;
+      padding: 0.6rem 1rem;
+    }
+    @include modifier("copy") {
+      @extend %dff
+    }
+    @include modifier("download") {
+      @extend %dff
+    }
+    @include media('xs-max') {
+      width: 100% !important;
+    }
+  }
+}
+
+

@@ -10,4 +10,7 @@
       margin-bottom: 5rem;
     }
   }
+  @include element("card"){
+    max-width: 90rem;
+  }
 }

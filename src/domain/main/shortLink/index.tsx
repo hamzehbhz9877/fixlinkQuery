@@ -26,11 +26,11 @@ const ShortLink = () => {
 
   return (
     <section className="short-link center-content">
-      <div className="card short-link--card custom--card">
+      <div className="card short-link--card card__custom">
         <div className="card__header-title">
           <img src={successLink} alt="successLink" />
           <br />
-          <h4 className="text-center">لینک کوتاه ساخته شد</h4>
+          <h5 className="text-center">لینک کوتاه ساخته شد</h5>
         </div>
         <div className="input-group short-link__input">
           <input
@@ -38,29 +38,25 @@ const ShortLink = () => {
             readOnly
             className="form-control"
           />
-
-          <div className="input-group-prepend">
-            <Tooltip
+          <Tooltip
               tooltipText="کپی شد"
               direction="left"
               clickable
               closeDelay={3000}
-            >
-              <button
-                onClick={() => copy('https://FixLink.ir/' + shortLink)}
-                className="btn short-link__copy-btn"
-              >
+          >
+          <button  onClick={() => copy('https://FixLink.ir/' + shortLink)}
+                   className="input-group-text input-group-custom">
+
+                کپی &nbsp;
                 <FaCopy />
-                &nbsp; کپی
-              </button>
-            </Tooltip>
-          </div>
+          </button>
+          </Tooltip>
         </div>
         <div className="short-link__qr-code text-center">
           <div className="my-4">
             <img src={'data:image/png;base64,' + qr} alt="" />
           </div>
-          <button className="btn bt-outline">
+          <button className="mb-4">
             <a href={`data:image/png;base64,${qr}`} download="QrCode.jpeg">
               دانلود QR
             </a>
@@ -85,7 +81,8 @@ const ShortLink = () => {
           {!user ? (
             <>
               مدت فعال بودن لینک شما{' '}
-              <span className="short-link__alert-day">10</span> روز است برای ساختن{' '}
+              <span className="short-link__alert-day">10</span> روز است برای
+              ساختن{' '}
               <span className="short-link__alert-warning">لینک نامحدود</span>
               &nbsp;
               <NavLink to={'/user/register'}>ثبت نام</NavLink>

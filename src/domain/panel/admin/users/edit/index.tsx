@@ -42,7 +42,7 @@ const EditUserList: FC<Props> = ({ currentPage, search, close }) => {
                 type="password"
                 label="تکرار رمز عبور جدید"
               />
-              <button className="btn custom-mutate-button" type="submit">
+              <button className="btn__custom--mutate" type="submit">
                 تایید
               </button>
             </Form>

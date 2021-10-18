@@ -1,7 +1,7 @@
 .register {
   max-width: 75rem;
 }
-.register .custom-btn {
+.register .btn__custom {
   width: 320px;
 }
 .register__have-account {
