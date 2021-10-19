@@ -1,0 +1,1 @@
+(this["webpackJsonpfixlink-typescript"]=this["webpackJsonpfixlink-typescript"]||[]).push([[4],{473:function(s,e,c){"use strict";c.r(e);var t=c.p+"static/media/accsessDeny.627e0ed1.svg",i=c(0);e.default=function(){return Object(i.jsx)("div",{className:"access-deny",children:Object(i.jsx)("img",{src:t,alt:"accessDeny"})})}}}]);
