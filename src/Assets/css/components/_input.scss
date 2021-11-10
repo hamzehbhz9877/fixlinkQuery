@@ -95,24 +95,3 @@
   }
 }
 
-.custom-select {
-  height: 48px !important;
-  background-color: $x7 !important;
-  color: white;
-  width: 100%;
-  border: 1px solid $x4;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  padding: 0 1.5rem;
-  & option{
-    padding: 1rem !important;
-    margin: 1rem !important;
-  }
-  @include sibling("fa-arrow-down"){
-    position: relative;
-    left: 2.5rem;
-    top: 1.5rem;
-  }
-}
-

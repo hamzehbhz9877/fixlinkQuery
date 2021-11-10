@@ -8,7 +8,7 @@
   visibility: hidden;
   inset: 0;
   z-index: $backdrop-z-index;
-  transition: 0s ease;
+  transition: $backdrop-transition;
   @include modifier('open') {
     opacity: $backdrop-opacity--open;
     visibility: visible;

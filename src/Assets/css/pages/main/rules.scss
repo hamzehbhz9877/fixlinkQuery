@@ -6,5 +6,6 @@
   }
   & p {
     @extend %justify-text;
+    margin-bottom: 2rem;
   }
 }

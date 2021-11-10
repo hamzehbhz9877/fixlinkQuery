@@ -1,4 +1,4 @@
-import  { memo } from 'preact/compat';
+import  { memo } from 'react';
 import Pagination from './pagination';
 const Paginate = (props: any) => {
   if (props.pages <= 1) {

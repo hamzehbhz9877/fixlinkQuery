@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react';
+import { FC,DetailedHTMLProps, InputHTMLAttributes } from 'react';
 import { ErrorMessage, useField } from 'formik';
 
 type propsType = DetailedHTMLProps<
@@ -23,7 +23,7 @@ const WInput: FC<Props> = ({ label,loadingMessage, ...props }) => {
         <input
           {...field}
           {...props}
-          className={`form-control ${error && 'error'} ${success && 'success'}`}
+          className={`form-control ${error ? 'error' : ""} ${success  ? 'success': ""}`}
           placeholder={props.placeholder}
         />
         <button className="input-group-text input-group-custom"

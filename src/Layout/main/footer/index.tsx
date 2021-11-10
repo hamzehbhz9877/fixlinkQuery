@@ -1,4 +1,3 @@
-import React from 'react';
 import footerImage from 'Assets/images/footerImg.svg';
 import { FaTelegram } from 'react-icons/fa';
 

@@ -28,7 +28,7 @@ const ContactUs = () => {
     <section className="contact-us center-content">
       <div className="card contact-us--card card__custom">
         <div className="card__header-title">
-          <h5 className="text-center">تماس با ما</h5>
+          <h4 className="text-center">تماس با ما</h4>
         </div>
         <Formik
           initialValues={initialValues}

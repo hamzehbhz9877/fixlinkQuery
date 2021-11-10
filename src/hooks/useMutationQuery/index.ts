@@ -12,13 +12,13 @@ export const useMutationQuery = <T, U>(
   loadingMessage?: any,
   options?: Option<T, U>['option']
 ) => {
-  const alert = useAlert();
+  const {addAlert} = useAlert();
   return GenericMutate<T, U>(
     {
       event: async (info: any) => {
         const { data }: AxiosResponse<Api<any>> = await event(info);
         if (data.isSuccess) {
-          alert.addAlert({
+          addAlert({
             type: 'success',
             message: data.message,
             timeout: 5,
@@ -26,7 +26,7 @@ export const useMutationQuery = <T, U>(
           });
           return data.data;
         } else {
-          alert.addAlert({
+          addAlert({
             type: 'error',
             message: data.Message,
             timeout: 5,

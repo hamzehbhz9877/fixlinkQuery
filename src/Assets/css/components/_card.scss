@@ -4,12 +4,12 @@
 
 .card {
   background-color: $x7;
-
+   height: 100%;
   @include element("header-title") {
       text-align: center;
       padding-bottom: 40px;
 
-      & h5 {
+      & h4 {
         display: inline-block;
         position: relative;
         margin-top: 1rem;

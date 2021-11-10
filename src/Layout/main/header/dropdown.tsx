@@ -1,4 +1,4 @@
-import { FC, useRef } from 'preact/compat';
+import { FC, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import AccessControl from 'Routes/premissions/section';
 import useClickOutside from 'hooks/useOutsideClick';

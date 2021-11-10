@@ -19,8 +19,8 @@ module.exports = function override(webpackConfig) {
     webpackConfig.resolve.alias = {
         ...webpackConfig.resolve.alias,
         "react": "preact/compat",
-        "react-dom/test-utils": "preact/test-utils",
         "react-dom": "preact/compat",
+        "react-dom/test-utils": "preact/test-utils",
         "react/jsx-runtime": "preact/jsx-runtime",
     }
 
@@ -30,8 +30,6 @@ module.exports = function override(webpackConfig) {
                 {
                     from: 'public/logo.ico',
                     to: './[name].[contenthash:8].[ext]',
-                    force: true,
-                    info: () => ({minimized: true}),
                 }
             ],
         })

@@ -2,8 +2,9 @@
 // This file contains all @Font-face declarations, if any.
 // -----------------------------------------------------------------------------
 @font-face {
-  font-family: 'irYekan';
+  font-family: irYekan;
   src:local("irYekan"), font("iranYekanRegular.woff") format('woff');
   font-weight: normal;
+  font-display: swap;
   font-style: normal;
 }

@@ -1,5 +1,5 @@
 import { ErrorMessage, useField } from 'formik';
-import { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react';
+import { DetailedHTMLProps,FC, InputHTMLAttributes } from 'react';
 
 export type propsType = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
@@ -25,8 +25,8 @@ const Input: FC<Props> = ({ label, classes, ...props }) => {
           <input
             {...field}
             {...props}
-            className={`form__input ${error && 'error'} ${
-              success && 'success'
+            className={`form__input ${error ? 'error' : ""} ${
+              success ? 'success' : ""
             }`}
             placeholder="وارد کنید"
           />

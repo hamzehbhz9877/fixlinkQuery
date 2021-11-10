@@ -22,7 +22,7 @@ const Register = () => {
     <section className="register center-content">
       <div className="card register--card card__custom">
         <div className="card__header-title">
-          <h5 className="text-center">ثبت نام</h5>
+          <h4 className="text-center">ثبت نام</h4>
         </div>
         <Formik
           initialValues={initialValues}

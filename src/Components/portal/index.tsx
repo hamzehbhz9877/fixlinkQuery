@@ -1,5 +1,5 @@
-import { FC, ReactNode } from 'react';
-import ReactDOM from 'react-dom';
+import { FC,ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 
 interface Props {
   component: Element;
@@ -7,7 +7,7 @@ interface Props {
 }
 
 const PortalWrapper: FC<Props> = ({ component, children }) => {
-  return ReactDOM.createPortal(children, component);
+  return createPortal(children as any, component);
 };
 
 export default PortalWrapper;

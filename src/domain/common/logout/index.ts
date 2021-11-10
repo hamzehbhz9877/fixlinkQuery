@@ -1,6 +1,6 @@
 import useAuth from 'Context/authentication/useAuth';
 import useAlert from "Context/alert/useAlert";
-import {useEffect} from "react";
+import {useEffect} from "preact/hooks";
 
 const Logout = () => {
   const { reset } = useAuth();

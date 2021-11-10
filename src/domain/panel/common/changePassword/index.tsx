@@ -34,7 +34,7 @@ const ChangePassword = () => {
         </div>
         <div className="card change-password--card card__custom">
           <div className="card__header-title">
-            <h5 className="text-center">تغییر رمز</h5>
+            <h4 className="text-center">تغییر رمز</h4>
           </div>
           <Formik
             initialValues={initialValues}

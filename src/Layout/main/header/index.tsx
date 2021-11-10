@@ -1,5 +1,4 @@
-import { FC, memo } from 'preact/compat';
-import {MouseEventHandler} from "react"
+import { MouseEventHandler,FC, memo } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from 'Assets/images/logo.svg';
 import DropDownMenu from 'Layout/main/header/dropdown';
@@ -20,7 +19,7 @@ const Header: FC<Props> = ({ open }) => {
           <FaBars />
         </div>
         <NavLink to="/" exact>
-          <img src={Logo} alt="logo" />
+          <img src={Logo} alt="logo" width="100" height="100" />
         </NavLink>
 
         <div className="flex-grow-1" />

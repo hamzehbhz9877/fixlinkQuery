@@ -77,7 +77,7 @@ const AddNotificationsList: FC<Props> = ({ close, search }) => {
                 component="div"
               />
               <br />
-              <button className="btn__custom--mutate" type="submit">
+              <button className="btn btn__custom--mutate" type="submit">
                 تایید
               </button>
             </Form>

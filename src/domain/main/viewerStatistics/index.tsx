@@ -3,7 +3,7 @@ import WInout from 'Components/input/cuInput';
 import { initialValues, validationSchema } from './validation';
 import { getLinkVisit } from 'Services/shortlink';
 import 'Assets/css/pages/main/viewerStatistics.css';
-import { useEffect, useRef, useState } from 'preact/compat';
+import { useEffect, useRef, useState } from 'react';
 import { useGetQuery } from 'hooks/useGetQuery';
 import Loading from 'Components/loading';
 
@@ -34,7 +34,7 @@ const ViewerStatistics = () => {
   return (
     <section className="viewer-statistics center-content">
       <div className="viewer-statistics__short-link">
-        <h5 className="text-center">آدرس کوتاه شده را وارد کنید</h5>
+        <h4 className="text-center">آدرس کوتاه شده را وارد کنید</h4>
         <Formik
           initialValues={initialValues}
           onSubmit={handleSubmit}

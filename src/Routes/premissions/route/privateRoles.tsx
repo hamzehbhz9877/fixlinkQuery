@@ -1,5 +1,8 @@
 // Components
 import * as AsyncComponent from 'Routes/lazy';
+import main from "domain/main/info"
+import Logout from "domain/common/logout";
+import Notfound from "domain/common/notFound";
 
 export const mainPath = [
   {
@@ -27,7 +30,7 @@ export const mainPath = [
     path: '/user/login',
   },
   {
-    component: AsyncComponent.logout,
+    component: Logout,
     path: '/account/logout',
   },
   {
@@ -55,12 +58,12 @@ export const mainPath = [
     path: '/link/viewerStatistics',
   },
   {
-    component: AsyncComponent.home,
+    component: main,
     path: '/',
     exact: true,
   },
   {
-    component: AsyncComponent.notFound,
+    component: Notfound,
     path: '*',
   },
 ];
@@ -99,7 +102,7 @@ export const adminPath = [
     exact: true,
   },
   {
-    component: AsyncComponent.notFound,
+    component: Notfound,
     path: '*',
   },
 ];
@@ -123,7 +126,7 @@ export const userPath = [
     exact: true,
   },
   {
-    component: AsyncComponent.notFound,
+    component: Notfound,
     path: '*',
   },
 ];

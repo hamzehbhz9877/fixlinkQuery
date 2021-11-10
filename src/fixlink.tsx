@@ -36,7 +36,7 @@ const FixLink = () => {
                     {children?.map(({ path, ...rest }: any) => (
                       <Route {...rest} key={path} path={path} />
                     ))}
-                    <Route component={component} path={path} exact />
+                    <Route component={component} path={path} exact/>
                   </Route>
                 )
               )}

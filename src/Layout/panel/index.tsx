@@ -1,4 +1,4 @@
-import  { useCallback, useState } from 'preact/compat';
+import  { useCallback, useState } from 'react';
 import PanelHeader from 'Layout/panel/common/header';
 import PanelSidebar from 'Layout/common/sideBar';
 

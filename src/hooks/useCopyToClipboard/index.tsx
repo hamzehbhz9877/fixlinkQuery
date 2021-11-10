@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'preact/compat';
+import { useCallback, useState } from 'react';
 
 const useCopyToClipboard = () => {
   const copyToClipboard = (str: string) => {

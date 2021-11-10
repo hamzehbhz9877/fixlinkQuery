@@ -49,91 +49,91 @@ const Dashboard = () => {
           url
         />
 
-        <Table
-          tableHeadingItem={[
-            'لینک اصلی',
-            'لینک کوتاه',
-            'تعداد بازدید',
-            'تاریخ ساخت',
-            'وضعیت',
-            'حذف',
-          ]}
-          classes={'table__fixed'}
-          cols={
-            <colgroup>
-              <col width="30%" />
-              <col width="270px" />
-              <col width="130px" />
-              <col width="200px" />
-              <col width="100px" />
-              <col width="70px" />
-            </colgroup>
-          }
-        >
-          {data?.links.map(
-            (
-              { id, isActive, bigLink, createAt, referenceCount, shortLink },
-              index: number
-            ) => (
-              <tr key={index}>
-                <td className="text-overflow big-link">
-                  <span>{bigLink}</span>
-                </td>
-                <td className="short-link">
-                  <Tooltip
-                    direction="right"
-                    tooltipText="کپی شد"
-                    clickable
-                    closeDelay={1000}
-                  >
-                    <button
-                      type="button"
-                      onClick={() => copy('https://fixLink.ir/' + shortLink)}
-                      className="btn__custom--copy"
-                    >
-                      {'https://FixLink.ir/' + shortLink}
-                      &nbsp;
-                      <FaCopy />
-                    </button>
-                  </Tooltip>
-                </td>
-                <td>
-                  <span>{referenceCount}</span>
-                </td>
-                <td>
-                  <span>{createAt}</span>
-                </td>
-                <td>
-                  <label className="switch">
-                    <input
-                      id={id}
-                      onClick={() => handleDeActive(id)}
-                      type="checkbox"
-                      defaultChecked={isActive}
-                    />
-                    <span className="switch__slider switch--round" />
-                  </label>
-                </td>
-                <td>
-                  <button
-                    onClick={() =>
-                      handleOpen(
-                        <DeleteLink
-                          close={handleClose}
-                          currentPage={rest.currentPage}
-                          link={shortLink}
-                          searchValue={searchValue}
-                        />
-                      )
-                    }
-                  >
-                    <FaTrash className="fa-trash" />
-                  </button>
-                </td>
-              </tr>
-            )
-          )}
-        </Table>
+          <Table
+              tableHeadingItem={[
+                'لینک اصلی',
+                'لینک کوتاه',
+                'تعداد بازدید',
+                'تاریخ ساخت',
+                'وضعیت',
+                'حذف',
+              ]}
+              cols={
+                <colgroup>
+                  <col width="300px" />
+                  <col width="270px" />
+                  <col width="130px" />
+                  <col width="200px" />
+                  <col width="100px" />
+                  <col width="70px" />
+                </colgroup>
+              }
+          >
+            {data?.links.map(
+                (
+                    { id, isActive, bigLink, createAt, referenceCount, shortLink },
+                    index: number
+                ) => (
+                    <tr key={index}>
+                      <td className="text-overflow big-link">
+                        <span>{bigLink}</span>
+                      </td>
+                      <td className="short-link">
+                        <Tooltip
+                            direction="right"
+                            tooltipText="کپی شد"
+                            clickable
+                            closeDelay={1000}
+                        >
+                          <button
+                              type="button"
+                              onClick={() => copy('https://fixLink.ir/' + shortLink)}
+                              className="btn__custom--copy"
+                          >
+                            {'https://FixLink.ir/' + shortLink}
+                            &nbsp;
+                            <FaCopy />
+                          </button>
+                        </Tooltip>
+                      </td>
+                      <td>
+                        <span>{referenceCount}</span>
+                      </td>
+                      <td>
+                        <span>{createAt}</span>
+                      </td>
+                      <td>
+                        <label className="switch">
+                          <input
+                              id={id}
+                              onClick={() => handleDeActive(id)}
+                              type="checkbox"
+                              defaultChecked={isActive}
+                          />
+                          <span className="switch__slider switch--round" />
+                        </label>
+                      </td>
+                      <td>
+                        <button
+                            onClick={() =>
+                                handleOpen(
+                                    <DeleteLink
+                                        close={handleClose}
+                                        currentPage={rest.currentPage}
+                                        link={shortLink}
+                                        searchValue={searchValue}
+                                    />
+                                )
+                            }
+                        >
+                          <FaTrash className="fa-trash"/>
+                        </button>
+                      </td>
+                    </tr>
+                )
+            )}
+          </Table>
+
         {loadingMessage}
         <NoInformation data={data?.links} />
         <Paginate {...rest} pages={pages} total={data?.pages} />

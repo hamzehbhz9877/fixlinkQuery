@@ -38,7 +38,7 @@ const DeleteUserLinks: FC<Props> = ({
     <>
       <h5>حذف لینک</h5>
       <p> آیا میخواهید لینک {link} را حذف کنید؟ </p>
-      <button className="btn__custom--mutate" onClick={handleSubmit}>
+      <button className="btn btn__custom--mutate" onClick={handleSubmit}>
         تایید
       </button>
     </>

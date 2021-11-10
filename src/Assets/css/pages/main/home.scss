@@ -17,8 +17,11 @@
   }
 
   @include element('title') {
-    font-size: min(4vw,2rem) !important;
-    margin-bottom: 2rem;
+    font-size: $h4-font-size;
+    @include media("xl-min")
+    {
+      font-size: $h4-font-size;
+    }
   }
 
   @include element('custom-link') {
@@ -26,9 +29,9 @@
 
     &-prepend {
       direction: ltr;
-      background-color: #393939;
-      color: #969696;
-      border: none;
+      background-color: #393939 !important;
+      color: #969696 !important;
+      border: none !important;
     }
 
     &-button-wrapper {

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import SimpleInput from 'Components/input/simple';
 
 interface Props {
@@ -45,7 +45,7 @@ const ShowContactUs: FC<Props> = ({ data, close }) => {
         readOnly
       />
       <button
-        className="btn__custom--mutate"
+        className="btn btn__custom--mutate"
         type="submit"
         onClick={close}
       >

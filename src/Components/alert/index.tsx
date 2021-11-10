@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'preact/compat';
+import {useEffect, useRef, useState} from 'react';
 import {alert} from 'Context/alert';
 
 const Alert = ({

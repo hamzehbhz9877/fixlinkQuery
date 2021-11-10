@@ -1,5 +1,5 @@
 module.exports={
-    blocklist: ["nav-link",/^btn:/],
+    blocklist: ["nav-link"],
     safelist: {
         standard: [/^alert/],
         deep: [],

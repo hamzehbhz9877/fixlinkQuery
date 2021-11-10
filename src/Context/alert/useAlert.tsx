@@ -1,4 +1,4 @@
-import { useContext } from 'preact/compat';
+import { useContext } from 'react';
 import { AlertProvider } from 'Context/alert/index';
 
 const useAlert = () => {

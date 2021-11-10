@@ -18,7 +18,6 @@ const SearchBar: FC<Props> = ({
   setSearch,
   label,
   url,
-  userPanelQrCode,
 }) => {
   const initialValues = {
     search: '',
@@ -99,7 +98,7 @@ const SearchBar: FC<Props> = ({
                         />
                       </div>
                       <div className="search__btn">
-                        <button type="submit">
+                        <button className="btn" type="submit">
                           جستجو
                         </button>
                       </div>

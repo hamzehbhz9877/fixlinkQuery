@@ -1,5 +1,4 @@
-import {  useCallback, useState } from 'preact/compat';
-import {ReactNode} from "react"
+import {  useCallback, useState,ReactNode } from 'react';
 import { modal } from 'Components/modal';
 
 const useModal = () => {

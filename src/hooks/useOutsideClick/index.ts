@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'preact/compat';
+import { useEffect, useRef } from 'react';
 
 const useClickOutside = (ref: any, callback: (e: any) => void) => {
   const callbackRef = useRef<any>();

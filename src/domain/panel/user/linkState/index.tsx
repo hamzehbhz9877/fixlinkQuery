@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'preact/compat';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useGetQuery } from 'hooks/useGetQuery';
 import {
   getDailyData,
@@ -12,7 +12,6 @@ import { initialValues, validationSchema } from './validation';
 import { chartOption } from './chartOption';
 import BarChart from 'Components/chart/bar/barChart';
 import 'Assets/css/pages/panel/admin/dashboard.css';
-import {FaAngleDown} from "react-icons/fa";
 
 const LinkState = () => {
   const ref = useRef(false);
@@ -137,14 +136,13 @@ const LinkState = () => {
                   <Field
                     as="select"
                     name="statistics"
-                    className="custom-select"
+                    className="form-select custom-select"
                   >
                     <option value="0">آمار امروز</option>
                     <option value="1">آمار هفتگی</option>
                     <option value="2">آمار ماهیانه</option>
                     <option value="3">آمار سالیانه</option>
                   </Field>
-                  <FaAngleDown className="fa-arrow-down"/>
                   <div className="search__btn">
                     <button type="submit" className="btn">
                       اعمال فیلتر

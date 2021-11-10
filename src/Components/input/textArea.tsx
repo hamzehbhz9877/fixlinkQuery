@@ -25,8 +25,8 @@ const TextArea: FC<textArea> = ({ label, classes, ...props }) => {
           <textarea
             {...field}
             {...props}
-            className={`form__input ${error && 'error'} ${
-              success && 'success'
+            className={`form__input ${error ? 'error' : ""} ${
+              success ? 'success' : ""
             }`}
             placeholder="وارد کنید"
           />

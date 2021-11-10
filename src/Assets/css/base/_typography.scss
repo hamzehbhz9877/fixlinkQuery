@@ -9,29 +9,7 @@
 body {
   direction: $direction-base;
   overflow-x: hidden;
-  background-color: $x2;
 }
-
-
-a {
-  text-decoration: none;
-  color: $x1;
-  @include on-event {
-    color: $x1;
-    text-decoration: none;
-  }
-}
-
-#{h1,
-h2,
-h3,
-h4,
-h5,
-h6} {
-  color: $x6;
-  margin-bottom: 1.3rem;
-}
-
 
 p {
   color: $x6;

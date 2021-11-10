@@ -1,9 +1,9 @@
-import { createContext, useEffect, useState } from 'preact/compat';
+import { createContext, useEffect, useState } from 'react';
 import Cookie from 'universal-cookie';
 import { useHistory } from 'react-router';
 import { useMutationQuery } from 'hooks/useMutationQuery';
 import { signIn } from 'Services/shortlink';
-import Loading from "Components/loading";
+import Loading from 'Components/loading';
 
 export const AuthProvider = createContext({} as any);
 
@@ -16,16 +16,14 @@ const Auth = (props: any) => {
 
   const cookie = new Cookie();
 
-  const login = useMutationQuery<login, userPost>(signIn,<Loading/>);
+  const login = useMutationQuery<login, userPost>(signIn, <Loading />);
 
   const {
     location: { pathname },
-    replace,
-    goBack,
+    replace
   } = useHistory();
 
   const reset = async () => {
-
     setUserName('');
     setRole('');
     cookie.remove('Ro', { path: '/' });
@@ -33,6 +31,7 @@ const Auth = (props: any) => {
     cookie.remove('token', { path: '/' });
     history.replace('/');
   };
+
 
   useEffect(() => {
     if (login.data) {
@@ -45,7 +44,7 @@ const Auth = (props: any) => {
     const { token, user, Ro } = cookie.getAll();
     if (token) {
       if (pathname.startsWith('/user')) {
-        goBack();
+        replace("/")
       }
       setUserName(user);
       setRole(Ro);

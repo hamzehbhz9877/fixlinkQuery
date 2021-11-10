@@ -4,7 +4,7 @@ const Rules = () => {
   return (
     <div className="rules">
       <label htmlFor="rules">
-        <h5 className="rules__title">قوانین و ضوابط سایت</h5>
+        <h4 className="rules__title">قوانین و ضوابط سایت</h4>
       </label>
       <div className="rules__content">
         <p>

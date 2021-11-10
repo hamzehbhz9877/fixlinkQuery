@@ -39,7 +39,7 @@ const QrCode = () => {
           cols={
             <colgroup>
               <col width="100px" />
-              <col width="50%" />
+              <col width="300px" />
               <col width="270px" />
               <col width="100px" />
             </colgroup>

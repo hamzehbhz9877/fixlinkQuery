@@ -31,7 +31,7 @@ export const useGetQuery = <T>(
   values?: any,
   options?: Option<T>['option']
 ) => {
-  const alert = useAlert();
+  const {addAlert} = useAlert();
 
   return GenericQuery<T>(
     {
@@ -45,7 +45,7 @@ export const useGetQuery = <T>(
             if (data.isSuccess) {
               resolve(data.data);
             } else {
-              alert.addAlert({
+             addAlert({
                 showProgress: true,
                 message:
                   data.Message ??

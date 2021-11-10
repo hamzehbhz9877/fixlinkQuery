@@ -25,7 +25,7 @@ const DeleteAminUser: FC<Props> = ({ fullName, id, close }) => {
     <>
       <h5>حذف کاربر</h5>
       <p> آیا میخواهید کاربر{fullName} را حذف کنید؟ </p>
-      <button className="btn__custom--mutate" onClick={handleSubmit}>
+      <button className="btn btn__custom--mutate" onClick={handleSubmit}>
         تایید
       </button>
     </>

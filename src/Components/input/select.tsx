@@ -31,8 +31,8 @@ const CustomSelectInput: FC<customSelectInput> = ({
           {...field}
           {...props}
           placeholder="وارد کنید"
-          className={`form-select form-select-lg ${error && 'error'} ${
-            success && 'success'
+          className={`form-select form-select-lg ${error ? 'error' : ""} ${
+            success ? 'success' : ""
           }`}
           aria-label=".form-select-lg example"
         >

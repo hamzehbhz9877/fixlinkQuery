@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'preact/compat';
+import { FC, useEffect } from 'react';
 import LinearProgress from 'Components/progress';
 
 const AsyncLoading: FC = (): JSX.Element | null => {

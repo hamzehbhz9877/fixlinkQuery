@@ -5,10 +5,6 @@ export const accessDeny = Loadable(
   () => import(/* webpackChunkName:"accessDeny" */ 'domain/common/accessDeny'),
   { fallback: <AsyncLoading /> }
 );
-export const logout = Loadable(
-  () => import(/* webpackChunkName:"logout" */ 'domain/common/logout'),
-  { fallback: <AsyncLoading /> }
-);
 
 export const confirmEmail = Loadable(
   () =>
@@ -25,6 +21,7 @@ export const forgetPassword = Loadable(
     ),
   { fallback: <AsyncLoading /> }
 );
+
 export const submitPassword = Loadable(
   () =>
     import(
@@ -48,10 +45,6 @@ export const changePassword = Loadable(
   { fallback: <AsyncLoading /> }
 );
 
-export const notFound = Loadable(
-  () => import(/* webpackChunkName:"notfound" */ 'domain/common/notFound'),
-  { fallback: <AsyncLoading /> }
-);
 
 export const register = Loadable(
   () => import(/* webpackChunkName:"register" */ 'domain/main/register'),
@@ -90,10 +83,10 @@ export const viewerStatistics = Loadable(
   { fallback: <AsyncLoading /> }
 );
 
-export const home = Loadable(
-  () => import(/* webpackChunkName:"home" */ 'domain/main/info'),
-  { fallback: <AsyncLoading /> }
-);
+// export const main = Loadable(
+//   () => import(/* webpackChunkName:"home" */ 'domain/main/info'),
+//   { fallback: <AsyncLoading /> }
+// );
 
 //admin
 

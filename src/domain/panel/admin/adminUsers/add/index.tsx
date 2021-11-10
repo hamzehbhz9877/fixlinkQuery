@@ -82,7 +82,7 @@ const AddAminUser: FC<Props> = ({ close }) => {
                 label="تکرار رمز عبور"
               />
             </div>
-            <button type="submit" className="btn__custom--mutate">
+            <button type="submit" className="btn btn__custom--mutate">
               ثبت نام
             </button>
           </Form>

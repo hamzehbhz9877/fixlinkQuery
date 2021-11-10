@@ -11,6 +11,9 @@ table {
   border: none;
   margin: 0;
 
+  &-wrapper{
+      position: relative;
+  }
   &-overflow {
     overflow-x: auto;
   }

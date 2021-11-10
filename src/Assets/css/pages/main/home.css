@@ -15,8 +15,12 @@
 }
 
 .home__title {
-  font-size: min(4vw, 2rem) !important;
-  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+@media (min-width: 1200px) {
+  .home__title {
+    font-size: 2.4rem;
+  }
 }
 
 .home__custom-link {
@@ -24,9 +28,9 @@
 }
 .home__custom-link-prepend {
   direction: ltr;
-  background-color: #393939;
-  color: #969696;
-  border: none;
+  background-color: #393939 !important;
+  color: #969696 !important;
+  border: none !important;
 }
 .home__custom-link-button-wrapper {
   display: flex;

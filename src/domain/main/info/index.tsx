@@ -1,4 +1,4 @@
-import { useState } from 'preact/compat';
+import { useState } from 'react';
 import { Field, FieldMetaProps, Form, Formik, FormikHelpers } from 'formik';
 import Statistics from 'domain/main/info/statistics';
 import WInput from 'Components/input/cuInput';
@@ -21,7 +21,7 @@ const Main = () => {
 
   const [show, setShow] = useState(false);
 
-  const alert = useAlert();
+  const {addAlert} = useAlert();
 
   const handleSubmit = async (
     values: generateLinkPost,
@@ -36,35 +36,35 @@ const Main = () => {
           history.replace('/link/shortLink');
         }
         if (statusLink === 0) {
-          alert.addAlert({
+          addAlert({
             showProgress: true,
             message: 'لینک کوتاه شده آماده است',
             timeout: 5,
             type: 'success',
           });
         } else if (statusLink === 1) {
-          alert.addAlert({
+          addAlert({
             showProgress: true,
             message: 'این لینک قبلا ساخته شده است',
             timeout: 5,
             type: 'success',
           });
         } else if (statusLink === 2) {
-          alert.addAlert({
+          addAlert({
             showProgress: true,
             message: 'لینک نانعتبر است',
             timeout: 5,
             type: 'error',
           });
         } else if (statusLink === 3) {
-          alert.addAlert({
+          addAlert({
             showProgress: true,
             message: 'این لینک توسط شخص دیگری انتخاب شده است',
             timeout: 5,
             type: 'error',
           });
         } else if (statusLink === 4) {
-          alert.addAlert({
+          addAlert({
             showProgress: true,
             message: 'لینک داده شده حاوی محتوای مستهجن می باشد',
             timeout: 5,

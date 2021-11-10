@@ -15,7 +15,6 @@
     "formik": "^2.2.9",
     "nprogress": "^0.2.0",
     "preact": "^10.5.15",
-    "preact-compat": "^3.19.0",
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.5",
     "react-dom": "^17.0.2",
@@ -35,7 +34,7 @@
     "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "purgecss --config purgecss.config.js --css build/static/css/main.33e5a760.chunk.css --content build/index.html build/static/js/*.js --output build/static/css",
+    "postbuild": "purgecss --config purgecss.config.js --css build/static/css/main.e582b401.chunk.css --content build/index.html build/static/js/*.js --output build/static/css",
     "rtlcss": "rtlcss src/Assets/css/bootstrap/bootstrap.css src/Assets/css/bootstrap/bootstrap-rtl.css"
   },
   "eslintConfig": {
@@ -73,6 +72,7 @@
     "purgecss": "^4.0.3",
     "purgecss-webpack-plugin": "^4.0.3",
     "react-app-rewired": "^2.1.8",
+    "rtlcss": "^3.4.0",
     "serve": "^12.0.1",
     "typescript": "^4.4.3",
     "webpack-bundle-analyzer": "^4.4.2"

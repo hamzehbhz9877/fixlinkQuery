@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'preact/compat';
+import React, { lazy, Suspense } from 'react';
 
 const Loadable = (importFunc, { fallback = null } = { fallback: null }) => {
   const LazyComponent = lazy(importFunc);

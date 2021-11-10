@@ -21,7 +21,7 @@ const ForgetPassword = () => {
     <section className="forget-password center-content">
       <div className="card forget-password--card card__custom">
         <div className="card__header-title">
-          <h5 className="text-center">تغییر رمز عبور</h5>
+          <h4 className="text-center">تغییر رمز عبور</h4>
         </div>
         <Formik
           initialValues={initialValues}

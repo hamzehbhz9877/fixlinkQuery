@@ -38,7 +38,7 @@ const Login = () => {
     <section className="login center-content">
       <div className="card login--card card__custom">
         <div className="card__header-title">
-          <h5 className="text-center">ورود به حساب کاربری</h5>
+          <h4 className="text-center">ورود به حساب کاربری</h4>
         </div>
         <Formik
           initialValues={initialValues}

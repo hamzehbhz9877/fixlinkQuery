@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import {FC, memo} from 'react';
 import logo from 'Assets/images/logo.svg';
 import { NavLink } from 'react-router-dom';
 import useAuth from 'Context/authentication/useAuth';
@@ -35,4 +35,4 @@ const PanelHeader: FC<Props> = ({ open }) => {
   );
 };
 
-export default React.memo(PanelHeader);
+export default memo(PanelHeader);

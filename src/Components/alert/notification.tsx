@@ -5,8 +5,6 @@ import Alert from 'Components/alert/index';
 const Notification = () => {
   const state = useAlert();
 
-
-
   if (state.alert.length === 0) {
     return null;
   }

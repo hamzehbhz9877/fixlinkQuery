@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'preact/compat';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import successLink from 'Assets/images/successLink.svg';
 import useCopyToClipboard from 'hooks/useCopyToClipboard';
@@ -30,7 +30,7 @@ const ShortLink = () => {
         <div className="card__header-title">
           <img src={successLink} alt="successLink" />
           <br />
-          <h5 className="text-center">لینک کوتاه ساخته شد</h5>
+          <h4 className="text-center">لینک کوتاه ساخته شد</h4>
         </div>
         <div className="input-group short-link__input">
           <input
@@ -56,7 +56,7 @@ const ShortLink = () => {
           <div className="my-4">
             <img src={'data:image/png;base64,' + qr} alt="" />
           </div>
-          <button className="mb-4">
+          <button className="btn">
             <a href={`data:image/png;base64,${qr}`} download="QrCode.jpeg">
               دانلود QR
             </a>

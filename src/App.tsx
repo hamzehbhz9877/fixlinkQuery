@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import FixLink from 'fixlink';
-import { useEffect } from 'preact/compat';
+import { useEffect } from 'react';
 import { Intercept } from 'Services/httpService';
 import AlertWrapper from 'Context/alert';
 import Notification from 'Components/alert/notification';

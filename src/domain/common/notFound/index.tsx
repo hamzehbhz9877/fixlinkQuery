@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import notFound from 'Assets/images/404.svg';
 
 const Notfound: FC = () => {

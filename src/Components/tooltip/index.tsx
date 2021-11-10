@@ -1,4 +1,4 @@
-import { FC, useRef } from 'preact/compat';
+import { FC, useRef } from 'react';
 
 interface Props {
   tooltipText: string;

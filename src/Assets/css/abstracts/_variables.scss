@@ -23,16 +23,42 @@ $x17: #676767;
 
 //Include any default variable overrides here
 
+//body
+$body-bg:$x2;
+$body-text-align:right;
+
+//typography
 $font-size-base: 1.6rem;
-$font-family-base: 'irYekan';
+$font-family-base: irYekan;
 $headings-font-weight: bold;
+$headings-color:$x6;
+$headings-margin-bottom:1.3rem;
 
-
+//table
 $table-cell-padding-x: 1.4rem;
 $table-cell-padding-y: 1.4rem;
 $table-cell-vertical-align:middle;
 
+//card
 $card-border-radius:.8rem;
+
+//select
+$form-select-bg:$x7;
+$form-select-color:white;
+$form-select-border-color:$x4;
+$form-select-padding-y:1.3rem;
+$form-select-indicator-color:white;
+$form-select-padding-x:1.3rem;
+$input-group-addon-border-color:transparent;
+
+//input
+$input-border-color:transparent;
+$input-bg:white;
+
+//link
+$link-decoration:none;
+$link-color: $x1;
+$link-hover-color: $x1;
 
 
 @import "../../../../node_modules/bootstrap/scss/variables";
@@ -84,16 +110,22 @@ $breakpoints: map-merge(
 );
 
 
-$zindex-modal-backdrop: 1050;
-$zindex-modal: 1055;
-$zindex-tooltip: 1050;
-$zindex-sidebar: 998;
+$zindex-modal: 1110;
+$zindex-tooltip: 1105;
+$zindex-sidebar: 1100;
 $zindex-header: 90;
+
+//backdrop
+$backdrop-background-color: black;
+$backdrop-z-index: $zindex-modal-backdrop;
+$backdrop-transition:  .3s ease;
+$backdrop-opacity--open: 0.5;
 
 //sidebar
 $sidebar-width: 270px;
 $sidebar-z-index: $zindex-sidebar;
 $sidebar-background: $x7;
+$sidebar-transition: $backdrop-transition;
 $sidebar-box-background: $x2;
 $sidebar-list-color: $x4;
 $sidebar-list--after-background: $x1;
@@ -105,10 +137,6 @@ $modal-background: #393939;
 $modal-overlay-background: #0000009e;
 $modal-z-index: $zindex-modal;
 
-//backdrop
-$backdrop-background-color: black;
-$backdrop-z-index: $zindex-modal-backdrop;
-$backdrop-opacity--open: 0.5;
 
 //dropdown menu
 $dropdown-menu-background: white;

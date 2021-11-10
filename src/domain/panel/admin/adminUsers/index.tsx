@@ -34,7 +34,7 @@ const AdminList = () => {
       <h5>لیست کاربران مدیر</h5>
       <section>
         <button
-          className="btn__custom--mutate"
+          className="btn btn__custom--mutate"
           onClick={() =>
             handleOpen(<AddAminUser close={handleClose} />, {
               style: { content: { width: '600px' } },
