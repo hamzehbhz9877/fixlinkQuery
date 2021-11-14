@@ -98,6 +98,14 @@ textarea {
   color: white;
 }
 
+.html-text ol, .html-text ul {
+  padding: 0 1rem;
+}
+
+.row:last-of-type .form-group {
+  margin-bottom: 0;
+}
+
 .notfound,
 .access-deny {
   display: flex;
@@ -540,7 +548,7 @@ main .center-content {
 
 .form-group {
   position: relative;
-  margin-bottom: 4.2rem !important;
+  margin-bottom: 4.2rem;
 }
 .form__div {
   position: relative;
@@ -895,8 +903,16 @@ table {
   margin: 0 auto;
   height: max-content;
 }
-.Modal h5 {
-  margin-bottom: 4rem;
+.Modal__header {
+  margin-bottom: 2.5rem;
+}
+
+.Modal__footer {
+  margin-top: 3rem;
+}
+
+.Modal form .btn {
+  margin-top: 3rem;
 }
 .Modal .btn {
   padding: 0.4rem 1rem;

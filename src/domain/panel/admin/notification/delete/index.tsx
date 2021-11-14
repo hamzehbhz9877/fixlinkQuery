@@ -2,6 +2,8 @@ import { FC } from 'react';
 import { queryClient } from 'Store';
 import { deleteNotification } from 'Services/shortlink';
 import { useMutationQuery } from 'hooks/useMutationQuery';
+import { ModalBody, ModalFooter, ModalHeader } from 'Components/modal/template';
+import MutationsButton from 'Components/button/mutations';
 
 interface Props {
   title: string;
@@ -18,10 +20,12 @@ const DeleteNotificationList: FC<Props> = ({
   currentPage,
   search,
 }) => {
-  const remove = useMutationQuery(deleteNotification,null,{  onSuccess: () => {
+  const remove = useMutationQuery(deleteNotification, null, {
+    onSuccess: () => {
       queryClient.invalidateQueries(['notifications', currentPage, search]);
       close();
-    },});
+    },
+  });
 
   const handleSubmit = () => {
     remove.restQuery.mutate(id);
@@ -29,11 +33,20 @@ const DeleteNotificationList: FC<Props> = ({
 
   return (
     <>
-      <h5>حذف اطلاعیه</h5>
-      <p> آیا میخواهید اطلاعیه {title} را حذف کنید؟ </p>
-      <button className="btn btn__custom--mutate" onClick={handleSubmit}>
-        تایید
-      </button>
+      <ModalHeader>
+        <h5>حذف اطلاعیه</h5>
+      </ModalHeader>
+      <ModalBody>
+        <p> آیا میخواهید اطلاعیه {title} را حذف کنید؟ </p>
+      </ModalBody>
+      <ModalFooter>
+        <MutationsButton
+          text="تایید"
+          className="btn btn__custom--mutate"
+          type="submit"
+          onClick={handleSubmit}
+        />
+      </ModalFooter>
     </>
   );
 };

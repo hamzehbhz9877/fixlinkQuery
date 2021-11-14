@@ -7,6 +7,7 @@ import App from 'App';
 import "Assets/css/bootstrap/bootstrap-rtl.css"
 import 'Assets/css/main.css';
 
+
 render(
   <QueryClientProvider client={queryClient}>
     <App />

@@ -2,6 +2,8 @@ import { FC } from 'react';
 import { queryClient } from 'Store';
 import { deleteContactUs } from 'Services/shortlink';
 import { useMutationQuery } from 'hooks/useMutationQuery';
+import {ModalBody, ModalFooter, ModalHeader} from "Components/modal/template";
+import MutationsButton from "Components/button/mutations";
 
 interface Props {
   subject: string;
@@ -24,11 +26,17 @@ const DeleteContactUs: FC<Props> = ({ subject, id, currentPage, close }) => {
 
   return (
     <>
-      <h5>حذف پیام</h5>
-      <p> آیا میخواهید پیغام {subject} را حذف کنید؟ </p>
-      <button className="btn btn__custom--mutate" onClick={handleSubmit}>
-        تایید
-      </button>
+      <ModalHeader>
+        <h5>حذف پیام</h5>
+      </ModalHeader>
+     <ModalBody>
+       <p> آیا میخواهید پیغام {subject} را حذف کنید؟ </p>
+
+     </ModalBody>
+      <ModalFooter>
+        <MutationsButton text="تایید" className="btn btn__custom--mutate" type="submit" onClick={handleSubmit}/>
+
+      </ModalFooter>
     </>
   );
 };

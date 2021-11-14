@@ -2,7 +2,6 @@ import useModal from 'hooks/useModal';
 import Table from 'Components/table/table';
 import Modal from 'Components/modal';
 import DeleteAminUser from './delete';
-import { NavLink, useRouteMatch } from 'react-router-dom';
 import AddAminUser from './add';
 import { deActiveAdminUser, getAllAdminUser } from 'Services/shortlink';
 import { queryClient } from 'Store';
@@ -59,7 +58,6 @@ const AdminList = () => {
                 isActive,
                 countLink,
                 userName,
-                email,
                 fullName,
                 id,
                 createAtPersian,

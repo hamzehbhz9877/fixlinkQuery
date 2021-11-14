@@ -13,8 +13,8 @@ interface Props extends propsType {
   loadingMessage?:any
 }
 
-const WInput: FC<Props> = ({ label,loadingMessage, ...props }) => {
-  const [field, meta] = useField(props);
+const WInput: FC<Props> = ({ label,loadingMessage, ...rest }) => {
+  const [field, meta] = useField(rest);
   const error = meta.error && meta.touched;
   const success = !meta.error && meta.touched;
   return (
@@ -22,16 +22,16 @@ const WInput: FC<Props> = ({ label,loadingMessage, ...props }) => {
       <div className="input-group mb-5">
         <input
           {...field}
-          {...props}
+          {...rest}
           className={`form-control ${error ? 'error' : ""} ${success  ? 'success': ""}`}
-          placeholder={props.placeholder}
+          placeholder={rest.placeholder}
         />
         <button className="input-group-text input-group-custom"
                 disabled={!!loadingMessage}>
           {loadingMessage ?? <span>{label}</span>}
         </button>
         <ErrorMessage
-          name={`${props.name}`}
+          name={`${rest.name}`}
           className="form__error"
           component="div"
         />

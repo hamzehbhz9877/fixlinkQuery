@@ -1,11 +1,10 @@
-import ReactHtmlParser from 'react-html-parser';
-import { options } from './transformHtml';
 import usePagination from 'hooks/usePagination';
 import Paginate from 'Components/pagination';
 import { MakePagination } from 'hooks/usePagination/makePagination';
 import { GetNotification } from 'domain/main/notification/services';
 import 'Assets/css/pages/main/notification.css';
 import NoInformation from 'Components/noInfo';
+import NotificationHtml from "hooks/dangerousHtml";
 
 const Notification = () => {
   const { ...rest } = usePagination();
@@ -28,9 +27,7 @@ const Notification = () => {
                 </h5>
                 <span>{item.createAtPersian}</span>
               </div>
-              <div className="notification__html-parser">
-                {ReactHtmlParser(item.text, options)}
-              </div>
+                <NotificationHtml text={item.text}/>
             </div>
           );
         })}

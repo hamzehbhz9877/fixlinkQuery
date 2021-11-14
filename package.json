@@ -18,7 +18,6 @@
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.5",
     "react-dom": "^17.0.2",
-    "react-html-parser": "^2.0.2",
     "react-icons": "^4.3.1",
     "react-modal": "^3.14.3",
     "react-query": "^3.23.2",
@@ -34,7 +33,7 @@
     "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "purgecss --config purgecss.config.js --css build/static/css/main.e582b401.chunk.css --content build/index.html build/static/js/*.js --output build/static/css",
+    "postbuild": "purgecss --config purgecss.config.js --css build/static/css/main.b9cd0198.chunk.css --content build/index.html build/static/js/*.js --output build/static/css",
     "rtlcss": "rtlcss src/Assets/css/bootstrap/bootstrap.css src/Assets/css/bootstrap/bootstrap-rtl.css"
   },
   "eslintConfig": {

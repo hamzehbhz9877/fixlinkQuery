@@ -103,7 +103,17 @@ textarea {
   padding: 30px;
   color: white;
 }
-
+.html-text{
+  & ol,
+  & ul {
+    padding: 0 1rem;
+  }
+}
+.row:last-of-type{
+  & .form-group{
+     margin-bottom: 0;
+  }
+}
 .notfound,
 .access-deny {
   display: flex;

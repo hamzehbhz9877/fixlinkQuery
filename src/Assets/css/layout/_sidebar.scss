@@ -9,7 +9,7 @@
   background: $sidebar-background;
   z-index: $sidebar-z-index;
   transition:$backdrop-transition;
-  //medium devices
+
   @include media('md-max') {
     z-index: 1100;
   }
@@ -54,7 +54,7 @@
   }
 }
 
-//medium devices
+
 @include media('md-max') {
   .navigation {
     right: -$sidebar-width;

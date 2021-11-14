@@ -12,6 +12,8 @@ import { FC } from 'react';
 import Ckeditor from 'Components/ckeditor';
 import { createNotification } from 'Services/shortlink';
 import { useMutationQuery } from 'hooks/useMutationQuery';
+import {ModalBody, ModalHeader} from "Components/modal/template";
+import MutationsButton from "Components/button/mutations";
 
 interface Props {
   close: () => void;
@@ -46,44 +48,47 @@ const AddNotificationsList: FC<Props> = ({ close, search }) => {
 
   return (
     <>
-      <h5>افزودن اطلاعیه جدید</h5>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={handleSubmit}
-        validationSchema={validationSchema}
-      >
-        {(props) => {
-          const touched = () => {
-            props.setTouched({ text: true, title: true });
-          };
+        <ModalHeader>
+            <h5>افزودن اطلاعیه جدید</h5>
 
-          return (
-            <Form>
-              <Input label="عنوان" name="title" type="text" onBlur={touched} />
-              <Ckeditor
-                options={{
-                  onChange: (_: any, editor: any) =>
-                    props.setFieldValue('text', editor.getData()),
-                  data: props.values.text,
-                  onBlur: () => touched(),
+        </ModalHeader>
+        <ModalBody>
+            <Formik
+                initialValues={initialValues}
+                onSubmit={handleSubmit}
+                validationSchema={validationSchema}
+            >
+                {(props) => {
+                    const touched = () => {
+                        props.setTouched({ text: true, title: true });
+                    };
+
+                    return (
+                        <Form>
+                            <Input label="عنوان" name="title" type="text" onBlur={touched} />
+                            <Ckeditor
+                                options={{
+                                    onChange: (_: any, editor: any) =>
+                                        props.setFieldValue('text', editor.getData()),
+                                    data: props.values.text,
+                                    onBlur: () => touched(),
+                                }}
+                                type={ClassicEditor}
+                                config={editorConfig}
+                            />
+                            <div />
+                            <ErrorMessage
+                                name="text"
+                                className="form--ckeditor-error"
+                                component="div"
+                            />
+                            <MutationsButton text="تایید" className="btn btn__custom--mutate" type="submit"/>
+                        </Form>
+                    );
                 }}
-                type={ClassicEditor}
-                config={editorConfig}
-              />
-              <div />
-              <ErrorMessage
-                name="text"
-                className="form--ckeditor-error"
-                component="div"
-              />
-              <br />
-              <button className="btn btn__custom--mutate" type="submit">
-                تایید
-              </button>
-            </Form>
-          );
-        }}
-      </Formik>
+            </Formik>
+        </ModalBody>
+
     </>
   );
 };

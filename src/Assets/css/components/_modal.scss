@@ -8,23 +8,29 @@
   margin: 0 auto;
   height: max-content;
 
-  & h5{
-    margin-bottom: 4rem;
+  @include element("header") {
+    margin-bottom: 2.5rem;
   }
+  @include element("footer") {
+    margin-top: 3rem;
+  }
+
+  & form .btn{
+    margin-top: 3rem;
+  }
+
   & .btn {
     padding: 0.4rem 1rem;
   }
-  //medium devices
+
   @include media('md-min') {
     margin: auto;
   }
 
-  //small devices
   @include media('sm-max') {
     width: 95% !important;
     overflow-x: auto;
   }
-
 
 }
 

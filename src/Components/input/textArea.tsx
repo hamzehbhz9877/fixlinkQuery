@@ -13,8 +13,8 @@ interface textArea extends propsType {
   type: string;
 }
 
-const TextArea: FC<textArea> = ({ label, classes, ...props }) => {
-  const [field, meta] = useField(props);
+const TextArea: FC<textArea> = ({ label, classes, ...rest }) => {
+  const [field, meta] = useField(rest);
   const error = meta.error && meta.touched;
   const success = !meta.error && meta.touched;
 
@@ -24,7 +24,7 @@ const TextArea: FC<textArea> = ({ label, classes, ...props }) => {
         <div className="form__div form__cnu">
           <textarea
             {...field}
-            {...props}
+            {...rest}
             className={`form__input ${error ? 'error' : ""} ${
               success ? 'success' : ""
             }`}
@@ -35,7 +35,7 @@ const TextArea: FC<textArea> = ({ label, classes, ...props }) => {
           </label>
         </div>
         <ErrorMessage
-          name={`${props.name}`}
+          name={`${rest.name}`}
           className="form__error"
           component="div"
         />

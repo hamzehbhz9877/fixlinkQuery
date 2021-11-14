@@ -20,6 +20,7 @@ const UserList = () => {
   let { url } = useRouteMatch();
   const { searchValue, sendData } = useSearch();
   const { ...rest } = usePagination();
+
   const { data, loadingMessage } = GetAllUser({
     page: rest.currentPage,
     search: searchValue,

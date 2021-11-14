@@ -2,6 +2,8 @@ import { FC } from 'react';
 import { queryClient } from 'Store';
 import { deleteLink } from 'Services/shortlink';
 import { useMutationQuery } from 'hooks/useMutationQuery';
+import { ModalBody, ModalFooter, ModalHeader } from 'Components/modal/template';
+import MutationsButton from "Components/button/mutations";
 
 interface Props {
   link: string;
@@ -11,7 +13,7 @@ interface Props {
 }
 
 const DeleteLink: FC<Props> = ({ link, close, searchValue, currentPage }) => {
-  const remove = useMutationQuery(deleteLink,null,{
+  const remove = useMutationQuery(deleteLink, null, {
     onSuccess: () => {
       queryClient.invalidateQueries(['links', currentPage, searchValue]);
       close();
@@ -24,11 +26,16 @@ const DeleteLink: FC<Props> = ({ link, close, searchValue, currentPage }) => {
 
   return (
     <>
-      <h5>حذف لینک</h5>
-      <p> آیا میخواهید لینک {link} را حذف کنید؟ </p>
-      <button className="btn btn__custom--mutate" onClick={handleSubmit}>
-        تایید
-      </button>
+      <ModalHeader>
+        <h5>حذف لینک</h5>
+      </ModalHeader>
+      <ModalBody>
+        <p> آیا میخواهید لینک {link} را حذف کنید؟ </p>
+      </ModalBody>
+      <ModalFooter>
+        <MutationsButton text="تایید" className="btn btn__custom--mutate" type="submit" onClick={handleSubmit}/>
+
+      </ModalFooter>
     </>
   );
 };

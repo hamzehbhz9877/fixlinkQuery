@@ -14,6 +14,7 @@ import useCopyToClipboard from 'hooks/useCopyToClipboard';
 import NoInformation from 'Components/noInfo';
 import { FaCopy, FaTrash } from 'react-icons/fa';
 
+
 const UserLinks = () => {
   const { copy } = useCopyToClipboard();
   const { id }: { id: string } = useParams();
@@ -26,7 +27,6 @@ const UserLinks = () => {
   });
   const pages = MakePagination(rest.currentPage, data?.pages, rest.goTo);
   const { isModalOpen, handleClose, handleOpen, modalData } = useModal();
-
 
   return (
     <>
@@ -60,7 +60,7 @@ const UserLinks = () => {
               </colgroup>
             }
           >
-            {loadingMessage ??
+            {
               data?.linkForUserDto.map(
                 (
                   { bigLink, shortLink, createAt, id, refrenceCount },
@@ -114,6 +114,7 @@ const UserLinks = () => {
               )}
           </Table>
         </div>
+        {loadingMessage}
         <NoInformation data={data?.linkForUserDto} />
         <Paginate {...rest} pages={pages} total={data?.pages} />
         <Modal

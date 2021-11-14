@@ -22,10 +22,6 @@
   flex-wrap: wrap;
 }
 
-.notification__html-parser ol, .notification__html-parser ul {
-  padding: 0 1rem;
-}
-
 .notification ol li, .notification ul li, .notification p {
   margin: 1rem 0;
   color: white;

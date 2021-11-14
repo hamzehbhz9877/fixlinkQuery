@@ -17,9 +17,9 @@ const CustomSelectInput: FC<customSelectInput> = ({
   label,
   classes,
   values,
-  ...props
+  ...rest
 }) => {
-  const [field, meta] = useField(props);
+  const [field, meta] = useField(rest);
   const error = meta.error && meta.touched;
   const success = !meta.error && meta.touched;
 
@@ -29,14 +29,14 @@ const CustomSelectInput: FC<customSelectInput> = ({
         <label htmlFor="">{label}</label>
         <select
           {...field}
-          {...props}
+          {...rest}
           placeholder="وارد کنید"
           className={`form-select form-select-lg ${error ? 'error' : ""} ${
             success ? 'success' : ""
           }`}
           aria-label=".form-select-lg example"
         >
-          {!meta.initialValue && <option defaultChecked></option>}
+          {!meta.initialValue && <option defaultChecked/>}
           {values.map((value, index) => (
             <option key={index} value={index + 1}>
               {value}
@@ -44,7 +44,7 @@ const CustomSelectInput: FC<customSelectInput> = ({
           ))}
         </select>
         <ErrorMessage
-          name={`${props.name}`}
+          name={`${rest.name}`}
           className="form__error"
           component="div"
         />

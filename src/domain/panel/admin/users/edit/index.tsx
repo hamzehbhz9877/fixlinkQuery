@@ -5,6 +5,8 @@ import { useMutationQuery } from 'hooks/useMutationQuery';
 import { changePasswordUsers } from 'Services/shortlink';
 import { queryClient } from 'Store';
 import { FC } from 'react';
+import MutationsButton from "Components/button/mutations";
+import {ModalBody, ModalHeader} from "Components/modal/template";
 
 interface Props {
   close: () => void;
@@ -20,35 +22,35 @@ const EditUserList: FC<Props> = ({ currentPage, search, close }) => {
     },
   });
 
-  const handleSubmit = async (values: any, actions: any) => {
-    actions.resetForm();
+  const handleSubmit = async (values: any) => {
     remove.restQuery.mutate(values);
   };
 
   return (
     <>
-      <h5>ویرایش رمز کاربر</h5>
-      <div>
-        <Formik
-          initialValues={initialValues}
-          onSubmit={handleSubmit}
-          validationSchema={validationSchema}
-        >
-          {() => (
-            <Form>
-              <Input name="newPassword" type="password" label="رمز عبور جدید" />
-              <Input
-                name="confirmPassword"
-                type="password"
-                label="تکرار رمز عبور جدید"
-              />
-              <button className="btn btn__custom--mutate" type="submit">
-                تایید
-              </button>
-            </Form>
-          )}
-        </Formik>
-      </div>
+      <ModalHeader>
+        <h5>ویرایش رمز کاربر</h5>
+      </ModalHeader>
+      <ModalBody>
+          <Formik
+              initialValues={initialValues}
+              onSubmit={handleSubmit}
+              validationSchema={validationSchema}
+          >
+            {() => (
+                <Form>
+                  <Input name="newPassword" type="password" label="رمز عبور جدید" />
+                  <Input
+                      name="confirmPassword"
+                      type="password"
+                      label="تکرار رمز عبور جدید"
+                  />
+                  <MutationsButton text="تایید" className="btn btn__custom--mutate" type="submit" onClick={handleSubmit}/>
+                </Form>
+            )}
+          </Formik>
+      </ModalBody>
+
     </>
   );
 };

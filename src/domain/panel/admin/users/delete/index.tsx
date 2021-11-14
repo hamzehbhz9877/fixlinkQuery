@@ -2,6 +2,8 @@ import { FC } from 'react';
 import { useMutationQuery } from 'hooks/useMutationQuery';
 import { deleteUsers } from 'Services/shortlink';
 import { queryClient } from 'Store';
+import { ModalBody, ModalFooter, ModalHeader } from 'Components/modal/template';
+import MutationsButton from "Components/button/mutations";
 
 interface Props {
   fullName: string;
@@ -18,7 +20,7 @@ const DeleteUserList: FC<Props> = ({
   currentPage,
   search,
 }) => {
-  const remove = useMutationQuery(deleteUsers,null,{
+  const remove = useMutationQuery(deleteUsers, null, {
     onSuccess: () => {
       queryClient.invalidateQueries(['users', currentPage, search]);
       close();
@@ -31,11 +33,16 @@ const DeleteUserList: FC<Props> = ({
 
   return (
     <>
-      <h5>حذف کاربر</h5>
-      <p> آیا میخواهید کاربر{fullName} را حذف کنید؟ </p>
-      <button className="btn btn__custom--mutate" onClick={handleSubmit}>
-        تایید
-      </button>
+      <ModalHeader>
+        <h5>حذف کاربر</h5>
+      </ModalHeader>
+      <ModalBody>
+        <p> آیا میخواهید کاربر{fullName} را حذف کنید؟ </p>
+      </ModalBody>
+      <ModalFooter>
+        <MutationsButton text="تایید" className="btn btn__custom--mutate" type="submit" onClick={handleSubmit}/>
+
+      </ModalFooter>
     </>
   );
 };

@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Table: FC<Props> = ({children, cols, tableHeadingItem, classes }) => {
-    const mutation=useIsMutating()
+    const isMutating=useIsMutating()
     return (
       <div className="table-wrapper">
           <div className="table-overflow">
@@ -34,7 +34,7 @@ const Table: FC<Props> = ({children, cols, tableHeadingItem, classes }) => {
                   <tbody>{children}</tbody>
               </table>
           </div>
-          <div className={mutation>0 ? "content-block":""}/>
+          <div className={isMutating>0 ? "content-block":""}/>
       </div>
 
   );

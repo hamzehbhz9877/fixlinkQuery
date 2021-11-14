@@ -13,8 +13,8 @@ interface Props extends propsType {
   classes?: string;
 }
 
-const Input: FC<Props> = ({ label, classes, ...props }) => {
-  const [field, meta] = useField(props);
+const Input: FC<Props> = ({ label, classes, ...rest }) => {
+  const [field, meta] = useField(rest);
   const error = meta.error && meta.touched;
   const success = !meta.error && meta.touched;
 
@@ -24,7 +24,7 @@ const Input: FC<Props> = ({ label, classes, ...props }) => {
         <div className="form__div">
           <input
             {...field}
-            {...props}
+            {...rest}
             className={`form__input ${error ? 'error' : ""} ${
               success ? 'success' : ""
             }`}
@@ -35,7 +35,7 @@ const Input: FC<Props> = ({ label, classes, ...props }) => {
           </label>
         </div>
         <ErrorMessage
-          name={`${props.name}`}
+          name={`${rest.name}`}
           className="form__error"
           component="div"
         />
