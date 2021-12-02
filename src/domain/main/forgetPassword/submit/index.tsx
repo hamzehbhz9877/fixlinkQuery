@@ -13,7 +13,9 @@ const SubmitForgetPassword = () => {
   const { token }: { token: string } = useParams();
 
   const {restQuery,loadingMessage} = useMutationQuery<null, submitPassword & { token: string }>(
-    submitForgetPassword,<Loading/>
+      {event:submitForgetPassword,
+  loadingMessage:<Loading/>
+}
   );
 
   const handleSubmit = async (

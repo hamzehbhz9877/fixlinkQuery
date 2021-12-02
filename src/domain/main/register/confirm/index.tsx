@@ -6,7 +6,7 @@ const ConfirmEmail = () => {
   const { token }: { token: string } = useParams();
   const history = useHistory();
 
-  const confirm = useMutationQuery<null, string>(confirmEmail);
+  const confirm = useMutationQuery<null, string>({ event:confirmEmail });
 
   confirm.restQuery.mutate(token, {
     onSuccess: () => {

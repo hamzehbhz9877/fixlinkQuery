@@ -11,12 +11,15 @@ const ViewerStatistics = () => {
   const ref = useRef<boolean>(false);
 
   const [value, setValue] = useState<string>('');
-  const { restQuery, data, loadingMessage } = useGetQuery<getLinkVisit>(
-    getLinkVisit,
-    { queryKey: ['viewerStatistics', value], loadingMessage: <Loading /> },
-    value,
-    { enabled: false }
-  );
+  const { restQuery, data, loadingMessage } = useGetQuery<getLinkVisit>({
+    event: getLinkVisit,
+    eventOption: {
+      queryKey: ['viewerStatistics', value],
+      loadingMessage: <Loading />,
+    },
+    values: value,
+    options: { enabled: false },
+  });
 
   useEffect(() => {
     if (ref.current) restQuery.refetch();

@@ -26,7 +26,7 @@ const Dashboard = () => {
   });
   const pages = MakePagination(rest.currentPage, data?.pages, rest.goTo);
   const { isModalOpen, handleClose, handleOpen, modalData } = useModal();
-  const toggle = useMutationQuery(deActiveLink);
+  const toggle = useMutationQuery({ event:deActiveLink });
 
   const handleDeActive = (id: string) => {
     toggle.restQuery.mutate(id, {

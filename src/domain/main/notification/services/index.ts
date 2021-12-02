@@ -2,12 +2,12 @@ import { useGetQuery } from 'hooks/useGetQuery';
 import { getAllNotification } from 'Services/shortlink';
 
 export const GetNotification = ({ page, search }: pagination) =>
-  useGetQuery<notifications>(
-    getAllNotification,
-    {
+  useGetQuery<notifications>({
+    event: getAllNotification,
+    eventOption: {
       loadingMessage: 'در حال دریافت اطلاعیه ها ...',
       queryKey: ['notifications', page, search],
     },
-    { page, search },
-    { keepPreviousData: true }
-  );
+    values: { page, search },
+    options: { keepPreviousData: true },
+  });

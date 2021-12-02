@@ -24,7 +24,7 @@ const AddNotificationsList: FC<Props> = ({ close, search }) => {
   const create = useMutationQuery<
     notifications['notifications'][0],
     notificationPost
-  >(createNotification, '', {
+  >({event:createNotification,options: {
     onError: () => {},
     onSuccess: (data: any) => {
       queryClient.setQueryData<notifications>(
@@ -36,7 +36,7 @@ const AddNotificationsList: FC<Props> = ({ close, search }) => {
       );
       close();
     },
-  });
+  }});
 
   const handleSubmit = async (
     values: notificationPost,

@@ -17,7 +17,9 @@ const Main = () => {
   const { restQuery, loadingMessage } = useMutationQuery<
     generatorLink,
     generateLinkPost
-  >(generateLink, <Loading />);
+  >({event:generateLink,
+  loadingMessage:<Loading/>
+});
 
   const [show, setShow] = useState(false);
 

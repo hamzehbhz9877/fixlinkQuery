@@ -28,7 +28,7 @@ const UserList = () => {
   const pages = MakePagination(rest.currentPage, data?.pages, rest.goTo);
   const { isModalOpen, handleClose, handleOpen, modalData } = useModal();
 
-  const toggle = useMutationQuery(deActiveUsers);
+  const toggle = useMutationQuery({ event:deActiveUsers });
 
   const handleDeActive = (id: string) => {
     toggle.restQuery.mutate(id, {

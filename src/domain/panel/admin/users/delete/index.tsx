@@ -20,12 +20,12 @@ const DeleteUserList: FC<Props> = ({
   currentPage,
   search,
 }) => {
-  const remove = useMutationQuery(deleteUsers, null, {
+  const remove = useMutationQuery({event:deleteUsers, options:{
     onSuccess: () => {
       queryClient.invalidateQueries(['users', currentPage, search]);
       close();
     },
-  });
+  }});
 
   const handleSubmit = () => {
     remove.restQuery.mutate(id);

@@ -10,7 +10,9 @@ import Loading from "Components/loading";
 
 const ContactUs = () => {
   const history = useHistory();
-  const {loadingMessage,restQuery} = useMutationQuery<null, contactUsPost>(contactUs,<Loading/>);
+  const {loadingMessage,restQuery} = useMutationQuery<null, contactUsPost>({event:contactUs,
+  loadingMessage:<Loading/>
+});
 
   const handleSubmit = async (
     values: contactUsPost,

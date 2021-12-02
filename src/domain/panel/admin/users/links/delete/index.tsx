@@ -20,7 +20,7 @@ const DeleteUserLinks: FC<Props> = ({
   id,
   currentPage,
 }) => {
-  const remove = useMutationQuery(deleteLink, null, {
+  const remove = useMutationQuery({event:deleteLink,options: {
     onSuccess: () => {
       queryClient.invalidateQueries([
         'userLinks',
@@ -30,7 +30,7 @@ const DeleteUserLinks: FC<Props> = ({
       ]);
       close();
     },
-  });
+  }});
 
   const handleSubmit = () => {
     remove.restQuery.mutate(link);

@@ -20,69 +20,69 @@ const LinkState = () => {
   const [info, setInfo] = useState<any>(null);
   const [format, setFormat] = useState<Array<string> | null>(null);
 
-  const { restQuery: dailyQ, loadingMessage: l1 } = useGetQuery<dailyData>(
-    getDailyData,
-    {
+  const { restQuery: dailyQ, loadingMessage: l1 } = useGetQuery<dailyData>({
+    event: getDailyData,
+    eventOption: {
       queryKey: ['daily', data],
       loadingMessage: 'درحال دریافت آمار روزانه...',
     },
-    data,
-    {
+    values: data,
+    options: {
       enabled: false,
       onSuccess: (data) => {
         setInfo(data);
         setFormat(data?.map((data) => data.hour));
       },
-    }
-  );
+    },
+  });
 
-  const { restQuery: weeklyQ, loadingMessage: l2 } = useGetQuery<weeklyData>(
-    getWeeklyData,
-    {
+  const { restQuery: weeklyQ, loadingMessage: l2 } = useGetQuery<weeklyData>({
+    event: getWeeklyData,
+    eventOption: {
       queryKey: ['weekly', data],
       loadingMessage: 'درحال دریافت آمار هفتگی...',
     },
-    data,
-    {
+    values: data,
+    options: {
       enabled: false,
       onSuccess: (data) => {
         setInfo(data);
         setFormat(data?.map((data) => data.day + ' ' + data.date));
       },
-    }
-  );
+    },
+  });
 
-  const { restQuery: monthlyQ, loadingMessage: l3 } = useGetQuery<monthlyData>(
-    getMonthlyData,
-    {
+  const { restQuery: monthlyQ, loadingMessage: l3 } = useGetQuery<monthlyData>({
+    event: getMonthlyData,
+    eventOption: {
       queryKey: ['monthly', data],
       loadingMessage: 'درحال دریافت آمار ماهیانه...',
     },
-    data,
-    {
+    values: data,
+    options: {
       enabled: false,
       onSuccess: (data) => {
         setInfo(data);
         setFormat(data?.map((data) => data.date));
       },
-    }
-  );
+    },
+  });
 
-  const { restQuery: yearlyQ, loadingMessage: l4 } = useGetQuery<yearlyData>(
-    getYearlyData,
-    {
+  const { restQuery: yearlyQ, loadingMessage: l4 } = useGetQuery<yearlyData>({
+    event: getYearlyData,
+    eventOption: {
       queryKey: ['yearly', data],
       loadingMessage: 'درحال دریافت آمار سالیانه...',
     },
-    data,
-    {
+    values: data,
+    options: {
       enabled: false,
       onSuccess: (data) => {
         setInfo(data);
         setFormat(data?.map((data) => data.month + ' ' + data.date));
       },
-    }
-  );
+    },
+  });
 
   const chart = useMemo(() => {
     if (format && info) {

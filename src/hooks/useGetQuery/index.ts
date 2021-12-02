@@ -25,13 +25,20 @@ function isAbortError(error: any): error is DOMException {
   return false;
 }
 
-export const useGetQuery = <T>(
-  event: any,
-  eventOption: Event<T>,
-  values?: any,
-  options?: Option<T>['option']
-) => {
-  const {addAlert} = useAlert();
+interface GetQuery<T> {
+  event: any;
+  eventOption: Event<T>;
+  values?: any;
+  options?: Option<T>['option'];
+}
+
+export const useGetQuery = <T>({
+  event,
+  eventOption,
+  values,
+  options,
+}: GetQuery<T>) => {
+  const { addAlert } = useAlert();
 
   return GenericQuery<T>(
     {
@@ -45,7 +52,7 @@ export const useGetQuery = <T>(
             if (data.isSuccess) {
               resolve(data.data);
             } else {
-             addAlert({
+              addAlert({
                 showProgress: true,
                 message:
                   data.Message ??

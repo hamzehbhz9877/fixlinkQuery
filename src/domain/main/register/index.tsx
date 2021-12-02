@@ -8,7 +8,9 @@ import { register } from 'Services/shortlink';
 import Loading from "Components/loading";
 
 const Register = () => {
-  const {restQuery,loadingMessage} = useMutationQuery<null, registerPost>(register,<Loading/>);
+  const {restQuery,loadingMessage} = useMutationQuery<null, registerPost>({event:register,
+    loadingMessage:<Loading/>
+});
 
   const handleSubmit = async (
     values: registerPost,

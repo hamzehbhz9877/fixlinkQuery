@@ -16,12 +16,12 @@ interface Props {
 }
 
 const AddAminUser: FC<Props> = ({ close }) => {
-  const register = useMutationQuery<adminUser, registerPost>(addNewAdminUser,null,{
+  const register = useMutationQuery<adminUser, registerPost>({event:addNewAdminUser,options:{
     onSuccess: () => {
       queryClient.invalidateQueries('adminUser');
       close();
-    },
-  });
+    }
+  }});
 
   const handleSubmit = async (
     values: registerPost,

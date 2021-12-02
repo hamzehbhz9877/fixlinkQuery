@@ -20,12 +20,12 @@ const DeleteNotificationList: FC<Props> = ({
   currentPage,
   search,
 }) => {
-  const remove = useMutationQuery(deleteNotification, null, {
+  const remove = useMutationQuery({event:deleteNotification,options: {
     onSuccess: () => {
       queryClient.invalidateQueries(['notifications', currentPage, search]);
       close();
     },
-  });
+  }});
 
   const handleSubmit = () => {
     remove.restQuery.mutate(id);

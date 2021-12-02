@@ -5,13 +5,13 @@ import { getInfoDashboard } from 'Services/shortlink';
 import 'Assets/css/pages/panel/admin/dashboard.css';
 
 const Dashboard = () => {
-  const { data, loadingMessage } = useGetQuery<adminDashboard>(
-    getInfoDashboard,
-    {
+  const { data, loadingMessage } = useGetQuery<adminDashboard>({
+    event: getInfoDashboard,
+    eventOption: {
       queryKey: 'adminDashboard',
       loadingMessage: '...',
-    }
-  );
+    },
+  });
 
   const { data: datasets, options } = chartOption(
     data?.countLinkWeeklies || [],

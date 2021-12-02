@@ -2,12 +2,12 @@ import { useGetQuery } from 'hooks/useGetQuery';
 import { getAllUser } from 'Services/shortlink';
 
 export const GetAllUser = ({ page, search }: pagination) =>
-  useGetQuery<users>(
-    getAllUser,
-    {
+  useGetQuery<users>({
+    event: getAllUser,
+    eventOption: {
       loadingMessage: 'در حال دریافت کاربر ها ...',
       queryKey: ['users', page, search],
     },
-    { page, search },
-    { keepPreviousData: true }
-  );
+    values: { page, search },
+    options: { keepPreviousData: true },
+  });

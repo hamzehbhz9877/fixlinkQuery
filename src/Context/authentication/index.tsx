@@ -16,7 +16,9 @@ const Auth = (props: any) => {
 
   const cookie = new Cookie();
 
-  const login = useMutationQuery<login, userPost>(signIn, <Loading />);
+  const login = useMutationQuery<login, userPost>({event:signIn,
+  loadingMessage:<Loading/>
+});
 
   const {
     location: { pathname },

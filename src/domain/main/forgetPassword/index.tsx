@@ -7,7 +7,9 @@ import 'Assets/css/pages/main/forgetPassword.css';
 import Loading from "Components/loading";
 
 const ForgetPassword = () => {
-  const {restQuery,loadingMessage} = useMutationQuery<null, forgetPassword>(forgetPassword,<Loading/>);
+  const {restQuery,loadingMessage} = useMutationQuery<null, forgetPassword>({event:forgetPassword,
+  loadingMessage:<Loading/>
+});
 
   const handleSubmit = async (
     values: forgetPassword,

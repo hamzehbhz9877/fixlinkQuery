@@ -29,12 +29,12 @@ const EditNotificationList: FC<Props> = ({
   const edit = useMutationQuery<
     notifications['notifications'][0],
     notificationPost
-  >(editNotification, null, {
+  >({event:editNotification,options: {
     onSuccess: () => {
       queryClient.invalidateQueries(['notifications', currentPage, search]);
       close();
     },
-  });
+  }});
 
   const handleSubmit = async (values: notificationPost) => {
     edit.restQuery.mutate({ ...values, id });

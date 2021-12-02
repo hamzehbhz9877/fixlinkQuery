@@ -22,8 +22,7 @@ const Post = () => {
     search: searchValue,
   });
   const pages = MakePagination(rest.currentPage, data?.pages, rest.goTo);
-  const { isModalOpen, handleClose, handleOpen, modalData, options } =
-    useModal();
+  const { isModalOpen, handleClose, handleOpen, modalData, options } = useModal();
 
   return (
     <>

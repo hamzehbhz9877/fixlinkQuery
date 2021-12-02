@@ -5,6 +5,7 @@ import Logout from "domain/common/logout";
 import Notfound from "domain/common/notFound";
 
 export const mainPath = [
+
   {
     component: AsyncComponent.submitPassword,
     path: '/user/forgetpassword/:token',

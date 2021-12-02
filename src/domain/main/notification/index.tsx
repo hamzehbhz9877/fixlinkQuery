@@ -15,6 +15,8 @@ const Notification = () => {
   });
   const pages = MakePagination(rest.currentPage, data?.pages, rest.goTo);
 
+
+
   return (
     <>
       <section className="notification">

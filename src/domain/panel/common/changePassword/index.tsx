@@ -9,7 +9,7 @@ import 'Assets/css/pages/panel/common/changePassword.css';
 const ChangePassword = () => {
   const history = useHistory();
 
-  const user = useMutationQuery<null, changePassword>(changePassword);
+  const user = useMutationQuery<null, changePassword>({event: changePassword });
 
   const handleSubmit = async (
     values: changePassword,

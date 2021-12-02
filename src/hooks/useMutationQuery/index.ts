@@ -7,11 +7,12 @@ interface Option<T, U> {
   option: UseMutationOptions<T, AxiosError, U, T>;
 }
 
-export const useMutationQuery = <T, U>(
-  event: any,
-  loadingMessage?: any,
-  options?: Option<T, U>['option']
-) => {
+interface MutationQuery<T,U> {
+  event: any, loadingMessage?: any, options?: Option<T, U>['option']
+}
+
+export const useMutationQuery = <T, U>
+({event, loadingMessage, options}:MutationQuery<T,U>) => {
   const {addAlert} = useAlert();
   return GenericMutate<T, U>(
     {
